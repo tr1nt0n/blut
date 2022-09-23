@@ -174,6 +174,6 @@
                     \fontsize #3
                         \fromproperty #'page:page-number-string
                 }
-                "Minnelieder - Trinton Hlynn"
+                "P O L Ú E I D O S, or: blut und feuer - Trinton Hlynn"
             }
 }
