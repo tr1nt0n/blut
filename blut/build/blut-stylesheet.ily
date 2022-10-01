@@ -1,18 +1,18 @@
 \version "2.20.0"
 \language english
 #(set-default-paper-size "arch a")
-#(set-global-staff-size 9)
+#(set-global-staff-size 12)
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-spanners.ily"
-\include "/Users/trintonprater/abjad/abjad/_stylesheets/ekmelos-ji-accidental-markups.ily"
-\include "/Users/trintonprater/baca/lilypond/baca-circle-bow-markups.ily"
+\include "/Users/trintonprater/abjad/abjad/scm/ekmelos-ji-accidental-markups.ily"
+\include "/Users/trintonprater/baca/baca/scm/baca-circle-bow-markups.ily"
 
 \header {
     dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"to Nora" \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column {"P O L Ú E I D O S, or: blut und feuer" \fontsize #0.01 \with-color #white "."}
+    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column {"P O L Ú E I D O S, or : blut und feuer" \fontsize #0.01 \with-color #white "."}
     subtitle = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"for Bass Clarinet, Percussions, and two Violoncelli" \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton Hlynn (*2000)"}
 }
@@ -35,13 +35,12 @@
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 7) (padding . 2) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = 8
-        \override TimeSignature.font-name = "Bodoni72"
-        \override TimeSignature.transparent = ##t
-        % \override TimeSignature.X-extent = ##f
-        \override TimeSignature.X-offset = -1.45
-        \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 5) (minimum-distance . 5) (padding . 5) (stretchability . 0))
+        \override TimeSignature.font-size = 7
+		\override TimeSignature.font-name = "Bodoni72"
+        \override TimeSignature.X-offset = -1.5
+        \override TimeSignature.Y-offset = 3
     }
 
     \context {
@@ -50,7 +49,7 @@
         \accepts TimeSignatureContext
         proportionalNotationDuration = #(ly:make-moment 1 30)
 
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 0) (padding . 2))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
@@ -126,18 +125,18 @@
                  (ly:grob-set-property! grob 'positions (cons new-pos new-pos))
                  (ly:tuplet-bracket::print grob)))
         % \override TupletBracket.direction = #up
-        \remove Time_signature_engraver
     }
 
     \context {
         \Staff
         fontSize = #-0.5
+        \remove Time_signature_engraver
         \override BarLine.hair-thickness = 0.5
         \override BarLine.transparent = ##t
         \override BarLine.thick-thickness = #8
-        % \override LedgerLineSpanner.transparent = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
+        \override InstrumentName.font-name = "Bodoni72 Book"
     }
 
     \context {
@@ -161,7 +160,7 @@
     evenHeaderMarkup = \markup ""
     oddFooterMarkup = \markup
         \fill-line {
-            "Minnelieder - Trinton Hlynn"
+            "P O L Ú E I D O S, or : blut und feuer - Trinton Hlynn"
         \concat {
             \fontsize #3
                 \fromproperty #'page:page-number-string
@@ -174,6 +173,6 @@
                     \fontsize #3
                         \fromproperty #'page:page-number-string
                 }
-                "P O L Ú E I D O S, or: blut und feuer - Trinton Hlynn"
+                "P O L Ú E I D O S, or : blut und feuer - Trinton Hlynn"
             }
 }
