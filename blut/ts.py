@@ -76,9 +76,13 @@ section_numerators = abjad.sequence.partition_by_counts(
 )
 
 section_1b_ts = trinton.make_ts_pair_list(
-        numerators=section_numerators[0],
-        denominators=cycle([8,]),
-    )
+    numerators=section_numerators[0],
+    denominators=cycle(
+        [
+            8,
+        ]
+    ),
+)
 
 for ts in section_1b_ts:
     section_1a_ts.append(ts)

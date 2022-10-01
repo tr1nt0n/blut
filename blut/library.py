@@ -8,6 +8,7 @@ from abjadext import microtones
 
 # score
 
+
 def blut_score(time_signatures):
     score = trinton.make_empty_score(
         instruments=[
@@ -25,6 +26,7 @@ def blut_score(time_signatures):
     )
 
     return score
+
 
 # tempi
 

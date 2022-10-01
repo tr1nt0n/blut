@@ -20,7 +20,22 @@ library.write_instrument_names(score)
 
 library.write_short_instrument_names(score)
 
-for leaf, tempo in zip([0, 2, 4, 6, 8,], [4, 1, 3, 2, 0,],):
+for leaf, tempo in zip(
+    [
+        0,
+        2,
+        4,
+        6,
+        8,
+    ],
+    [
+        4,
+        1,
+        3,
+        2,
+        0,
+    ],
+):
     trinton.attach(
         voice=score["Global Context"],
         leaves=[leaf],
@@ -43,10 +58,15 @@ trinton.attach_multiple(
     score=score,
     voice="Global Context",
     leaves=[
-        1, 3, 5, 7,
+        1,
+        3,
+        5,
+        7,
     ],
     attachments=[
-        abjad.Markup(r'\markup \huge \center-column { \musicglyph "scripts.ufermata" } '),
+        abjad.Markup(
+            r'\markup \huge \center-column { \musicglyph "scripts.ufermata" } '
+        ),
         abjad.LilyPondLiteral(
             r"\once \override Score.TimeSignature.transparent = ##t",
             "before",
