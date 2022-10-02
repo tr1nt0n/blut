@@ -11,6 +11,10 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"140" } }
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -21,6 +25,10 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 5/8
@@ -28,6 +36,10 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -38,6 +50,10 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 1/8
@@ -45,6 +61,10 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"117" } }
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -55,6 +75,10 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 13/8
@@ -62,6 +86,10 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -72,6 +100,10 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 3/8
@@ -126,13 +158,37 @@
                     \set Staff.instrumentName = \markup \bold { Bass Clarinet }
                     \set Staff.shortInstrumentName = \markup \bold { b. cl. }
                     s1 * 3/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 5/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 1/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 13/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 3/8
                     s1 * 3/4
                     s1 * 11/8
@@ -156,13 +212,37 @@
                     \set Staff.instrumentName = \markup \bold { Percussions }
                     \set Staff.shortInstrumentName = \markup \bold { perc. }
                     s1 * 3/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 5/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 1/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 13/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                     s1 * 1/16
+                    % AFTER:
+                    % COMMANDS:
+                    \stopStaff \startStaff
                     s1 * 3/8
                     s1 * 3/4
                     s1 * 11/8
@@ -189,13 +269,37 @@
                         \set Staff.instrumentName = \markup \bold { Violoncello I }
                         \set Staff.shortInstrumentName = \markup \bold { vc. I }
                         s1 * 3/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 1/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 13/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 3/8
                         s1 * 3/4
                         s1 * 11/8
@@ -219,13 +323,37 @@
                         \set Staff.instrumentName = \markup \bold { Violoncello II }
                         \set Staff.shortInstrumentName = \markup \bold{ vc. II }
                         s1 * 3/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 1/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 13/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                         s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
                         s1 * 3/8
                         s1 * 3/4
                         s1 * 11/8

@@ -50,10 +50,12 @@
         proportionalNotationDuration = #(ly:make-moment 1 30)
 
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7))
+        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
 
+        \override BarLine.bar-extent = #'(-2 . 2)
         \override BarLine.hair-thickness = 0.5
         \override BarLine.transparent = ##t
         % \override BarLine.X-extent = #'(0 . 0)
@@ -131,9 +133,6 @@
         \Staff
         fontSize = #-0.5
         \remove Time_signature_engraver
-        \override BarLine.hair-thickness = 0.5
-        \override BarLine.transparent = ##t
-        \override BarLine.thick-thickness = #8
 
         \override InstrumentName.self-alignment-X = #CENTER
         \override InstrumentName.font-name = "Bodoni72 Book"

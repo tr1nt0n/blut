@@ -54,25 +54,7 @@ trinton.attach(
 
 # fermate
 
-trinton.attach_multiple(
-    score=score,
-    voice="Global Context",
-    leaves=[
-        1,
-        3,
-        5,
-        7,
-    ],
-    attachments=[
-        abjad.Markup(
-            r'\markup \huge \center-column { \musicglyph "scripts.ufermata" } '
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.TimeSignature.transparent = ##t",
-            "before",
-        ),
-    ],
-)
+library.fermata_measures(score=score, measures=[2, 4, 6, 8,])
 
 # show file
 
