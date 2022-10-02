@@ -42,12 +42,18 @@ for leaf, tempo in zip(
         attachment=library.tempi[tempo],
     )
 
-trinton.attach(
-    voice=score["Global Context"],
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
     leaves=[
         -1,
     ],
-    attachment=abjad.BarLine("||"),
+    attachments=[
+        abjad.BarLine("||"),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
+        ),
+    ],
 )
 
 # trinton.fill_empty_staves_with_skips(score)

@@ -20,7 +20,6 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -34,7 +33,6 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 5/8
@@ -45,7 +43,6 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -59,7 +56,6 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 1/8
@@ -70,7 +66,6 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -84,7 +79,6 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 13/8
@@ -95,7 +89,6 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
@@ -109,7 +102,6 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
-            \once \override Score.SpanBar.transparent = ##f
             % OPENING:
             % COMMANDS:
             \time 3/8
@@ -148,6 +140,9 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
