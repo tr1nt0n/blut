@@ -90,7 +90,9 @@ def write_short_instrument_names(score):
     for voice_name, markup in zip(all_voice_names, all_short_instrument_names):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
 
+
 # fermate
+
 
 def fermata_measures(score, measures):
     for voice_name in [
@@ -111,7 +113,6 @@ def fermata_measures(score, measures):
         for measure in measures:
             abjad.attach(start_command, all_measures[measure - 1][0])
             abjad.attach(stop_command, all_measures[measure - 1][0])
-
 
     trinton.attach_multiple(
         score=score,
