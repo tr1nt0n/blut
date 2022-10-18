@@ -11,8 +11,8 @@
 \include "/Users/trintonprater/baca/baca/scm/baca-circle-bow-markups.ily"
 
 \header {
-    dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"to Nora" \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column {"P O L Ú E I D O S, or : speichel und wasser" \fontsize #0.01 \with-color #white "."}
+    dedication = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #3 \center-column {"to 李惟怡" \fontsize #0.25 \with-color #white "."}
+    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #10 \center-column {"P O L Ú E I D O S, or : speichel und wasser" \fontsize #0.01 \with-color #white "."}
     subtitle = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"for Bass Clarinet, Percussions, and two Violoncelli" \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton Hlynn (*2000)"}
 }
