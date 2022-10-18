@@ -1,1 +1,1 @@
-Polúeidos, or: blut und feuer, for bass clarinet, percussions, and two violoncelli
+Polúeidos, or: speichel und wasser, for bass clarinet, percussions, and two violoncelli

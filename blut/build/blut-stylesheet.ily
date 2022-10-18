@@ -12,7 +12,7 @@
 
 \header {
     dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"to Nora" \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column {"P O L Ú E I D O S, or : blut und feuer" \fontsize #0.01 \with-color #white "."}
+    title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column {"P O L Ú E I D O S, or : speichel und wasser" \fontsize #0.01 \with-color #white "."}
     subtitle = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"for Bass Clarinet, Percussions, and two Violoncelli" \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton Hlynn (*2000)"}
 }
@@ -131,7 +131,7 @@
 
     \context {
         \Staff
-        fontSize = #-0.5
+        fontSize = #-0.25
         \remove Time_signature_engraver
 
         \override InstrumentName.self-alignment-X = #CENTER
@@ -159,7 +159,7 @@
     evenHeaderMarkup = \markup ""
     oddFooterMarkup = \markup
         \fill-line {
-            "P O L Ú E I D O S, or : blut und feuer - Trinton Hlynn"
+            "P O L Ú E I D O S, or : speichel und wasser - Trinton Hlynn"
         \concat {
             \fontsize #3
                 \fromproperty #'page:page-number-string
@@ -172,6 +172,6 @@
                     \fontsize #3
                         \fromproperty #'page:page-number-string
                 }
-                "P O L Ú E I D O S, or : blut und feuer - Trinton Hlynn"
+                "P O L Ú E I D O S, or : speichel und wasser - Trinton Hlynn"
             }
 }
