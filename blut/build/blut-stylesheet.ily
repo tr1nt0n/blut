@@ -116,6 +116,13 @@
         \override TupletBracket.padding = 3
         \override TupletNumber.font-size = 1.5
         \override TupletBracket.bracket-visibility = ##t
+        \override TupletBracket.layer = 2
+        \override TupletBracket.whiteout-style = #'outline
+        \override TupletBracket.whiteout = 1
+        \override TupletNumber.font-size = 1.5
+        \override TupletNumber.layer = 2
+        \override TupletNumber.whiteout-style = #'outline
+        \override TupletNumber.whiteout = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override TupletBracket #'stencil =
             #(lambda (grob)
