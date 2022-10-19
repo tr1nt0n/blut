@@ -28,6 +28,111 @@ def blut_score(time_signatures):
     return score
 
 
+# selectors
+
+
+def tuplet_index_selector(indices):
+    def selector(argument):
+        for i in indices:
+            tuplet = abjad.select.tuplet(argument, i)
+            return tuplet
+
+    return selector
+
+
+# pitch handlers
+
+
+def pitch_teeth_on_reed(index):
+    def pitch(argument):
+        handler = evans.PitchHandler(
+            pitch_list=trinton.rotated_sequence(
+                [
+                    -9,
+                    -2,
+                    -4,
+                    -9,
+                    4,
+                ],
+                index,
+            ),
+            forget=False,
+        )
+
+        selections = abjad.select.leaves(argument, pitched=True)
+
+        handler(selections)
+
+    return pitch
+
+
+# commands
+
+
+def one_line(
+    score,
+    leaves,
+    voice="percussion voice",
+):
+    trinton.attach_multiple(
+        score=score,
+        voice=voice,
+        leaves=leaves,
+        attachments=[
+            abjad.Clef("percussion"),
+            abjad.LilyPondLiteral(
+                r"\staff-line-count 1",
+                "absolute_before",
+            ),
+        ],
+    )
+
+
+def artificial_harmonics():
+    def change_noteheads(argument):
+        leaves = abjad.select.leaves(argument, pitched=True)
+        for leaf in leaves:
+            if isinstance(leaf, abjad.Chord) is False:
+                pass
+
+            else:
+                noteheads = leaf.note_heads
+                abjad.tweak(noteheads[1], rf"\tweak style #'harmonic")
+
+    return change_noteheads
+
+
+def tremolo():
+    def call_stem_tremolo(argument):
+        leaves = abjad.select.leaves(argument, pitched=True)
+        trinton.unmeasured_stem_tremolo(leaves)
+
+    return call_stem_tremolo
+
+
+def glissando():
+    def call_glissando(argument):
+        leaves = abjad.select.leaves(argument, pitched=True)
+        abjad.glissando(
+            leaves,
+            hide_middle_note_heads=True,
+            allow_repeats=True,
+            allow_ties=True,
+        )
+
+    return call_glissando
+
+
+def grunt(dynamic="ff", hairpin="o<|"):
+    def attach(argument):
+        first_leaf = abjad.select.leaf(argument, 0, pitched=True)
+        last_leaf = abjad.select.leaf(argument, -1, pitched=True)
+        abjad.attach(abjad.StartHairpin(hairpin), first_leaf)
+        abjad.attach(abjad.Dynamic(dynamic), last_leaf)
+
+    return attach
+
+
 # tempi
 
 tempi = [
