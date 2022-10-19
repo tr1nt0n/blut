@@ -259,27 +259,18 @@
                     % OPEN_BRACKETS:
                     \context Voice = "cello 1 voice"
                     {
-                        % BEFORE:
-                        % COMMANDS:
-                        \set Staff.instrumentName = \markup \bold { Violoncello I }
-                        \set Staff.shortInstrumentName = \markup \bold { vc. I }
-                        s1 * 3/8
-                        % BEFORE:
-                        % COMMANDS:
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                        s1 * 1/16
-                        % AFTER:
-                        % COMMANDS:
-                        \stopStaff \startStaff
-                        s1 * 5/8
-                        % BEFORE:
-                        % COMMANDS:
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                        s1 * 1/16
-                        % AFTER:
-                        % COMMANDS:
-                        \stopStaff \startStaff
-                        s1 * 1/8
+                        % OPEN_BRACKETS:
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/8
+                        {
+                            % BEFORE:
+                            % COMMANDS:
+                            \set Staff.instrumentName = \markup \bold { Violoncello I }
+                            \set Staff.shortInstrumentName = \markup \bold { vc. I }
+                            c'4..
+                            c'16
+                        % CLOSE_BRACKETS:
+                        }
                         % BEFORE:
                         % COMMANDS:
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -287,7 +278,14 @@
                         % AFTER:
                         % COMMANDS:
                         \stopStaff \startStaff
-                        s1 * 13/8
+                        % OPEN_BRACKETS:
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 5/8
+                        {
+                            c'2..
+                            c'8
+                        % CLOSE_BRACKETS:
+                        }
                         % BEFORE:
                         % COMMANDS:
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -295,7 +293,37 @@
                         % AFTER:
                         % COMMANDS:
                         \stopStaff \startStaff
-                        s1 * 3/8
+                        c'16..
+                        % AFTER:
+                        % START_BEAM:
+                        [
+                        c'64
+                        % AFTER:
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                        s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
+                        % OPEN_BRACKETS:
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 13/8
+                        {
+                            c'2..
+                            c'8
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                        s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
+                        c'4.
                         s1 * 3/4
                         s1 * 11/8
                         s1 * 1

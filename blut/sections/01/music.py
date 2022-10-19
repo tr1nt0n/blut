@@ -11,7 +11,27 @@ from blut import ts
 
 score = library.blut_score(ts.section_1a_ts)
 
-# music commands
+# cello 1 music commands
+
+for n in [
+    1,
+    3,
+    5,
+    7,
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (n,)),
+        evans.RhythmHandler(evans.tuplet([(7, 1)])),
+        abjad.beam,
+        trinton.treat_tuplets(),
+        voice=score["cello 1 voice"],
+    )
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (9,)),
+    evans.RhythmHandler(rmakers.note),
+    voice=score["cello 1 voice"],
+)
 
 
 # markups and beams
