@@ -41,6 +41,9 @@
 		\override TimeSignature.font-name = "Bodoni72"
         \override TimeSignature.X-offset = -1.5
         \override TimeSignature.Y-offset = 3
+        \override TimeSignature.whiteout-style = #'outline
+        \override TimeSignature.whiteout = 1
+        \override TimeSignature.layer = 2
     }
 
     \context {
@@ -120,11 +123,11 @@
         \override TupletBracket.whiteout-style = #'outline
         \override TupletBracket.whiteout = 1
         \override TupletNumber.font-size = 1.5
-        \override TupletNumber.layer = 2
+        \override TupletNumber.layer = 3
         \override TupletNumber.whiteout-style = #'outline
         \override TupletNumber.whiteout = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
-        \override TupletBracket #'stencil =
+        \override TupletBracket.stencil =
             #(lambda (grob)
                (let* ((pos (ly:grob-property grob 'positions))
                       (dir (ly:grob-property grob 'direction))

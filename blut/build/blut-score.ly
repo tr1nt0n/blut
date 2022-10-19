@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.23.14"
 \language "english"
 
 \include "blut-stylesheet.ily"
@@ -8,5 +8,4 @@
     {
         \include "01.ly"
     }
-% \midi{}
 }

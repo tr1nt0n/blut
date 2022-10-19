@@ -5,6 +5,88 @@ import trinton
 import random
 from abjadext import rmakers
 from abjadext import microtones
+from itertools import cycle
+
+# immutables
+
+visas_tuplets = eval(
+    """[
+        (1, 10),
+        (12, 1),
+        (1, 9),
+        (12, 1),
+        (1, 11),
+        (12, 1),
+        (1, 6),
+        (10, 1),
+        (1, 1),
+        (10, 1),
+        (3, 2),
+        (11, 1),
+        (3, 4),
+        (12, 1),
+        (5, 4),
+        (10, 1),
+    ]"""
+)
+
+visas_1_pitch_list = eval(
+    """[
+        [6, 11],
+        6,
+        [6, 11],
+        [6, 11],
+        [6, 11],
+        6,
+        [6, 11],
+        [6, 11],
+        [4, 9],
+        4,
+        [4, 9],
+        [4, 9],
+        [4, 9],
+        4,
+        [4, 9],
+        [4, 9],
+        [6, 11],
+        6,
+        [6, 11],
+        [6, 11],
+        [7.5, 12.5],
+        7.5,
+        [7.5, 12.5],
+        [7.5, 12.5],
+    ]"""
+)
+
+visas_2_pitch_list = eval(
+    """[
+        [4, 9],
+        4,
+        [4, 9],
+        [4, 9],
+        [4, 9],
+        4,
+        [4, 9],
+        [4, 9],
+        [2, 7],
+        2,
+        [2, 7],
+        [2, 7],
+        [2, 7],
+        2,
+        [2, 7],
+        [2, 7],
+        [4, 9],
+        4,
+        [4, 9],
+        [4, 9],
+        [5.5, 10.5],
+        5.5,
+        [5.5, 10.5],
+        [5.5, 10.5],
+    ]"""
+)
 
 # score
 
@@ -28,6 +110,14 @@ def blut_score(time_signatures):
     return score
 
 
+# rhythm
+
+
+def visas_rhythms(index):
+    out = trinton.rotated_sequence(visas_tuplets, index)
+    return out
+
+
 # selectors
 
 
@@ -40,30 +130,35 @@ def tuplet_index_selector(indices):
     return selector
 
 
-# pitch handlers
+# pitch
 
 
-def pitch_teeth_on_reed(index):
-    def pitch(argument):
-        handler = evans.PitchHandler(
-            pitch_list=trinton.rotated_sequence(
-                [
-                    -9,
-                    -2,
-                    -4,
-                    -9,
-                    4,
-                ],
-                index,
-            ),
-            forget=False,
-        )
+def teeth_on_reed_pitches(index):
+    pitches = trinton.rotated_sequence(
+        [
+            -9,
+            -2,
+            -4,
+            -9,
+            4,
+        ],
+        index,
+    )
 
-        selections = abjad.select.leaves(argument, pitched=True)
+    return pitches
 
-        handler(selections)
 
-    return pitch
+def visas_pitches(index, cello):
+    _cello_to_pitch_list = {
+        1: visas_1_pitch_list,
+        2: visas_2_pitch_list,
+    }
+    pitches = trinton.rotated_sequence(
+        _cello_to_pitch_list[cello],
+        index,
+    )
+
+    return pitches
 
 
 # commands
@@ -131,6 +226,68 @@ def grunt(dynamic="ff", hairpin="o<|"):
         abjad.attach(abjad.Dynamic(dynamic), last_leaf)
 
     return attach
+
+
+def visas_attachments():
+    def attach(argument):
+        tuplets = abjad.select.tuplets(argument)
+        for tuplet in tuplets:
+            if tuplets.index(tuplet) % 2 == 1:
+                tremolo()(tuplet)
+            else:
+                pass
+            glissando()(tuplet)
+
+    return attach
+
+
+# markups
+
+
+def perc_instrument(instrument_string, selector):
+    literal = abjad.LilyPondLiteral(rf'\boxed-markup "{instrument_string}" 1', "after")
+    command = trinton.attachment_command(
+        attachments=[literal],
+        selector=selector,
+    )
+    return command
+
+
+# spanners
+
+
+def bcl_vibrato(
+    amplitudes,
+    selector,
+    wave_length="2",
+):
+
+    command = trinton.linear_attachment_command(
+        attachments=cycle(
+            [
+                abjad.LilyPondLiteral(
+                    rf"\vibrato #'{amplitudes} #{wave_length}  #0.2", site="before"
+                ),
+                abjad.StartTrillSpan(),
+                abjad.StopTrillSpan(),
+            ]
+        ),
+        selector=selector,
+    )
+
+    return command
+
+
+def hooked_spanner(string, padding):
+    start_text_span = abjad.StartTextSpan(
+        left_text=abjad.Markup(rf"\markup {{ {string} }}"),
+        right_text=None,
+        style="dashed-line-with-hook",
+    )
+
+    bundle = abjad.bundle(start_text_span, rf"- \tweak padding #{padding}")
+
+    return bundle
 
 
 # tempi
