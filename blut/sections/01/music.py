@@ -16,22 +16,31 @@ score = library.blut_score(ts.section_1a_ts)
 for n in [
     1,
     3,
-    5,
     7,
 ]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (n,)),
-        evans.RhythmHandler(evans.tuplet([(7, 1)])),
-        abjad.beam,
+        evans.RhythmHandler(evans.tuplet([(12, 1)])),
         trinton.treat_tuplets(),
+        abjad.beam,
         voice=score["cello 1 voice"],
+        rewrite=-2,
     )
 
-trinton.make_music(
-    lambda _: trinton.select_target(_, (9,)),
-    evans.RhythmHandler(rmakers.note),
-    voice=score["cello 1 voice"],
-)
+for voice_name in library.all_voice_names:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (5,)),
+        evans.RhythmHandler(evans.tuplet([(12, 1)])),
+        trinton.treat_tuplets(),
+        abjad.beam,
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (9,)),
+        evans.RhythmHandler(rmakers.note),
+        voice=score[voice_name],
+    )
 
 
 # markups and beams

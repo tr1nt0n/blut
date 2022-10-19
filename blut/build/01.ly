@@ -168,7 +168,19 @@
                     % AFTER:
                     % COMMANDS:
                     \stopStaff \startStaff
-                    s1 * 1/8
+                    % OPEN_BRACKETS:
+                    \times 8/13
+                    {
+                        c'8.
+                        % AFTER:
+                        % START_BEAM:
+                        [
+                        c'64
+                        % AFTER:
+                        % STOP_BEAM:
+                        ]
+                    % CLOSE_BRACKETS:
+                    }
                     % BEFORE:
                     % COMMANDS:
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -184,7 +196,7 @@
                     % AFTER:
                     % COMMANDS:
                     \stopStaff \startStaff
-                    s1 * 3/8
+                    c'4.
                     s1 * 3/4
                     s1 * 11/8
                     s1 * 1
@@ -222,7 +234,19 @@
                     % AFTER:
                     % COMMANDS:
                     \stopStaff \startStaff
-                    s1 * 1/8
+                    % OPEN_BRACKETS:
+                    \times 8/13
+                    {
+                        c'8.
+                        % AFTER:
+                        % START_BEAM:
+                        [
+                        c'64
+                        % AFTER:
+                        % STOP_BEAM:
+                        ]
+                    % CLOSE_BRACKETS:
+                    }
                     % BEFORE:
                     % COMMANDS:
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -238,7 +262,7 @@
                     % AFTER:
                     % COMMANDS:
                     \stopStaff \startStaff
-                    s1 * 3/8
+                    c'4.
                     s1 * 3/4
                     s1 * 11/8
                     s1 * 1
@@ -261,13 +285,28 @@
                     {
                         % OPEN_BRACKETS:
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/8
+                        \times 12/13
                         {
                             % BEFORE:
                             % COMMANDS:
                             \set Staff.instrumentName = \markup \bold { Violoncello I }
                             \set Staff.shortInstrumentName = \markup \bold { vc. I }
-                            c'4..
+                            c'4.
+                            c'32
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                        s1 * 1/16
+                        % AFTER:
+                        % COMMANDS:
+                        \stopStaff \startStaff
+                        % OPEN_BRACKETS:
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 10/13
+                        {
+                            c'2.
                             c'16
                         % CLOSE_BRACKETS:
                         }
@@ -279,11 +318,16 @@
                         % COMMANDS:
                         \stopStaff \startStaff
                         % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 5/8
+                        \times 8/13
                         {
-                            c'2..
-                            c'8
+                            c'8.
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            c'64
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
                         % CLOSE_BRACKETS:
                         }
                         % BEFORE:
@@ -293,29 +337,8 @@
                         % AFTER:
                         % COMMANDS:
                         \stopStaff \startStaff
-                        c'16..
-                        % AFTER:
-                        % START_BEAM:
-                        [
-                        c'64
-                        % AFTER:
-                        % STOP_BEAM:
-                        ]
-                        % BEFORE:
-                        % COMMANDS:
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                        s1 * 1/16
-                        % AFTER:
-                        % COMMANDS:
-                        \stopStaff \startStaff
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 13/8
-                        {
-                            c'2..
-                            c'8
-                        % CLOSE_BRACKETS:
-                        }
+                        c'1.
+                        c'8
                         % BEFORE:
                         % COMMANDS:
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -361,7 +384,19 @@
                         % AFTER:
                         % COMMANDS:
                         \stopStaff \startStaff
-                        s1 * 1/8
+                        % OPEN_BRACKETS:
+                        \times 8/13
+                        {
+                            c'8.
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            c'64
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
+                        % CLOSE_BRACKETS:
+                        }
                         % BEFORE:
                         % COMMANDS:
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -377,7 +412,7 @@
                         % AFTER:
                         % COMMANDS:
                         \stopStaff \startStaff
-                        s1 * 3/8
+                        c'4.
                         s1 * 3/4
                         s1 * 11/8
                         s1 * 1
