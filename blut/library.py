@@ -118,6 +118,26 @@ def visas_rhythms(index):
     return out
 
 
+def hyperventilation_perc_rhythms(numerators):
+    tuplets = []
+
+    for n in numerators:
+        tup = []
+
+        r = list(range(0, n))
+
+        for i in r:
+            tup.append(1)
+
+        tup = tuple(tup)
+
+        tuplets.append(tup)
+
+    handler = evans.RhythmHandler(evans.tuplet(tuplets))
+
+    return handler
+
+
 # selectors
 
 
@@ -177,6 +197,25 @@ def one_line(
             abjad.Clef("percussion"),
             abjad.LilyPondLiteral(
                 r"\staff-line-count 1",
+                "absolute_before",
+            ),
+        ],
+    )
+
+
+def two_lines(
+    score,
+    leaves,
+    voice="percussion voice",
+):
+    trinton.attach_multiple(
+        score=score,
+        voice=voice,
+        leaves=leaves,
+        attachments=[
+            abjad.Clef("percussion"),
+            abjad.LilyPondLiteral(
+                r"\staff-line-count 2",
                 "absolute_before",
             ),
         ],
@@ -356,7 +395,7 @@ def write_short_instrument_names(score):
 # fermate
 
 
-def fermata_measures(score, measures):
+def fermata_measures(score, measures, fermata="ufermata"):
     for voice_name in [
         "bassclarinet voice",
         "percussion voice",
@@ -382,7 +421,7 @@ def fermata_measures(score, measures):
         leaves=[_ - 1 for _ in measures],
         attachments=[
             abjad.Markup(
-                r'\markup \huge \center-column { \musicglyph "scripts.ufermata" } '
+                rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }} '
             ),
             abjad.LilyPondLiteral(
                 r"\once \override Score.TimeSignature.transparent = ##t",
