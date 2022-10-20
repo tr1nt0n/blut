@@ -1241,6 +1241,11 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight }
+                                        \startTextSpan
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
                                         \glissando
@@ -1262,6 +1267,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1320,6 +1327,11 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight }
+                                        \startTextSpan
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
                                         \glissando
@@ -1341,6 +1353,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1399,6 +1413,11 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide }
+                                        \startTextSpan
                                         \>
                                         \glissando
                                         % OPENING:
@@ -1421,6 +1440,8 @@
                                         :512
                                         % ARTICULATIONS:
                                         \mp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1600,6 +1621,11 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide }
+                                        \startTextSpan
                                         \<
                                         \glissando
                                         ~
@@ -1631,6 +1657,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1669,6 +1697,11 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
+                                        - \tweak padding #11.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "molto tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { molto pont. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -1688,6 +1721,8 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 3/8
@@ -1704,6 +1739,9 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -1732,9 +1770,17 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :64
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight }
+                                        \startTextSpan
                                         \glissando
                                         ~
                                         % OPENING:
@@ -1765,6 +1811,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1778,6 +1826,9 @@
                                             b'
                                         >64.
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \sfz
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
@@ -1794,6 +1845,8 @@
                                         \undo \hide NoteHead
                                         fs'8...
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1812,6 +1865,13 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #16
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide }
+                                        \startTextSpan
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -1831,6 +1891,10 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -1844,6 +1908,8 @@
                                             b'
                                         >64
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
@@ -1856,7 +1922,10 @@
                                         \override NoteHead.no-ledgers = ##t
                                         fs'8
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
                                         % SPANNER_STARTS:
+                                        \<
                                         ~
                                         % OPENING:
                                         % COMMANDS:
@@ -1882,7 +1951,16 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :32
+                                        % ARTICULATIONS:
+                                        \fff
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        - \tweak padding #12
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight tast. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -1902,6 +1980,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :256
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -1913,6 +1993,8 @@
                                             a'
                                         >64
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
@@ -1925,6 +2007,8 @@
                                         \override NoteHead.no-ledgers = ##t
                                         e'8
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
                                         % SPANNER_STARTS:
                                         ~
                                         % OPENING:
@@ -1951,7 +2035,16 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :32
+                                        % ARTICULATIONS:
+                                        \sff
                                         % SPANNER_STARTS:
+                                        - \tweak padding #12
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight tast. }
+                                        \startTextSpan
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -1971,6 +2064,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :256
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -1983,6 +2078,9 @@
                                             a'
                                         >16
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
+                                        \mf
                                         % SPANNER_STARTS:
                                         \glissando
                                         % OPENING:
@@ -1996,6 +2094,10 @@
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
                                         e'4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2011,6 +2113,13 @@
                                         % STEM_TREMOLOS:
                                         :32
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        - \tweak padding #12.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight pont. }
+                                        \startTextSpan
                                         \glissando
                                         ~
                                         % OPENING:
@@ -2043,6 +2152,10 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :128
+                                        % ARTICULATIONS:
+                                        \fff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2053,10 +2166,19 @@
                                         b'
                                     >32
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
                                     % START_BEAM:
                                     [
+                                    % SPANNER_STARTS:
+                                    \(
+                                    \>
                                     fs'32
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % SPANNER_STOPS:
+                                    \)
                                     % STOP_BEAM:
                                     ]
                                     % OPEN_BRACKETS:
@@ -2069,7 +2191,16 @@
                                             b'
                                         >4...
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        - \tweak padding #10.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { pont. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2086,6 +2217,9 @@
                                             \tweak style #'harmonic
                                             b'
                                         >32.
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2099,9 +2233,12 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :256
+                                        % ARTICULATIONS:
+                                        \ppp
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        \<
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2117,8 +2254,12 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :128
+                                        % ARTICULATIONS:
+                                        \p
                                         % STOP_BEAM:
                                         ]
+                                        % SPANNER_STARTS:
+                                        \>
                                     % CLOSE_BRACKETS:
                                     }
                                     <
@@ -2127,6 +2268,9 @@
                                         cqs''
                                     >8
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \pp
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
@@ -2142,8 +2286,13 @@
                                         cqs''
                                     >64
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
                                     % OPEN_BRACKETS:
                                     \times 4/7
                                     {
@@ -2174,6 +2323,9 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     r16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     r4..
                                 % CLOSE_BRACKETS:
                                 }
@@ -2483,6 +2635,11 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
+                                        - \tweak padding #11
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "trem. tight tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { trem. wide pont. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2504,6 +2661,8 @@
                                         :128
                                         % ARTICULATIONS:
                                         \fff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     r4.
@@ -2556,6 +2715,11 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #15.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight pont. }
+                                        \startTextSpan
                                         \<
                                         \glissando
                                         % OPENING:
@@ -2578,6 +2742,8 @@
                                         :512
                                         % ARTICULATIONS:
                                         \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2638,6 +2804,11 @@
                                         % STEM_TREMOLOS:
                                         :256
                                         % SPANNER_STARTS:
+                                        - \tweak padding #11.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight pont." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide molto tast. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2673,6 +2844,8 @@
                                         :128
                                         % ARTICULATIONS:
                                         \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 3/8
@@ -2685,9 +2858,14 @@
                                             a'
                                         >16.
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2719,6 +2897,14 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
+                                        - \tweak padding #15.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2738,6 +2924,10 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2754,6 +2944,13 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        - \tweak padding #10.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { molt pont. }
+                                        \startTextSpan
                                         \glissando
                                         ~
                                         % OPENING:
@@ -2779,6 +2976,10 @@
                                             g'
                                         >8
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2790,9 +2991,17 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :64
+                                        % ARTICULATIONS:
+                                        \p
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        - \tweak padding #15.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight }
+                                        \startTextSpan
+                                        \<
                                         \glissando
                                         ~
                                         % OPENING:
@@ -2819,6 +3028,10 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :512
+                                        % ARTICULATIONS:
+                                        \mf
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2832,7 +3045,11 @@
                                             g'
                                         >32.
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        \mp
                                         % SPANNER_STARTS:
+                                        \(
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2849,6 +3066,12 @@
                                             \tweak style #'harmonic
                                             a'
                                         >4...
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \sfz
+                                        % SPANNER_STOPS:
+                                        \)
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2858,7 +3081,15 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :32
+                                        % ARTICULATIONS:
+                                        \mp
                                         % SPANNER_STARTS:
+                                        - \tweak padding #11.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide molto tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide molto pont. }
+                                        \startTextSpan
+                                        \<
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2878,6 +3109,11 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :256
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2889,7 +3125,11 @@
                                             a'
                                         >16
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
                                         % SPANNER_STARTS:
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2916,6 +3156,9 @@
                                             \tweak style #'harmonic
                                             bqf'
                                         >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2926,7 +3169,17 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :32
+                                        % ARTICULATIONS:
+                                        \mf
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
+                                        - \tweak padding #11.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide molto pont." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { tight molto tast. }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2946,9 +3199,14 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     r4
                                     s1 * 1
                                 % CLOSE_BRACKETS:

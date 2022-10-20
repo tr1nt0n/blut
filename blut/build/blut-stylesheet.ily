@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.23.14"
 \language english
 #(set-default-paper-size "arch a")
 #(set-global-staff-size 12)
