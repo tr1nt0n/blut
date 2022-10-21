@@ -7,7 +7,7 @@
 \include "../library.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-spanners.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/ekmelos-ji-accidental-markups.ily"
+\include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 \include "/Users/trintonprater/baca/baca/scm/baca-circle-bow-markups.ily"
 
 \header {

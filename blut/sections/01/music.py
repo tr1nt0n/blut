@@ -51,7 +51,7 @@ for m in [1, 3, 5, 7, 9]:
     )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (10, 13)),
+    lambda _: trinton.select_target(_, (10, 12)),
     evans.RhythmHandler(
         evans.tuplet(library.visas_rhythms(0)),
     ),
@@ -208,7 +208,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (14, 17)),
+    lambda _: trinton.select_target(_, (14, 16)),
     evans.RhythmHandler(
         evans.tuplet(library.visas_rhythms(14)),
     ),
@@ -556,7 +556,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (13, 17)),
+    lambda _: trinton.select_target(_, (13, 16)),
     evans.RhythmHandler(rmakers.note),
     trinton.force_rest(selector=trinton.select_leaves_by_index([0])),
     evans.RewriteMeterCommand(boundary_depth=-2),
@@ -668,7 +668,7 @@ trinton.make_music(
         _,
         (
             12,
-            15,
+            14,
         ),
     ),
     evans.RhythmHandler(
@@ -964,7 +964,7 @@ trinton.make_music(
         _,
         (
             14,
-            16,
+            15,
         ),
     ),
     evans.RhythmHandler(

@@ -25,7 +25,7 @@ score = library.blut_score(
 # bass clarinet music commands
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1, 3)),
+    lambda _: trinton.select_target(_, (1, 2)),
     evans.RhythmHandler(rmakers.note),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.teeth_on_reed_pitches(3)),
@@ -74,7 +74,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (4, 8)),
+    lambda _: trinton.select_target(_, (4, 7)),
     evans.RhythmHandler(rmakers.note),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.teeth_on_reed_pitches(1)),
@@ -125,7 +125,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (7, 9)),
+    lambda _: trinton.select_target(_, (7, 8)),
     library.bcl_vibrato(
         amplitudes="(0 0.25 0.5 0.75 1 1.25 1.5 7 12 15)",
         selector=trinton.select_leaves_by_index(
@@ -187,7 +187,7 @@ trinton.make_music(
         _,
         (
             5,
-            7,
+            6,
         ),
     ),
     library.hyperventilation_perc_rhythms(

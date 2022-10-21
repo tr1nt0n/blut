@@ -67,6 +67,8 @@ for l in helianthated_numerators:
     for _ in l:
         numerator_sequence.append(_)
 
+# section 1
+
 section_numerators = abjad.sequence.partition_by_counts(
     sequence=numerator_sequence,
     counts=[
@@ -86,3 +88,25 @@ section_1b_ts = trinton.make_ts_pair_list(
 
 for ts in section_1b_ts:
     section_1a_ts.append(ts)
+
+# section 3
+
+section_numerators = abjad.sequence.partition_by_counts(
+    sequence=numerator_sequence,
+    counts=[
+        10,
+        10,
+    ],
+    overhang=True,
+)
+
+section_3_ts = trinton.make_ts_pair_list(
+    numerators=section_numerators[1],
+    denominators=cycle(
+        [
+            32,
+        ]
+    ),
+)
+
+section_3_ts.append((1, 16))

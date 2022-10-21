@@ -1,11 +1,13 @@
 import abjad
 import baca
 import evans
+import fractions
 import trinton
 import random
 from abjadext import rmakers
 from abjadext import microtones
 from itertools import cycle
+import itertools
 
 # immutables
 
@@ -88,6 +90,49 @@ visas_2_pitch_list = eval(
     ]"""
 )
 
+bells_talea = eval(
+    """[
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+    ]"""
+)
+
+vc_1_bells_hexachord = eval(
+    """[
+        21,
+        24.5,
+        19,
+        26,
+        30,
+        26.5,
+    ]"""
+)
+
+vc_2_bells_hexachord = eval(
+    """[
+        31.5,
+        24,
+        19,
+        24.5,
+        28,
+        26,
+    ]"""
+)
+
 # score
 
 
@@ -115,6 +160,11 @@ def blut_score(time_signatures):
 
 def visas_rhythms(index):
     out = trinton.rotated_sequence(visas_tuplets, index)
+    return out
+
+
+def bells_rhythms(index):
+    out = trinton.rotated_sequence(bells_talea, index)
     return out
 
 
@@ -181,7 +231,253 @@ def visas_pitches(index, cello):
     return pitches
 
 
+def bcl_bells_handler(fundamental_string, index):
+    _fund_to_pitch_list = {
+        "ef": [
+            -9,
+            fractions.Fraction(35, -4),
+            -9,
+            fractions.Fraction(33, -4),
+            -9,
+            -8.5,
+            fractions.Fraction(35, -4),
+            fractions.Fraction(33, -4),
+        ],
+        "fs": [
+            -6,
+            fractions.Fraction(23, -4),
+            -6,
+            fractions.Fraction(21, -4),
+            -6,
+            -5.5,
+            fractions.Fraction(23, -4),
+            fractions.Fraction(21, -4),
+        ],
+        "af": [
+            -4,
+            fractions.Fraction(15, -4),
+            -4,
+            fractions.Fraction(13, -4),
+            -4,
+            -3.5,
+            fractions.Fraction(15, -4),
+            fractions.Fraction(13, -4),
+        ],
+    }
+    microtone_handler = evans.PitchHandler(
+        pitch_list=trinton.rotated_sequence(
+            _fund_to_pitch_list[fundamental_string],
+            index,
+        ),
+        forget=False,
+    )
+
+    def handler(argument):
+        microtone_handler(argument)
+        logical_ties = abjad.select.logical_ties(argument, pitched=True)
+        for tie in logical_ties:
+            first = tie[0]
+            first.note_head.is_forced = True
+
+    return handler
+
+
+def vc_bells_handler(instrument, index, random_walk=True, seed=0):
+    _voice_to_hexachord = {
+        "cello 1": vc_1_bells_hexachord,
+        "cello 2": vc_2_bells_hexachord,
+    }
+    _voice_to_open_string = {
+        "cello 1": [-24, -3],
+        "cello 2": [-3, -24],
+    }
+
+    if random_walk is True:
+        pitch_list = trinton.random_walk(
+            chord=_voice_to_hexachord[instrument],
+            seed=seed,
+        )
+
+    else:
+        pitch_list = _voice_to_hexachord[instrument]
+
+    harmonic_handler = evans.PitchHandler(
+        pitch_list=trinton.rotated_sequence(
+            pitch_list,
+            index,
+        ),
+        forget=False,
+    )
+
+    open_string_handler = evans.PitchHandler(
+        pitch_list=_voice_to_open_string[instrument],
+        forget=False,
+    )
+
+    def handle(argument):
+        logical_ties = abjad.select.logical_ties(argument)
+
+        it = iter(logical_ties)
+
+        tups = [*zip(it, it)]
+
+        for tup in tups:
+            if abjad.get.duration(tup[0]) > abjad.get.duration(tup[1]):
+                open_string_handler(tup[0])
+                harmonic_handler(tup[1])
+            elif abjad.get.duration(tup[0]) < abjad.get.duration(tup[1]):
+                open_string_handler(tup[1])
+                harmonic_handler(tup[0])
+            else:
+                harmonic_handler(tup)
+
+    return handle
+
+
 # commands
+
+
+def vc_bells_attachments(instrument, padding=9.5):
+    def attach(argument):
+        logical_ties = abjad.select.logical_ties(argument, pitched=True)
+
+        start_text_span = abjad.StartTextSpan(
+            left_text=abjad.Markup(rf'\markup \upright {{ "pizz. molto pont." }}'),
+            right_text=None,
+            style="dashed-line-with-hook",
+        )
+
+        bundle = abjad.bundle(start_text_span, rf"- \tweak padding #{padding}")
+
+        abjad.attach(bundle, logical_ties[0][0])
+
+        abjad.attach(abjad.StopTextSpan(), logical_ties[-1][-1])
+
+        it = iter(logical_ties)
+
+        tups = [*zip(it, it)]
+
+        for tup in tups:
+            if abjad.get.duration(tup[0]) > abjad.get.duration(tup[1]):
+                abjad.attach(
+                    abjad.Clef("bass"),
+                    tup[0][0],
+                )
+                abjad.attach(
+                    abjad.Clef("treble"),
+                    tup[1][0],
+                )
+                abjad.attach(
+                    abjad.Dynamic("ff"),
+                    tup[0][0],
+                )
+                abjad.attach(
+                    abjad.Dynamic("p"),
+                    tup[1][0],
+                )
+                if tup[0][0].written_pitch.number == -24:
+                    abjad.attach(
+                        abjad.Markup(r'\markup \upright { "IV" }'),
+                        tup[0][0],
+                        direction=abjad.UP,
+                    )
+                else:
+                    abjad.attach(
+                        abjad.Markup(r'\markup \upright { "I" }'),
+                        tup[0][0],
+                        direction=abjad.UP,
+                    )
+            elif abjad.get.duration(tup[0]) < abjad.get.duration(tup[1]):
+                abjad.attach(
+                    abjad.Clef("bass"),
+                    tup[1][0],
+                )
+                abjad.attach(
+                    abjad.Clef("treble"),
+                    tup[0][0],
+                )
+                abjad.attach(
+                    abjad.Dynamic("ff"),
+                    tup[1][0],
+                )
+                abjad.attach(
+                    abjad.Dynamic("p"),
+                    tup[0][0],
+                )
+                if tup[1][0].written_pitch.number == -24:
+                    abjad.attach(
+                        abjad.Markup(r'\markup \upright { "IV" }'),
+                        tup[1][0],
+                        direction=abjad.UP,
+                    )
+                else:
+                    abjad.attach(
+                        abjad.Markup(r'\markup \upright { "I" }'),
+                        tup[1][0],
+                        direction=abjad.UP,
+                    )
+        for tie in logical_ties:
+            pitch = tie[0].written_pitch.number
+            if pitch == -24 or pitch == -3:
+                pass
+            else:
+                for note in tie:
+                    abjad.tweak(note.note_head, rf"\tweak style #'harmonic-mixed")
+
+            if pitch == 24 or pitch == 28 or pitch == 31.5 or pitch == 21:
+                abjad.attach(
+                    abjad.Markup(r'\markup \upright { "II" }'),
+                    tie[0],
+                    direction=abjad.UP,
+                )
+
+            elif pitch == 24.5 or pitch == 19 or pitch == 26.5:
+                abjad.attach(
+                    abjad.Markup(r'\markup \upright { "III" }'),
+                    tie[0],
+                    direction=abjad.UP,
+                )
+
+            elif pitch == 26 and instrument == "cello 1":
+                abjad.attach(
+                    abjad.Markup(r'\markup \upright { "II" }'),
+                    tie[0],
+                    direction=abjad.UP,
+                )
+
+            elif pitch == 26 and instrument == "cello 2":
+                abjad.attach(
+                    abjad.Markup(r'\markup \upright { "III" }'),
+                    tie[0],
+                    direction=abjad.UP,
+                )
+
+    return attach
+
+
+def bcl_bells_attachments():
+    def attach(argument):
+        logical_ties = abjad.select.logical_ties(argument)
+        slur_groups = abjad.sequence.partition_by_counts(
+            sequence=logical_ties,
+            counts=[3 for _ in range(len(logical_ties))],
+            overhang=True,
+        )
+        for group in slur_groups:
+            abjad.slur(group)
+            all_but_last_tie = abjad.select.exclude(group, [-1])
+            for tie in all_but_last_tie:
+                if len(tie) > 1:
+                    abjad.glissando(
+                        abjad.select.with_next_leaf(tie),
+                        hide_middle_note_heads=True,
+                        allow_repeats=True,
+                        allow_ties=True,
+                    )
+                else:
+                    abjad.attach(abjad.Glissando(), tie[0])
+
+    return attach
 
 
 def one_line(
@@ -290,6 +586,17 @@ def perc_instrument(instrument_string, selector):
         selector=selector,
     )
     return command
+
+
+# beaming
+
+
+def beam_logical_ties():
+    def beam(argument):
+        for tie in abjad.select.logical_ties(argument):
+            abjad.beam(tie, beam_rests=False)
+
+    return beam
 
 
 # spanners
