@@ -851,8 +851,8 @@ trinton.make_music(
         ),
     ),
     trinton.arrow_spanner_command(
-        l_string="trem. tight tast.",
-        r_string="trem. wide pont.",
+        l_string="tight trem. tast.",
+        r_string="wide trem. pont.",
         selector=trinton.select_leaves_by_index(
             [
                 0,

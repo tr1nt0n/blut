@@ -2637,8 +2637,8 @@
                                         \<
                                         - \tweak padding #11
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "trem. tight tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { trem. wide pont. }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight trem. tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { wide trem. pont. }
                                         \startTextSpan
                                         \glissando
                                         % OPENING:
