@@ -65,6 +65,12 @@
             % COMMANDS:
             \time 15/32
             s1 * 15/32
+            % AFTER:
+            % COMMANDS:
+            \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -78,12 +84,8 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            \once \override Score.BarLine.transparent = ##f
-            \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }

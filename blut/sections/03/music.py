@@ -508,21 +508,7 @@ trinton.attach_multiple(
     score=score,
     voice="Global Context",
     leaves=[
-        -1,
-    ],
-    attachments=[
-        abjad.BarLine("||"),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-    ],
-)
-
-trinton.attach_multiple(
-    score=score,
-    voice="Global Context",
-    leaves=[
-        -1,
+        -2,
     ],
     attachments=[
         abjad.BarLine("||"),

@@ -133,6 +133,19 @@ vc_2_bells_hexachord = eval(
     ]"""
 )
 
+bat_trat_pitches = eval(
+    """[
+        -12.5,
+        -5,
+        -12,
+        -6.5,
+        -10.5,
+        -6.5,
+        -12,
+        -5,
+    ]"""
+)
+
 # score
 
 
@@ -330,6 +343,19 @@ def vc_bells_handler(instrument, index, random_walk=True, seed=0):
                 harmonic_handler(tup[0])
             else:
                 harmonic_handler(tup)
+
+    return handle
+
+
+def pitch_bat_trat(index=0, seed=0):
+    pitch_list = trinton.random_walk(
+        chord=bat_trat_pitches,
+        seed=seed,
+    )
+    handler = evans.PitchHandler(pitch_list=trinton.rotated_sequence(pitch_list, index))
+
+    def handle(argument):
+        handler(argument)
 
     return handle
 
