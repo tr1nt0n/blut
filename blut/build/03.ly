@@ -41,13 +41,16 @@
             % COMMANDS:
             \time 8/32
             s1 * 1/4
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \break
             % OPENING:
             % COMMANDS:
             \time 12/32
             s1 * 3/8
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
+            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
             % OPENING:
             % COMMANDS:
             \time 4/32
@@ -73,6 +76,7 @@
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
@@ -137,16 +141,45 @@
                             s1 * 1/4
                             % AFTER:
                             % SPANNER_STARTS:
-                            (
                             \glissando
-                            s1 * 1/8
+                            r16
                             % AFTER:
                             % SPANNER_STARTS:
                             \glissando
-                            s1 * 1/4
+                            dqs'16
                             % AFTER:
-                            % SPANNER_STOPS:
-                            )
+                            % MARKUP:
+                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (two three four five)) (lh . (thumb)) (rh . ()))}
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            \glissando
+                            ~
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            dqs'8
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            dqs'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fff
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            \glissando
+                            r16
                             s1 * 3/8
                             s1 * 1/8
                             s1 * 15/32
@@ -242,9 +275,52 @@
                             % CLOSE_BRACKETS:
                             }
                             s1 * 1/4
-                            s1 * 1/8
-                            s1 * 1/4
+                            c'8
+                            % AFTER:
+                            % STEM_TREMOLOS:
+                            :64
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            \glissando
+                            % COMMANDS:
+                            \boxed-markup "Slit Drum w/ rubber mallets" 1
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            c'16
+                            % AFTER:
+                            % STEM_TREMOLOS:
+                            :128
+                            % ARTICULATIONS:
+                            \fff
+                            % STOP_BEAM:
+                            ]
+                            r16
+                            c'8
+                            % AFTER:
+                            % STEM_TREMOLOS:
+                            :64
+                            % ARTICULATIONS:
+                            \fff
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
                             s1 * 3/8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
                             s1 * 1/8
                             s1 * 15/32
                             % BEFORE:
@@ -427,10 +503,191 @@
                                     \stopTextSpan
                                     s1 * 1/4
                                     s1 * 1/8
-                                    s1 * 1/4
-                                    s1 * 3/8
-                                    s1 * 1/8
-                                    s1 * 15/32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    bf8.
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+41" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { flaut. molto pont. }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    bf16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    c8.
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "III" \upright "+51" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "flaut." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { scratch m.p. }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    c16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    af8
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+37" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl.m.p." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { scratch }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    af16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    r8
+                                    b32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+33" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    b32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    b8
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    c16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "III" \upright "+51" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -588,11 +845,199 @@
                                     \fff
                                     % STOP_BEAM:
                                     ]
-                                    s1 * 1/8
-                                    s1 * 1/4
-                                    s1 * 3/8
-                                    s1 * 1/8
-                                    s1 * 15/32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    b,8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "III" \upright "+55" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { flaut. molto pont. }
+                                    \startTextSpan
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    b,8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    b,16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    af8.
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+37" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "flaut." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { scratch m.p. }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    af16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    bf8
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+41" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl.m.p." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { scratch }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    bf16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    r8
+                                    b,32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "III" \upright "+55" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    b,32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    b,8
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    af16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % MARKUP:
+                                    ^ \markup \center-column { \upright "II" \upright "+37" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    af16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

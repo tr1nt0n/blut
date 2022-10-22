@@ -480,6 +480,80 @@ def bcl_bells_attachments():
     return attach
 
 
+def totem_attachments(bcl=False, vc=False, arrow=False):
+    _written_pitch_to_fingering = {
+        2.5: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (two three four five)) (lh . (thumb)) (rh . ()))}",
+        6: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two three four five six)) (lh . ()) (rh . (e)))}",
+        8: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}",
+    }
+
+    _written_pitch_to_cent = {
+        -13: r'\markup \center-column { \upright "III" \upright "+55" }',
+        -12: r'\markup \center-column { \upright "III" \upright "+51" }',
+        -4: r'\markup \center-column { \upright "II" \upright "+37" }',
+        -2: r'\markup \center-column { \upright "II" \upright "+41" }',
+        -1: r'\markup \center-column { \upright "II" \upright "+33" }',
+    }
+
+    def attach(argument):
+        ties = abjad.select.logical_ties(argument, pitched=True)
+        groups = abjad.sequence.partition_by_counts(
+            sequence=ties,
+            counts=[2 for _ in range(len(ties))],
+            overhang=True,
+        )
+        glissando_tweaks = []
+        if vc is True:
+            glissando_tweaks.append(
+                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t")
+            )
+            glissando_tweaks.append(abjad.Tweak(r"- \tweak arrow-length #2"))
+            glissando_tweaks.append(abjad.Tweak(r"- \tweak arrow-width #0.5"))
+        for group in groups:
+            abjad.beam(group)
+
+            if len(group) > 1:
+                abjad.glissando(
+                    group,
+                    *glissando_tweaks,
+                    hide_middle_note_heads=True,
+                    allow_repeats=True,
+                    allow_ties=True,
+                )
+
+            if bcl is True:
+                first_leaf = group[0][0]
+
+                pitch = first_leaf.written_pitch.number
+
+                abjad.attach(
+                    abjad.Markup(_written_pitch_to_fingering[pitch]),
+                    first_leaf,
+                    direction=abjad.UP,
+                )
+            if vc is True:
+
+                first_leaf = group[0][0]
+
+                pitch = first_leaf.written_pitch.number
+
+                abjad.attach(
+                    abjad.Markup(_written_pitch_to_cent[pitch]),
+                    first_leaf,
+                    direction=abjad.UP,
+                )
+
+                if groups.index(group) % 2 == 1:
+                    for leaf in group[0]:
+                        abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
+
+                else:
+                    for leaf in group[-1]:
+                        abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
+
+    return attach
+
+
 def one_line(
     score,
     leaves,
