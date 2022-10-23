@@ -172,14 +172,164 @@
                             % COMMANDS:
                             \stopStaff \startStaff
                             s1 * 15/8
-                            s1 * 3/8
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \override TupletNumber.text = \markup \italic 4:3
+                            % OPEN_BRACKETS:
+                            \times 12/16
+                            {
+                                af'4
+                                % AFTER:
+                                % MARKUP:
+                                ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                af'8..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \fff
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                af'32
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                                % STOP_BEAM:
+                                ]
+                            % CLOSE_BRACKETS:
+                            }
+                            % AFTER:
+                            % GROB_REVERTS:
+                            \revert TupletNumber.text
                             s1 * 5/4
-                            s1 * 1/2
+                            af'4
+                            % AFTER:
+                            % MARKUP:
+                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            \glissando
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            af'8..
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ffff
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            af'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % STOP_BEAM:
+                            ]
                             s1 * 5/8
                             s1 * 1/8
-                            s1 * 1
+                            af'2
+                            % AFTER:
+                            % MARKUP:
+                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            \glissando
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            af'4..
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ffff
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            af'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
                             s1 * 1/4
-                            s1 * 15/8
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \override TupletNumber.text = \markup \italic 16:15
+                            % OPEN_BRACKETS:
+                            \times 15/16
+                            {
+                                af'1
+                                % AFTER:
+                                % MARKUP:
+                                ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                af'2..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \fffff
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                af'8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                            % CLOSE_BRACKETS:
+                            }
+                            % AFTER:
+                            % GROB_REVERTS:
+                            \revert TupletNumber.text
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -187,8 +337,70 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 1/4
-                            s1 * 5/8
+                            af'8
+                            % AFTER:
+                            % MARKUP:
+                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            \glissando
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            af'16..
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fffff
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            af'64
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % STOP_BEAM:
+                            ]
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \override TupletNumber.text = \markup \italic 8:5
+                            % OPEN_BRACKETS:
+                            \times 10/16
+                            {
+                                c'2
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                \glissando
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                c'4..
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                c'16
+                            % CLOSE_BRACKETS:
+                            }
+                            % AFTER:
+                            % GROB_REVERTS:
+                            \revert TupletNumber.text
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -224,12 +436,159 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 15/8
-                            s1 * 3/8
-                            s1 * 5/4
-                            s1 * 1/2
-                            s1 * 5/8
-                            s1 * 1/8
+                            r8.
+                            % AFTER:
+                            % COMMANDS:
+                            \boxed-markup "Chinese Cymbal w/ triangle beater" 1
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            \ppp
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r4
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r4.
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/6
+                            {
+                                r8
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r16
+                            % CLOSE_BRACKETS:
+                            }
+                            r8.
+                            r16
+                            r8
+                            c'8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r16
+                            c'4.
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fff
+                            % COMMANDS:
+                            \boxed-markup "w/ bow" 1
+                            r16
+                            % AFTER:
+                            % COMMANDS:
+                            \boxed-markup "w/ triangle beater" 1
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            \pp
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r16
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r16
+                            r16
+                            r8
+                            % OPEN_BRACKETS:
+                            \times 2/3
+                            {
+                                r8.
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r8
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r8
+                            % CLOSE_BRACKETS:
+                            }
+                            c'8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r8
+                            c'2
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ffff
+                            % COMMANDS:
+                            \boxed-markup "w/ bow" 1
+                            r8.
+                            % AFTER:
+                            % COMMANDS:
+                            \boxed-markup "w/ triangle beater" 1
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            \p
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            r16
+                            r16
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \stopped
+                            % COMMANDS:
+                            - \baca-circle-markup
+                            % OPEN_BRACKETS:
+                            \times 2/3
+                            {
+                                r16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r16
+                            % CLOSE_BRACKETS:
+                            }
                             s1 * 1
                             s1 * 1/4
                             s1 * 15/8
@@ -241,7 +600,35 @@
                             % COMMANDS:
                             \stopStaff \startStaff
                             s1 * 1/4
-                            s1 * 5/8
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \override TupletNumber.text = \markup \italic 8:5
+                            % OPEN_BRACKETS:
+                            \times 10/16
+                            {
+                                c'2
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                \glissando
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                c'4..
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                c'16
+                            % CLOSE_BRACKETS:
+                            }
+                            % AFTER:
+                            % GROB_REVERTS:
+                            \revert TupletNumber.text
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -922,7 +1309,7 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    \fff
+                                    \ffff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
                                     - \tweak padding #11
@@ -1100,10 +1487,528 @@
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
                                     \stopTextSpanOne
-                                    s1 * 1/8
-                                    s1 * 1
-                                    s1 * 1/4
-                                    s1 * 15/8
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        \tweak style #'triangle
+                                        dqf16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #5.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        r16
+                                        \tweak style #'triangle
+                                        fqs16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 3/5
+                                    {
+                                        r16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ffff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        - \tweak padding #10
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        - \tweak padding #13
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
+                                        \startTextSpanOne
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        r8
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 8/7
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        fs'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \stopTextSpanTwo
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 0
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \mp
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 0
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fffff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                    \startTextSpanTwo
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 6/11
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        r16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \tweak style #'harmonic-mixed
+                                    fs'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    \tweak style #'harmonic-mixed
+                                    fs'8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'triangle
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    % OPEN_BRACKETS:
+                                    \times 4/5
+                                    {
+                                        r8
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 6/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1111,8 +2016,110 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
-                                    s1 * 5/8
+                                    % OPEN_BRACKETS:
+                                    \times 4/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \fffff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        - \tweak padding #10
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        - \tweak padding #13
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
+                                        \startTextSpanOne
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \italic 8:5
+                                    % OPEN_BRACKETS:
+                                    \times 10/16
+                                    {
+                                        c'2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c'4..
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        c'16
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1178,11 +2185,72 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 15/8
-                                    s1 * 3/8
+                                    c,4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \fff
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #5.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
+                                    \startTextSpan
                                     s1 * 5/4
-                                    s1 * 1/2
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    c,2
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #5.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
+                                    \startTextSpan
                                     s1 * 5/8
-                                    s1 * 1/8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % OPEN_BRACKETS:
+                                    \times 4/5
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        \tweak style #'triangle
+                                        g32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #5.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        \tweak style #'triangle
+                                        bqs,32
+                                        \tweak style #'triangle
+                                        g32
+                                        r32
+                                        \tweak style #'triangle
+                                        bqs,32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1
                                     s1 * 1/4
                                     s1 * 15/8
@@ -1194,7 +2262,35 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 1/4
-                                    s1 * 5/8
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \italic 8:5
+                                    % OPEN_BRACKETS:
+                                    \times 10/16
+                                    {
+                                        c'2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c'4..
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        c'16
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:

@@ -146,6 +146,22 @@ bat_trat_pitches = eval(
     ]"""
 )
 
+# dictionaries
+
+_written_pitch_to_fingering = {
+    2.5: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (two three four five)) (lh . (thumb)) (rh . ()))}",
+    6: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two three four five six)) (lh . ()) (rh . (e)))}",
+    8: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}",
+}
+
+_written_pitch_to_cent = {
+    -13: r'\markup \center-column { \upright "III" \upright "+55" }',
+    -12: r'\markup \center-column { \upright "III" \upright "+51" }',
+    -4: r'\markup \center-column { \upright "II" \upright "+37" }',
+    -2: r'\markup \center-column { \upright "II" \upright "+41" }',
+    -1: r'\markup \center-column { \upright "II" \upright "+33" }',
+}
+
 # score
 
 
@@ -507,20 +523,6 @@ def bcl_bells_attachments():
 
 
 def totem_attachments(bcl=False, vc=False, arrow=False):
-    _written_pitch_to_fingering = {
-        2.5: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (two three four five)) (lh . (thumb)) (rh . ()))}",
-        6: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two three four five six)) (lh . ()) (rh . (e)))}",
-        8: r"\markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}",
-    }
-
-    _written_pitch_to_cent = {
-        -13: r'\markup \center-column { \upright "III" \upright "+55" }',
-        -12: r'\markup \center-column { \upright "III" \upright "+51" }',
-        -4: r'\markup \center-column { \upright "II" \upright "+37" }',
-        -2: r'\markup \center-column { \upright "II" \upright "+41" }',
-        -1: r'\markup \center-column { \upright "II" \upright "+33" }',
-    }
-
     def attach(argument):
         ties = abjad.select.logical_ties(argument, pitched=True)
         groups = abjad.sequence.partition_by_counts(
