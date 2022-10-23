@@ -71,6 +71,135 @@ trinton.make_music(
     voice=score["cello 1 voice"],
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(
+        _,
+        (
+            3,
+            7,
+        ),
+    ),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                3,
+                1,
+                2,
+                1,
+                1,
+                1,
+                4,
+            ],
+            16,
+            extra_counts=[
+                0,
+                3,
+                1,
+                4,
+            ],
+        )
+    ),
+    trinton.force_rest(selector=trinton.patterned_tie_index_selector([11], 12)),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(),
+    evans.PitchHandler([6]),
+    trinton.beam_groups(beam_rests=False),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Clef("treble"),
+            abjad.bundle(
+                abjad.Markup(r"\markup \italic { Espressivo }"), r"- \tweak padding #3"
+            ),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("ppp"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<|"),
+            abjad.Dynamic("fff"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("p"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<|"),
+            abjad.Dynamic("fff"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("p"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("mp"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                0,
+                6,
+                6,
+                12,
+                19,
+                19,
+                26,
+                28,
+                34,
+                36,
+                36,
+                40,
+                46,
+                46,
+                53,
+                54,
+                61,
+                63,
+                63,
+                66,
+                69,
+            ]
+        ),
+    ),
+    library.electroshock_attachments(),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index([0, -1]),
+        id="One",
+        left_text="IV, vibrato moltissimo",
+        style="dashed-line-with-hook",
+        padding=13,
+    ),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index(
+            [
+                28,
+                33,
+                54,
+                60,
+            ]
+        ),
+        id="Two",
+        left_text="1/2 scratch",
+        style="dashed-line-with-hook",
+        padding=11,
+    ),
+    voice=score["cello 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            1,
+            3,
+            1,
+            5,
+            2,
+        )
+    ),
+)
+
 # cello 2 music commands
 
 trinton.make_music(
@@ -125,6 +254,8 @@ library.one_line(
     voice="percussion voice",
     leaves=[0],
 )
+
+# trinton.annotate_leaves(score)
 
 # markups and beams
 
@@ -203,7 +334,7 @@ trinton.attach_multiple(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
         ),
         abjad.LilyPondLiteral(
-            r"""\set Score.repeatCommands = #'((volta "1-4"))""",
+            r"""\set Score.repeatCommands = #'((volta "1 - 4"))""",
             site="before",
         ),
     ],
@@ -225,6 +356,14 @@ trinton.attach_multiple(
             site="after",
         ),
     ],
+)
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        1,
+    ],
+    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
 )
 
 

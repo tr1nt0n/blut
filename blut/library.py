@@ -535,6 +535,7 @@ def totem_attachments(bcl=False, vc=False, arrow=False):
             )
             glissando_tweaks.append(abjad.Tweak(r"- \tweak arrow-length #2"))
             glissando_tweaks.append(abjad.Tweak(r"- \tweak arrow-width #0.5"))
+            glissando_tweaks.append(abjad.Tweak(r"- \tweak thickness #2"))
         for group in groups:
             abjad.beam(group)
 
@@ -576,6 +577,39 @@ def totem_attachments(bcl=False, vc=False, arrow=False):
                 else:
                     for leaf in group[-1]:
                         abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
+
+    return attach
+
+
+def electroshock_attachments():
+    def attach(argument):
+        ties = abjad.select.logical_ties(argument, pitched=True)
+        for tie in ties:
+            abjad.attach(abjad.Articulation(">"), tie[0])
+        groups = abjad.select.group_by_contiguity(ties)
+        for group in groups:
+            abjad.glissando(
+                group,
+                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
+                abjad.Tweak(r"- \tweak arrow-length #2"),
+                abjad.Tweak(r"- \tweak arrow-width #0.5"),
+                abjad.Tweak(r"- \tweak thickness #2"),
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+            if groups.index(group) % 3 == 1:
+                for leaf in group[0]:
+                    abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
+
+            elif groups.index(group) % 2 == 1:
+                for leaf in group[-1]:
+                    abjad.tweak(leaf.note_head, rf"\tweak style #'triangle")
+                for leaf in group[0]:
+                    abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
+            else:
+                for leaf in group[-1]:
+                    abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
 
     return attach
 

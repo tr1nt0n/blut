@@ -30,7 +30,7 @@
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.transparent = ##t
-            \set Score.repeatCommands = #'((volta "1-4"))
+            \set Score.repeatCommands = #'((volta "1 - 4"))
             % OPENING:
             % COMMANDS:
             \time 1/16
@@ -42,6 +42,7 @@
             \bar ":|."
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
@@ -318,11 +319,787 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 15/8
-                                    s1 * 3/8
-                                    s1 * 5/4
-                                    s1 * 1/2
-                                    s1 * 5/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 0
+                                    \set stemRightBeamCount = 2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % MARKUP:
+                                    - \tweak padding #3
+                                    - \markup \italic { Espressivo }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    - \tweak padding #13
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ppp
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 5/7
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        r16
+                                        \tweak style #'harmonic-mixed
+                                        fs'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \pp
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    fs'8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        r16
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 6/7
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \fff
+                                        % START_BEAM:
+                                        [
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        - \tweak padding #11
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 1
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    fs'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \pp
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    \tweak style #'harmonic-mixed
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    fs'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    % OPEN_BRACKETS:
+                                    \times 4/7
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        fs'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \times 2/3
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 3/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'triangle
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % STOP_BEAM:
+                                        ]
+                                        r8
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        \tweak style #'harmonic-mixed
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                    \startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 10/13
+                                    {
+                                        fs'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \stopTextSpanTwo
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 1
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 1
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \times 4/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 2
+                                        \set stemRightBeamCount = 0
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        fs'16
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                        r16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 0
+                                        \set stemRightBeamCount = 1
+                                        \tweak style #'harmonic-mixed
+                                        fs'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set stemLeftBeamCount = 1
+                                        \set stemRightBeamCount = 2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        fs'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'triangle
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \mp
+                                    % STOP_BEAM:
+                                    ]
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
                                     s1 * 1/8
                                     s1 * 1
                                     s1 * 1/4

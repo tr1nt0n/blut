@@ -524,6 +524,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -562,6 +563,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -601,6 +603,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
@@ -641,6 +644,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \>
@@ -676,6 +680,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -868,6 +873,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -912,6 +918,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -951,6 +958,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
@@ -991,6 +999,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \>
@@ -1026,6 +1035,7 @@
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
                                     \glissando
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
