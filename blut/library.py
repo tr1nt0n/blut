@@ -4,6 +4,7 @@ import evans
 import fractions
 import trinton
 import random
+import quicktions
 from abjadext import rmakers
 from abjadext import microtones
 from itertools import cycle
@@ -374,6 +375,93 @@ def pitch_bat_trat(index=0, seed=0):
         handler(argument)
 
     return handle
+
+
+def pitch_monolith(voice_name, index, selector=trinton.pleaves()):
+    _voice_name_to_pitch_list = {
+        "bassclarinet voice": trinton.rotated_sequence(["13/1", "11/1", "39/4"], index),
+        "cello 1 voice": trinton.rotated_sequence(
+            [
+                [
+                    quicktions.Fraction("4/1"),
+                    quicktions.Fraction("9/1"),
+                ],
+                [
+                    quicktions.Fraction("9/8"),
+                    quicktions.Fraction("9/1"),
+                ],
+                [quicktions.Fraction("9/8"), quicktions.Fraction("198/34")],
+            ],
+            index,
+        ),
+        "cello 2 voice": trinton.rotated_sequence(
+            [
+                [quicktions.Fraction("6/5"), quicktions.Fraction("7/1")],
+                [quicktions.Fraction("15/4"), quicktions.Fraction("15/1")],
+                [quicktions.Fraction("9/8"), quicktions.Fraction("7/1")],
+            ],
+            index,
+        ),
+    }
+
+    _voice_name_to_cent_string = {
+        "cello 1 voice": trinton.rotated_sequence(
+            [
+                "+4",
+                "+4",
+                "+50",
+            ],
+            index,
+        ),
+        "cello 2 voice": trinton.rotated_sequence(
+            [
+                "-31",
+                "-12",
+                "-31",
+            ],
+            index,
+        ),
+        "bassclarinet voice": None,
+    }
+
+    fundamental_handler = evans.PitchHandler(
+        pitch_list=trinton.rotated_sequence(
+            [
+                -27,
+                -26,
+                -26,
+            ],
+            index,
+        )
+    )
+    ratio_handler = evans.PitchHandler(
+        pitch_list=_voice_name_to_pitch_list[voice_name], as_ratios=True
+    )
+
+    def pitch(argument):
+        selections = selector(argument)
+        fundamental_handler(selections)
+        selections = selector(argument)
+        ratio_handler(selections)
+        selections = selector(argument)
+        for leaf in abjad.select.leaves(selections):
+            if isinstance(leaf, abjad.Chord):
+                leaf.note_heads[1].is_forced = True
+            else:
+                leaf.note_head.is_forced = True
+
+        if voice_name == "cello 1 voice" or voice_name == "cello 2 voice":
+            for leaf, string in zip(
+                abjad.select.leaves(selections), _voice_name_to_cent_string[voice_name]
+            ):
+                abjad.detach(abjad.Markup, leaf)
+                abjad.attach(
+                    abjad.Markup(rf'\markup \upright {{ "{string}" }}'),
+                    leaf,
+                    direction=abjad.UP,
+                )
+
+    return pitch
 
 
 # commands

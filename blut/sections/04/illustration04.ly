@@ -378,9 +378,15 @@
                             % OPEN_BRACKETS:
                             \times 10/16
                             {
-                                c'2
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
+                                d''!2
                                 % AFTER:
+                                % MARKUP:
+                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
                                 % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
                                 \glissando
                                 % OPENING:
                                 % COMMANDS:
@@ -388,14 +394,31 @@
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
-                                c'4..
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
+                                d''!4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \mp
+                                % MARKUP:
+                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                c'16
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
+                                d''!16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                                % MARKUP:
+                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
                             % CLOSE_BRACKETS:
                             }
                             % AFTER:
@@ -589,9 +612,42 @@
                                 r16
                             % CLOSE_BRACKETS:
                             }
-                            s1 * 1
-                            s1 * 1/4
-                            s1 * 15/8
+                            c'1
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ffff
+                            % COMMANDS:
+                            \boxed-markup "w/ bow" 1
+                            % OPEN_BRACKETS:
+                            \times 4/7
+                            {
+                                r8
+                                % AFTER:
+                                % COMMANDS:
+                                \boxed-markup "w/ triangle beater" 1
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                \mp
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r8
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \stopped
+                                % COMMANDS:
+                                - \baca-circle-markup
+                                r16
+                            % CLOSE_BRACKETS:
+                            }
+                            c'1...
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fffff
+                            % COMMANDS:
+                            \boxed-markup "w/ bow" 1
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -599,7 +655,12 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 1/4
+                            c'4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fffff
+                            % COMMANDS:
+                            \boxed-markup "w/ bow" 1
                             % BEFORE:
                             % GROB_OVERRIDES:
                             \override TupletNumber.text = \markup \italic 8:5
@@ -608,8 +669,14 @@
                             {
                                 c'2
                                 % AFTER:
+                                % STEM_TREMOLOS:
+                                :32
                                 % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
                                 \glissando
+                                % COMMANDS:
+                                \boxed-markup "Wooden Wind Chimes" 1
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -617,6 +684,14 @@
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
                                 c'4..
+                                % AFTER:
+                                % STEM_TREMOLOS:
+                                :32
+                                % ARTICULATIONS:
+                                \mp
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -624,6 +699,11 @@
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
                                 c'16
+                                % AFTER:
+                                % STEM_TREMOLOS:
+                                :128
+                                % ARTICULATIONS:
+                                \!
                             % CLOSE_BRACKETS:
                             }
                             % AFTER:
@@ -2097,9 +2177,27 @@
                                     % OPEN_BRACKETS:
                                     \times 10/16
                                     {
-                                        c'2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                                            ff'!
+                                        >2
                                         % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "+50" }
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        - \tweak padding #10
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2107,14 +2205,43 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        c'4..
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                                            ff'!
+                                        >4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % MARKUP:
+                                        ^ \markup \upright { "+50" }
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
-                                        c'16
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                                            ff'!
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % MARKUP:
+                                        ^ \markup \upright { "+50" }
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % AFTER:
@@ -2185,14 +2312,14 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 15/8
-                                    c,4.
+                                    d,4.
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STARTS:
-                                    - \tweak padding #5.5
+                                    - \tweak padding #3.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
                                     \startTextSpan
@@ -2207,7 +2334,7 @@
                                     % ARTICULATIONS:
                                     \ffff
                                     % SPANNER_STARTS:
-                                    - \tweak padding #5.5
+                                    - \tweak padding #3.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
                                     \startTextSpan
@@ -2251,26 +2378,73 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
-                                    s1 * 1
+                                    d,1
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
+                                    \startTextSpan
                                     s1 * 1/4
-                                    s1 * 15/8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    c,1...
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \fffff
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
+                                    \startTextSpan
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
+                                    d,4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \fffff
+                                    % MARKUP:
+                                    ^ \markup \upright { "IV, trem. pont." }
                                     % BEFORE:
                                     % GROB_OVERRIDES:
                                     \override TupletNumber.text = \markup \italic 8:5
                                     % OPEN_BRACKETS:
                                     \times 10/16
                                     {
-                                        c'2
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
+                                            af'!
+                                        >2
                                         % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "-31" }
                                         % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        - \tweak padding #10
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
+                                        \startTextSpan
                                         \glissando
                                         % OPENING:
                                         % COMMANDS:
@@ -2278,14 +2452,43 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        c'4..
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
+                                            af'!
+                                        >4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % MARKUP:
+                                        ^ \markup \upright { "-31" }
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
-                                        c'16
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \abjad-natural  }
+                                            c,
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
+                                            af'!
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % MARKUP:
+                                        ^ \markup \upright { "-31" }
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % AFTER:
