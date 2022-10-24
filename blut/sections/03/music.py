@@ -236,7 +236,7 @@ trinton.make_music(
         l_string="scratch",
         r_string="flaut. molto pont.",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        padding=10,
+        padding=11,
     ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
@@ -302,7 +302,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=12,
+        padding=12.5,
     ),
     trinton.arrow_spanner_command(
         l_string="fl.m.p.",
@@ -314,7 +314,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=9.5,
+        padding=10.5,
     ),
     voice=score["cello 1 voice"],
 )
@@ -453,7 +453,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=12,
+        padding=13,
     ),
     trinton.arrow_spanner_command(
         l_string="fl.m.p.",
@@ -465,7 +465,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=9.5,
+        padding=11,
     ),
     voice=score["cello 2 voice"],
 )

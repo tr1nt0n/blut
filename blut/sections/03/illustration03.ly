@@ -521,6 +521,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -529,7 +530,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #10
+                                    - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { flaut. molto pont. }
@@ -550,6 +551,7 @@
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -560,6 +562,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -568,7 +571,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #12
+                                    - \tweak padding #12.5
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "flaut." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { scratch m.p. }
@@ -589,6 +592,7 @@
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -600,6 +604,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -607,7 +612,7 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #9.5
+                                    - \tweak padding #10.5
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "fl.m.p." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { scratch }
@@ -627,6 +632,7 @@
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -641,6 +647,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -665,6 +672,8 @@
                                     \tweak style #'harmonic-mixed
                                     b8
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
                                     \tweak style #'harmonic-mixed
@@ -677,6 +686,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -699,6 +709,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:
@@ -870,6 +882,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -901,6 +914,7 @@
                                     b,16
                                     % AFTER:
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -915,6 +929,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -923,7 +938,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #12
+                                    - \tweak padding #13
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "flaut." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { scratch m.p. }
@@ -944,6 +959,7 @@
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -955,6 +971,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -962,7 +979,7 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #9.5
+                                    - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "fl.m.p." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { scratch }
@@ -982,6 +999,7 @@
                                     % ARTICULATIONS:
                                     \fff
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
@@ -996,6 +1014,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -1020,6 +1039,8 @@
                                     \tweak style #'harmonic-mixed
                                     b,8
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
                                     \tweak style #'harmonic-mixed
@@ -1032,6 +1053,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak arrow-length #2
                                     - \tweak arrow-width #0.5
                                     - \tweak bound-details.right.arrow ##t
@@ -1054,6 +1076,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:

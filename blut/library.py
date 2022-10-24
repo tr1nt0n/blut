@@ -650,6 +650,8 @@ def totem_attachments(bcl=False, vc=False, arrow=False):
                 )
             if vc is True:
 
+                abjad.slur(group)
+
                 first_leaf = group[0][0]
 
                 pitch = first_leaf.written_pitch.number
