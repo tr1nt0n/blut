@@ -744,6 +744,26 @@ def two_lines(
     )
 
 
+def five_lines(
+    score,
+    leaves,
+    clef="treble",
+    voice="percussion voice",
+):
+    trinton.attach_multiple(
+        score=score,
+        voice=voice,
+        leaves=leaves,
+        attachments=[
+            abjad.Clef(clef),
+            abjad.LilyPondLiteral(
+                r"\staff-line-count 5",
+                "absolute_before",
+            ),
+        ],
+    )
+
+
 def artificial_harmonics():
     def change_noteheads(argument):
         leaves = abjad.select.leaves(argument, pitched=True)
