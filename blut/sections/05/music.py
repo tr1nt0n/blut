@@ -161,7 +161,11 @@ trinton.make_music(
     ),
     evans.RhythmHandler(rmakers.note),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(pitch_list=library.teeth_on_reed_pitches(1)),
+    evans.PitchHandler(
+        pitch_list=[
+            6,
+        ]
+    ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("p"),
@@ -176,11 +180,16 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.arrow_spanner_command(
-        l_string="air",
-        r_string="overblow",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        padding=4,
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(library._written_pitch_to_fingering[6]),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ]
+        ),
+        direction=abjad.UP,
     ),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((17,)),

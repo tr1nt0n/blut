@@ -271,28 +271,23 @@
                             % OPENING:
                             % COMMANDS:
                             \clef "treble"
-                            bf4.
+                            fs'4.
                             % AFTER:
                             % ARTICULATIONS:
                             \p
+                            % MARKUP:
+                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two three four five six)) (lh . ()) (rh . (e)))}
                             % SPANNER_STARTS:
-                            - \tweak padding #4
-                            - \abjad-dashed-line-with-arrow
-                            - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
-                            - \tweak bound-details.right.text \markup \upright { overblow }
-                            \startTextSpan
                             \<
                             ~
-                            bf8.
+                            fs'8.
                             % AFTER:
                             % SPANNER_STARTS:
                             ~
-                            bf2
+                            fs'2
                             % AFTER:
                             % ARTICULATIONS:
                             \fff
-                            % SPANNER_STOPS:
-                            \stopTextSpan
                             s1 * 9/16
                             s1 * 7/8
                             s1 * 1/2
