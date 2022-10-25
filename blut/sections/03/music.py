@@ -208,7 +208,7 @@ trinton.make_music(
     library.vc_bells_handler(instrument="cello 1", index=0, seed=13),
     library.vc_bells_attachments(instrument="cello 1"),
     trinton.attachment_command(
-        attachments=[abjad.Dynamic("p")],
+        attachments=[abjad.Dynamic("p"), abjad.Clef("treble")],
         selector=trinton.select_leaves_by_index([0]),
     ),
     library.beam_logical_ties(),
@@ -376,6 +376,7 @@ trinton.make_music(
     abjad.glissando,
     trinton.linear_attachment_command(
         attachments=[
+            abjad.Clef("tenorvarC"),
             abjad.Dynamic("fp"),
             abjad.Articulation(">"),
             abjad.StartHairpin("<"),

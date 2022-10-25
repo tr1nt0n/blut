@@ -974,6 +974,9 @@
                                         % COMMANDS:
                                         \set Staff.instrumentName = \markup \bold { Violoncello I }
                                         \set Staff.shortInstrumentName = \markup \bold { vc. I }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "tenorvarC"
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -986,7 +989,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #13.5
+                                        - \tweak padding #8
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
@@ -1039,7 +1042,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #11
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                         \startTextSpan
@@ -1092,7 +1095,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #16
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                         \startTextSpan
@@ -1142,7 +1145,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #7.5
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                     \startTextSpan
@@ -1241,7 +1244,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight }
@@ -1327,7 +1330,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight }
@@ -1413,7 +1416,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide }
@@ -1621,7 +1624,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide }
@@ -1697,7 +1700,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        - \tweak padding #11.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "molto tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { molto pont. }
@@ -1776,7 +1779,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16.5
+                                        - \tweak padding #7
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight }
@@ -1865,7 +1868,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #16
+                                        - \tweak padding #7
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide }
@@ -1956,7 +1959,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        - \tweak padding #12
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight tast. }
@@ -2038,7 +2041,7 @@
                                         % ARTICULATIONS:
                                         \sff
                                         % SPANNER_STARTS:
-                                        - \tweak padding #12
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight tast. }
@@ -2115,7 +2118,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
-                                        - \tweak padding #12.5
+                                        - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight pont. }
@@ -2196,7 +2199,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        - \tweak padding #10.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { pont. }
@@ -2348,6 +2351,9 @@
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \bold { Violoncello II }
                                     \set Staff.shortInstrumentName = \markup \bold{ vc. II }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "tenorvarC"
                                     r16
                                     % BEFORE:
                                     % COMMANDS:
@@ -2367,7 +2373,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #13.5
+                                    - \tweak padding #8
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
@@ -2439,7 +2445,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #11
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                         \startTextSpan
@@ -2496,7 +2502,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #16
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                         \startTextSpan
@@ -2547,7 +2553,7 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #7.5
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                     \startTextSpan
@@ -2635,7 +2641,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
-                                        - \tweak padding #11
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tight trem. tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide trem. pont. }
@@ -2715,7 +2721,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #15.5
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight pont. }
@@ -2804,7 +2810,7 @@
                                         % STEM_TREMOLOS:
                                         :256
                                         % SPANNER_STARTS:
-                                        - \tweak padding #11.5
+                                        - \tweak padding #7
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tight pont." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide molto tast. }
@@ -2900,7 +2906,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        - \tweak padding #15.5
+                                        - \tweak padding #8
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight }
@@ -2946,7 +2952,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
-                                        - \tweak padding #10.5
+                                        - \tweak padding #5.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { molt pont. }
@@ -2996,7 +3002,7 @@
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak padding #15.5
+                                        - \tweak padding #8
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight }
@@ -3084,9 +3090,9 @@
                                         % ARTICULATIONS:
                                         \mp
                                         % SPANNER_STARTS:
-                                        - \tweak padding #11.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide molto tast." } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight molto tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { wide molto pont. }
                                         \startTextSpan
                                         \<
@@ -3175,7 +3181,7 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
-                                        - \tweak padding #11.5
+                                        - \tweak padding #6.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "wide molto pont." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { tight molto tast. }

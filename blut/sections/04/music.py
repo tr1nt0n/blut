@@ -543,7 +543,7 @@ trinton.make_music(
     trinton.beam_groups(beam_rests=False),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Clef("treble"),
+            abjad.Clef("tenorvarC"),
             abjad.bundle(
                 abjad.Markup(r"\markup \italic { Espressivo }"), r"- \tweak padding #3"
             ),
@@ -603,7 +603,7 @@ trinton.make_music(
         id="One",
         left_text="IV, vibrato moltissimo",
         style="dashed-line-with-hook",
-        padding=13,
+        padding=7.5,
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index(
@@ -617,7 +617,7 @@ trinton.make_music(
         id="Two",
         left_text="1/2 scratch",
         style="dashed-line-with-hook",
-        padding=11,
+        padding=6,
     ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -713,7 +713,7 @@ trinton.make_music(
     trinton.beam_groups(beam_rests=False),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Clef("treble"),
+            abjad.Clef("tenorvarC"),
             abjad.Dynamic("ffff"),
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mp"),
@@ -739,14 +739,14 @@ trinton.make_music(
         id="One",
         left_text="IV, vibrato moltissimo",
         style="dashed-line-with-hook",
-        padding=13,
+        padding=9.5,
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([1, 12, 18, -1]),
         id="Two",
         left_text="1/2 scratch",
         style="dashed-line-with-hook",
-        padding=10,
+        padding=7.5,
     ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -797,7 +797,7 @@ trinton.make_music(
         id="One",
         left_text="IV, vibrato moltissimo",
         style="dashed-line-with-hook",
-        padding=13,
+        padding=8,
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index(
@@ -809,7 +809,7 @@ trinton.make_music(
         id="Two",
         left_text="1/2 scratch",
         style="dashed-line-with-hook",
-        padding=10,
+        padding=6,
     ),
     voice=score["cello 1 voice"],
 )

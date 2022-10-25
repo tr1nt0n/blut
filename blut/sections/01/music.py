@@ -159,7 +159,7 @@ trinton.make_music(
                 9,
             ]
         ),
-        padding=16,
+        padding=6.5,
     ),
     trinton.arrow_spanner_command(
         l_string="tight",
@@ -172,7 +172,7 @@ trinton.make_music(
                 29,
             ]
         ),
-        padding=16.5,
+        padding=6.5,
     ),
     trinton.arrow_spanner_command(
         l_string="molto tast.",
@@ -184,7 +184,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=11.5,
+        padding=6.5,
     ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
@@ -334,7 +334,7 @@ trinton.make_music(
                 8,
             ]
         ),
-        padding=16,
+        padding=7,
     ),
     trinton.arrow_spanner_command(
         l_string="wide",
@@ -345,7 +345,7 @@ trinton.make_music(
                 4,
             ]
         ),
-        padding=16.5,
+        padding=7,
     ),
     trinton.arrow_spanner_command(
         l_string="wide pont.",
@@ -358,7 +358,7 @@ trinton.make_music(
                 18,
             ]
         ),
-        padding=12,
+        padding=6,
     ),
     trinton.arrow_spanner_command(
         l_string="wide tast.",
@@ -369,7 +369,7 @@ trinton.make_music(
                 23,
             ]
         ),
-        padding=12.5,
+        padding=8.5,
     ),
     trinton.arrow_spanner_command(
         l_string="tast.",
@@ -380,7 +380,7 @@ trinton.make_music(
                 27,
             ]
         ),
-        padding=10.5,
+        padding=6.5,
     ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
@@ -798,29 +798,22 @@ for voice_name in ["cello 1 voice", "cello 2 voice"]:
             l_string="wide trem. tast.",
             r_string="tight trem. pont.",
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-            padding=13.5,
+            padding=8,
         ),
         voice=score[voice_name],
     )
 
-    for m, padding in zip(
-        [
-            3,
-            5,
-            7,
-        ],
-        [
-            11,
-            16,
-            7.5,
-        ],
-    ):
+    for m in [
+        3,
+        5,
+        7,
+    ]:
         trinton.make_music(
             lambda _: trinton.select_target(_, (m,)),
             trinton.hooked_spanner_command(
                 string="sim.",
                 selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-                padding=padding,
+                padding=6,
             ),
             voice=score[voice_name],
         )
@@ -860,7 +853,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=11,
+        padding=6.5,
     ),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -933,7 +926,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=15.5,
+        padding=6,
     ),
     trinton.arrow_spanner_command(
         l_string="tight pont.",
@@ -945,7 +938,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=11.5,
+        padding=7,
     ),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
@@ -1068,7 +1061,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=15.5,
+        padding=8,
     ),
     trinton.arrow_spanner_command(
         l_string="tast.",
@@ -1080,10 +1073,10 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=10.5,
+        padding=5.5,
     ),
     trinton.arrow_spanner_command(
-        l_string="wide molto tast.",
+        l_string="tight molto tast.",
         r_string="wide molto pont.",
         selector=trinton.select_leaves_by_index(
             [
@@ -1092,7 +1085,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=11.5,
+        padding=6.5,
     ),
     trinton.arrow_spanner_command(
         l_string="wide molto pont.",
@@ -1104,7 +1097,7 @@ trinton.make_music(
             ],
             pitched=True,
         ),
-        padding=11.5,
+        padding=6.5,
     ),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -1120,6 +1113,9 @@ trinton.make_music(
         )
     ),
 )
+
+for voice_name in ["cello 1 voice", "cello 2 voice"]:
+    abjad.attach(abjad.Clef("tenorvarC"), abjad.select.leaf(score[voice_name], 0))
 
 # markups and beams
 

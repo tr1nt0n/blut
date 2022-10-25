@@ -792,7 +792,7 @@
                                     \set stemRightBeamCount = 2
                                     % OPENING:
                                     % COMMANDS:
-                                    \clef "treble"
+                                    \clef "tenorvarC"
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -812,7 +812,7 @@
                                     \<
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #13
+                                    - \tweak padding #7.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
                                     \startTextSpanOne
@@ -1108,7 +1108,7 @@
                                         [
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
-                                        - \tweak padding #11
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
                                         \startTextSpanTwo
@@ -1392,7 +1392,7 @@
                                     \ffff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #11
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
                                     \startTextSpanTwo
@@ -1610,7 +1610,7 @@
                                         \set stemRightBeamCount = 2
                                         % OPENING:
                                         % COMMANDS:
-                                        \clef "treble"
+                                        \clef "tenorvarC"
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1626,11 +1626,11 @@
                                         \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
-                                        - \tweak padding #10
+                                        - \tweak padding #7.5
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
                                         \startTextSpanTwo
-                                        - \tweak padding #13
+                                        - \tweak padding #9.5
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
                                         \startTextSpanOne
@@ -1824,7 +1824,7 @@
                                     \glissando
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #10
+                                    - \tweak padding #7.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
                                     \startTextSpanTwo
@@ -2118,11 +2118,11 @@
                                         \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
-                                        - \tweak padding #10
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
                                         \startTextSpanTwo
-                                        - \tweak padding #13
+                                        - \tweak padding #8
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
                                         \startTextSpanOne

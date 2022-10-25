@@ -367,6 +367,9 @@
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \bold { Violoncello I }
                                     \set Staff.shortInstrumentName = \markup \bold { vc. I }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
                                     \tweak style #'harmonic-mixed
                                     cqs'''16.
                                     % AFTER:
@@ -842,6 +845,9 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     r8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "tenorvarC"
                                     <
                                         e'
                                         \tweak style #'harmonic
@@ -854,7 +860,6 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    \<
                                     \glissando
                                     e'8
                                     % AFTER:
@@ -866,10 +871,10 @@
                                         a'
                                     >16.
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    \fff
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    \<
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
