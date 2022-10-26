@@ -610,7 +610,10 @@ def bcl_bells_attachments():
     return attach
 
 
-def totem_attachments(bcl=False, vc=False, arrow=False):
+def totem_attachments(
+    bcl=False,
+    vc=False,
+):
     def attach(argument):
         ties = abjad.select.logical_ties(argument, pitched=True)
         groups = abjad.sequence.partition_by_counts(

@@ -709,7 +709,7 @@
                                     - \tweak padding #4.5
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "pont." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanOne
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanTwo
                                     - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "legno bat." } \hspace #0.5 }
@@ -727,7 +727,7 @@
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
                                     \stopTextSpanOne
-                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1453,7 +1453,7 @@
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { { \upright "pont." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanOne
+                                        - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanTwo
                                         - \tweak padding #6.5
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "legno bat." } \hspace #0.5 }
@@ -1476,7 +1476,7 @@
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         \stopTextSpanOne
-                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:

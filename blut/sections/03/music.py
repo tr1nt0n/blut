@@ -61,7 +61,7 @@ trinton.make_music(
         ),
     ),
     voice=score["bassclarinet voice"],
-    preprocessor=trinton.fuse_quarters_preprocessor((5,)),
+    preprocessor=trinton.fuse_preprocessor((4,)),
 )
 
 trinton.make_music(

@@ -369,7 +369,7 @@ trinton.make_music(
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        id="One",
+        id="Two",
         left_text="pont.",
         right_text="tast.",
         style="dashed-line-with-arrow",
@@ -523,7 +523,7 @@ trinton.make_music(
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        id="One",
+        id="Two",
         left_text="pont.",
         right_text="tast.",
         style="dashed-line-with-arrow",
