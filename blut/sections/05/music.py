@@ -288,7 +288,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (12, 16)),
-    evans.RhythmHandler(evans.talea(library.bells_rhythms(0), 8)),
+    evans.RhythmHandler(evans.even_division([8])),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.attachment_command(
@@ -316,7 +316,7 @@ trinton.make_music(
                 0,
                 0,
                 4,
-                5,
+                7,
             ]
         ),
     ),
@@ -647,7 +647,18 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (14, 16)),
-    evans.RhythmHandler(evans.talea(library.bells_rhythms(3), 8)),
+    evans.RhythmHandler(
+        evans.talea(
+            library.bells_rhythms(3),
+            8,
+            extra_counts=[
+                1,
+                0,
+                3,
+                0,
+            ],
+        )
+    ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.vc_bells_handler(instrument="cello 2", index=4, random_walk=False, seed=0),
@@ -658,14 +669,20 @@ trinton.make_music(
         attachments=[abjad.Clef("treble"), abjad.Dynamic("p"), abjad.Clef("bass")],
         selector=trinton.select_leaves_by_index(
             [
+                2,
+                2,
                 4,
-                4,
-                6,
             ]
         ),
     ),
     library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            6,
+            2,
+        )
+    ),
 )
 
 # attachments

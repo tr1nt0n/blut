@@ -388,8 +388,35 @@
                             \ff
                             % STOP_BEAM:
                             ]
-                            s1 * 13/32
-                            s1 * 9/32
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 11/16
+                            {
+                                ef!2
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-eighth-flat-markup
+                                e!4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \mp
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                                \glissando
+                                ef!16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                                % SPANNER_STOPS:
+                                )
+                            % CLOSE_BRACKETS:
+                            }
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -397,28 +424,232 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 1/4
-                            s1 * 1/4
-                            s1 * 1/2
-                            s1 * 1/4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-eighth-flat-markup
+                            a!4
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            (
+                            - \tweak circled-tip ##t
+                            \<
+                            \glissando
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 0
+                            \set stemRightBeamCount = 1
+                            af!8.
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mp
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            \glissando
+                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 3
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            af32
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 0
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            aqf!32
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            )
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \three-eighths-flat-markup
+                            a!4.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            (
+                            \glissando
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 0
+                            \set stemRightBeamCount = 1
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-eighth-flat-markup
+                            a!8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \f
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            \glissando
+                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 2
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-eighth-flat-markup
+                            a16
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 0
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            af!8.
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            )
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             s1 * 1/16
                             % AFTER:
+                            % ARTICULATIONS:
+                            \!
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 17/32
-                            s1 * 9/32
-                            s1 * 1/4
-                            s1 * 9/32
-                            s1 * 7/16
-                            s1 * 1/4
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 13/16
+                            {
+                                gqf!2
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \three-eighths-flat-markup
+                                g!4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \ff
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                                \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 0
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-eighth-flat-markup
+                                g!16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                                % SPANNER_STOPS:
+                                )
+                            % CLOSE_BRACKETS:
+                            }
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \staff-line-count 2
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "percussion"
+                            d'8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \tenuto
+                            \p
+                            % START_BEAM:
+                            [
+                            b8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
+                            % STOP_BEAM:
+                            ]
+                            d'8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \tenuto
+                            \p
+                            % START_BEAM:
+                            [
+                            b8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
+                            b32
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \staff-line-count 5
+                            % BEFORE:
+                            % COMMANDS:
+                            \textSpannerDown
+                            \vibrato #'(0 0.25 0.5 0.75 1 1.5 2 3 4 6 9 11 12 6 2 1 0.5 0) #1.75  #0.2
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "treble"
+                            ef4..
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \p
+                            % SPANNER_STARTS:
+                            - \tweak padding #10
+                            - \abjad-dashed-line-with-up-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            \startTextSpan
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            bf4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            % COMMANDS:
+                            \textSpannerUp
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             s1 * 1/16
                             % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTrillSpan
                             % COMMANDS:
                             \stopStaff \startStaff
                         % CLOSE_BRACKETS:
@@ -677,8 +908,52 @@
                             \ff
                             % STOP_BEAM:
                             ]
-                            s1 * 13/32
-                            s1 * 9/32
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 13/12
+                            {
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \p
+                                % SPANNER_STARTS:
+                                - \tweak padding #6.5
+                                - \abjad-dashed-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
+                                \startTextSpan
+                                % COMMANDS:
+                                \boxed-markup "Lion`s Roar" 1
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 9/8
+                            {
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                            % CLOSE_BRACKETS:
+                            }
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -686,10 +961,74 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 1/4
-                            s1 * 1/4
-                            s1 * 1/2
-                            s1 * 1/4
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \pp
+                            % SPANNER_STARTS:
+                            - \tweak padding #4
+                            - \abjad-dashed-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
+                            \startTextSpan
+                            \<
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \accent
+                            c'16
+                            c'16
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 4/3
+                            {
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \times 8/11
+                            {
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                            % CLOSE_BRACKETS:
+                            }
+                            c'16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \accent
+                            c'16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mf
+                            % SPANNER_STOPS:
+                            \stopTextSpan
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -697,10 +1036,92 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            s1 * 17/32
-                            s1 * 9/32
-                            s1 * 1/4
-                            s1 * 9/32
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 17/16
+                            {
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \f
+                                % SPANNER_STARTS:
+                                - \tweak padding #4
+                                - \abjad-dashed-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
+                                \startTextSpan
+                                \>
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                c'16
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 9/8
+                            {
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \accent
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \p
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                            % CLOSE_BRACKETS:
+                            }
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \staff-line-count 2
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "percussion"
+                            <b d'>8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \tenuto
+                            \p
+                            % START_BEAM:
+                            [
+                            % COMMANDS:
+                            \boxed-markup "Frame Drum + Slit Drum w/ sponges ( rub )" 1
+                            <b d'>8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
+                            % STOP_BEAM:
+                            ]
+                            <b d'>8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \tenuto
+                            \p
+                            % START_BEAM:
+                            [
+                            <b d'>8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
+                            <b d'>32
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
                             s1 * 7/16
                             s1 * 1/4
                             % BEFORE:
@@ -1232,8 +1653,78 @@
                                     % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
-                                    s1 * 13/32
-                                    s1 * 9/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 5/3
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        g''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #9.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                        \startTextSpan
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        c,16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "IV" }
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 6/5
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        fs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        a8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "I" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        dqs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1241,10 +1732,133 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
-                                    s1 * 1/4
-                                    s1 * 1/2
-                                    s1 * 1/4
+                                    \tweak style #'harmonic-mixed
+                                    a''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                    \startTextSpan
+                                    \tweak style #'harmonic-mixed
+                                    cqs'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    c,8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "IV" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c,16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    g''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    cqs'''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    a16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "I" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    a16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    g''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    c,4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "IV" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    d'''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    \tweak style #'harmonic-mixed
+                                    g''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    \tweak style #'harmonic-mixed
+                                    d'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    \tweak style #'harmonic-mixed
+                                    fs'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    \tweak style #'harmonic-mixed
+                                    dqs'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    \tweak style #'harmonic-mixed
+                                    fs'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1252,10 +1866,139 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 17/32
-                                    s1 * 9/32
-                                    s1 * 1/4
-                                    s1 * 9/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 4/3
+                                    {
+                                        \tweak style #'harmonic-mixed
+                                        g''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #9.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                        \startTextSpan
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        c,16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "IV" }
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 9/8
+                                    {
+                                        c,8
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        fs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        dqs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        a8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "I" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        fs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bridge, -45°" } \hspace #0.5 }
+                                    \startTextSpan
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % STOP_BEAM:
+                                    ]
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    c'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 7/16
                                     s1 * 1/4
                                     % BEFORE:
@@ -1781,8 +2524,111 @@
                                     % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
-                                    s1 * 13/32
-                                    s1 * 9/32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    a16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "I" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                    \startTextSpan
+                                    ~
+                                    a16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    a32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    g''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    g''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    c,32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "IV" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c,16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c,32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    gqs'''16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    a8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "I" }
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1790,10 +2636,135 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
-                                    s1 * 1/4
-                                    s1 * 1/2
-                                    s1 * 1/4
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 4/3
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        gqs'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #9.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                        \startTextSpan
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        a8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "I" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        e'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        c,16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "IV" }
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 6/7
+                                    {
+                                        c,8.
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        \tweak style #'harmonic-mixed
+                                        gqs'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        \tweak style #'harmonic-mixed
+                                        d'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        \tweak style #'harmonic-mixed
+                                        gqs'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        \tweak style #'harmonic-mixed
+                                        c'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "II" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        a8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % MARKUP:
+                                        ^ \markup \upright { "I" }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        \tweak style #'harmonic-mixed
+                                        g''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        \tweak style #'harmonic-mixed
+                                        cqs'''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        \tweak style #'harmonic-mixed
+                                        g''16
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \upright { "III" }
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1801,10 +2772,201 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 17/32
-                                    s1 * 9/32
-                                    s1 * 1/4
-                                    s1 * 9/32
+                                    \tweak style #'harmonic-mixed
+                                    g''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
+                                    \startTextSpan
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    gqs'''32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    gqs'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    c'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    a32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "I" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    a8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    a32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    gqs'''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    gqs'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    d'''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    d'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    c,16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % MARKUP:
+                                    ^ \markup \upright { "IV" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c,16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \tweak style #'harmonic-mixed
+                                    e'''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'harmonic-mixed
+                                    e'''32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    \tweak style #'harmonic-mixed
+                                    d'''16
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "III" }
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bridge, -45°" } \hspace #0.5 }
+                                    \startTextSpan
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % STOP_BEAM:
+                                    ]
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    c'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 7/16
                                     s1 * 1/4
                                     % BEFORE:

@@ -304,10 +304,6 @@ def bcl_bells_handler(fundamental_string, index):
 
     def handler(argument):
         microtone_handler(argument)
-        logical_ties = abjad.select.logical_ties(argument, pitched=True)
-        for tie in logical_ties:
-            first = tie[0]
-            first.note_head.is_forced = True
 
     return handler
 
@@ -554,7 +550,13 @@ def vc_bells_attachments(instrument, padding=9.5):
                 for note in tie:
                     abjad.tweak(note.note_head, rf"\tweak style #'harmonic-mixed")
 
-            if pitch == 24 or pitch == 28 or pitch == 31.5 or pitch == 21:
+            if (
+                pitch == 24
+                or pitch == 28
+                or pitch == 30
+                or pitch == 31.5
+                or pitch == 21
+            ):
                 abjad.attach(
                     abjad.Markup(r'\markup \upright { "II" }'),
                     tie[0],
@@ -588,6 +590,9 @@ def vc_bells_attachments(instrument, padding=9.5):
 def bcl_bells_attachments():
     def attach(argument):
         logical_ties = abjad.select.logical_ties(argument)
+        for tie in logical_ties:
+            first = tie[0]
+            first.note_head.is_forced = True
         slur_groups = abjad.sequence.partition_by_counts(
             sequence=logical_ties,
             counts=[3 for _ in range(len(logical_ties))],
