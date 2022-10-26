@@ -147,13 +147,7 @@
                             % GROB_REVERTS:
                             \revert TupletNumber.text
                             s1 * 1/4
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            \glissando
                             r16
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            \glissando
                             dqs'16
                             % AFTER:
                             % MARKUP:
@@ -185,8 +179,6 @@
                             \fff
                             % STOP_BEAM:
                             ]
-                            % SPANNER_STARTS:
-                            \glissando
                             r16
                             s1 * 3/8
                             s1 * 1/8

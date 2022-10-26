@@ -26,30 +26,6 @@ library.fermata_measures(
 # bass clarinet music commands
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (6, 7)),
-    evans.RhythmHandler(rmakers.note),
-    evans.RewriteMeterCommand(boundary_depth=-2),
-    trinton.force_rest(
-        selector=trinton.patterned_tie_index_selector(
-            [
-                0,
-                3,
-            ],
-            4,
-        )
-    ),
-    voice=score["bassclarinet voice"],
-    preprocessor=trinton.fuse_sixteenths_preprocessor(
-        (
-            1,
-            3,
-            1,
-            2,
-        )
-    ),
-)
-
-trinton.make_music(
     lambda _: trinton.select_target(
         _,
         (1, 4),
@@ -89,10 +65,17 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (2, 7)),
-    trinton.detach_command(
-        detachments=[abjad.StartSlur, abjad.StopSlur],
-        selector=trinton.select_leaves_by_index([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+    lambda _: trinton.select_target(_, (6, 7)),
+    evans.RhythmHandler(rmakers.note),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.force_rest(
+        selector=trinton.patterned_tie_index_selector(
+            [
+                0,
+                3,
+            ],
+            4,
+        )
     ),
     evans.PitchHandler([2.5]),
     library.totem_attachments(bcl=True),
@@ -104,6 +87,14 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     voice=score["bassclarinet voice"],
+    preprocessor=trinton.fuse_sixteenths_preprocessor(
+        (
+            1,
+            3,
+            1,
+            2,
+        )
+    ),
 )
 
 trinton.reduce_tuplets(score=score, voice="bassclarinet voice", tuplets=[0])

@@ -135,3 +135,31 @@ section_5_ts = trinton.make_ts_pair_list(
 section_5_ts.insert(3, (1, 16))
 
 section_5_ts.append((15, 16))
+
+# section 6
+
+section_numerators = abjad.sequence.partition_by_counts(
+    sequence=[_ for _ in numerator_sequence if _ > 6],
+    counts=[
+        22,
+        22,
+        22,
+        22,
+    ],
+    overhang=True,
+)
+
+section_6_ts = trinton.make_ts_pair_list(
+    numerators=section_numerators[3],
+    denominators=cycle(
+        [
+            32,
+        ]
+    ),
+)
+
+section_6_ts.insert(12, (1, 16))
+
+section_6_ts.insert(17, (1, 16))
+
+section_6_ts.append((1, 16))
