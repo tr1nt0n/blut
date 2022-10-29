@@ -163,3 +163,34 @@ section_6_ts.insert(12, (1, 16))
 section_6_ts.insert(17, (1, 16))
 
 section_6_ts.append((1, 16))
+
+# section 7
+
+section_numerators = abjad.sequence.partition_by_counts(
+    sequence=numerator_sequence,
+    counts=[
+        15,
+        15,
+        15,
+        15,
+        13,
+    ],
+    overhang=True,
+)
+
+section_7_ts = trinton.make_ts_pair_list(
+    numerators=section_numerators[4],
+    denominators=cycle(
+        [
+            8,
+        ]
+    ),
+)
+
+section_7_ts.insert(0, (7, 8))
+
+section_7_ts.append((11, 7))
+
+section_7_ts.append((13, 9))
+
+section_7_ts.append((12, 8))

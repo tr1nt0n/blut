@@ -65,12 +65,12 @@
         \override BarLine.thick-thickness = #8
 
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
-        % \override BarNumber.Y-extent = ##f
-		% \override BarNumber.Y-offset = 0
-		\override BarNumber.extra-offset = #'(-4 . -4)
+        \override BarNumber.Y-extent = ##f
+		\override BarNumber.Y-offset = 0
+		\override BarNumber.extra-offset = #'(-2 . 4)
         \override BarNumber.font-size = 2
+		\override BarNumber.padding = 4
         \override BarNumber.font-name = "Bodoni72 Book"
-		\override BarNumber.padding = 1
 
         autoBeaming = ##f
         \override Beam.breakable = ##t
@@ -156,7 +156,7 @@
 }
 %
 \paper {
-    system-separator-markup = \markup { \slashSeparator }
+    system-separator-markup = \markup { \slashSeparator } 
     system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
     indent = 20\mm
     short-indent = 15\mm
