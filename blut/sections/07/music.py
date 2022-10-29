@@ -396,7 +396,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (17,)),
     evans.PitchHandler([[2, -1]]),
     library.perc_instrument(
-        instrument_string="Frame Drum + Slit Drum w/ sponge ( rub )",
+        instrument_string="Frame Drum + Slit Drum w/ sponges ( rub )",
         selector=trinton.select_leaves_by_index([0]),
     ),
     voice=score["percussion voice"],

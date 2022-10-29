@@ -890,7 +890,7 @@
                             % START_BEAM:
                             [
                             % COMMANDS:
-                            \boxed-markup "Frame Drum + Slit Drum w/ sponge ( rub )" 1
+                            \boxed-markup "Frame Drum + Slit Drum w/ sponges ( rub )" 1
                             <b d'>8
                             % AFTER:
                             % ARTICULATIONS:
