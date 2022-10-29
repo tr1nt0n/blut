@@ -709,24 +709,6 @@ for leaf, tempo in zip(
         attachment=library.tempi[tempo],
     )
 
-# trinton.make_music(
-#     lambda _: trinton.select_target(
-#         _,
-#         (
-#             19,
-#             21,
-#         ),
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"117" } }',
-#         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }',
-#         selector=trinton.select_leaves_by_index([0, -1]),
-#         padding=9.5,
-#         tempo=True,
-#     ),
-#     voice=score["Global Context"],
-# )
-
 trinton.attach_multiple(
     score=score,
     voice="Global Context",
