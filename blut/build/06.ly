@@ -1186,7 +1186,7 @@
                                     % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "flaut." } \hspace #0.5 }\startTextSpanTwo
                                     - \tweak padding #13
                                     - \abjad-dashed-line-with-hook
@@ -1238,7 +1238,7 @@
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "flaut." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2055,7 +2055,7 @@
                                     % COMMANDS:
                                     - \tweak padding #12.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "flaut." } \hspace #0.5 }\startTextSpanTwo
                                     - \tweak padding #14.5
                                     - \abjad-dashed-line-with-hook
@@ -2107,7 +2107,7 @@
                                     - \tweak padding #12.5
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "flaut." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead

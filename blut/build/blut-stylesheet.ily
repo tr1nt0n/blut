@@ -43,7 +43,7 @@
         \override TimeSignature.Y-offset = 3
         \override TimeSignature.whiteout-style = #'outline
         \override TimeSignature.whiteout = 1
-        \override TimeSignature.layer = 2
+        \override TimeSignature.layer = 4
     }
 
     \context {
@@ -156,7 +156,7 @@
 }
 %
 \paper {
-    system-separator-markup = \markup { \slashSeparator } 
+    system-separator-markup = \markup { \slashSeparator }
     system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
     indent = 20\mm
     short-indent = 15\mm
