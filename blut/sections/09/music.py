@@ -211,6 +211,10 @@ for voice_name in ["cello 1 voice", "cello 2 voice"]:
         lambda _: trinton.select_target(_, (2,)),
         evans.RhythmHandler(rmakers.note),
         library.noteheads_only(),
+        trinton.attachment_command(
+            attachments=[abjad.StartHairpin(">o")],
+            selector=trinton.select_leaves_by_index([0]),
+        ),
         voice=score[voice_name],
     )
 

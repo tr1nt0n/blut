@@ -474,6 +474,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
                                     % BEFORE:
                                     % GROB_OVERRIDES:
                                     \override TupletNumber.text = \markup \upright { "1\'" }
@@ -668,6 +671,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
                                     % BEFORE:
                                     % GROB_OVERRIDES:
                                     \override TupletNumber.text = \markup \upright { "1\'" }
