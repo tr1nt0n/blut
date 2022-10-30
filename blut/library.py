@@ -714,6 +714,23 @@ def electroshock_attachments():
     return attach
 
 
+def noteheads_only():
+    def only_noteheads(argument):
+        for leaf in abjad.select.leaves(argument):
+            abjad.override(leaf).Stem.transparent = True
+            abjad.override(leaf).Beam.transparent = True
+            abjad.override(leaf).Flag.transparent = True
+            abjad.override(leaf).Dots.transparent = True
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override NoteHead.duration-log = 2", "before"
+                ),
+                leaf,
+            )
+
+    return only_noteheads
+
+
 def one_line(
     score,
     leaves,
@@ -786,9 +803,12 @@ def artificial_harmonics():
     return change_noteheads
 
 
-def tremolo():
+def tremolo(selector=None):
     def call_stem_tremolo(argument):
-        leaves = abjad.select.leaves(argument, pitched=True)
+        if selector is not None:
+            leaves = selector(argument)
+        else:
+            leaves = abjad.select.leaves(argument, pitched=True)
         trinton.unmeasured_stem_tremolo(leaves)
 
     return call_stem_tremolo
@@ -828,6 +848,18 @@ def visas_attachments():
             glissando()(tuplet)
 
     return attach
+
+
+def invisible_rests():
+    def rests(argument):
+        rests = abjad.select.rests(argument)
+        for rest in rests:
+            rest_literal = abjad.LilyPondLiteral(
+                r"\once \override Rest.transparent = ##t", "before"
+            )
+            abjad.attach(rest_literal, rest)
+
+    return rests
 
 
 # markups
