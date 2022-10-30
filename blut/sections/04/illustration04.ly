@@ -380,10 +380,10 @@
                             {
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                                d''!2
+                                e'''!2
                                 % AFTER:
                                 % MARKUP:
-                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
+                                ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \<
@@ -396,12 +396,12 @@
                                 \override NoteHead.no-ledgers = ##t
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                                d''!4..
+                                e'''!4..
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mp
                                 % MARKUP:
-                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
+                                ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \>
@@ -413,12 +413,12 @@
                                 \undo \hide NoteHead
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                                d''!16
+                                e'''!16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \!
                                 % MARKUP:
-                                ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
+                                ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                             % CLOSE_BRACKETS:
                             }
                             % AFTER:

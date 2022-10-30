@@ -374,6 +374,23 @@ def pitch_bat_trat(index=0, seed=0):
 
 
 def pitch_monolith(voice_name, index, selector=trinton.pleaves()):
+    _voice_name_to_fundamental_list = {
+        "bassclarinet voice": [
+            -13,
+            -12,
+            -12,
+        ],
+        "cello 1 voice": [
+            -27,
+            -26,
+            -26,
+        ],
+        "cello 2 voice": [
+            -27,
+            -26,
+            -26,
+        ],
+    }
     _voice_name_to_pitch_list = {
         "bassclarinet voice": trinton.rotated_sequence(["13/1", "11/1", "39/4"], index),
         "cello 1 voice": trinton.rotated_sequence(
@@ -422,11 +439,7 @@ def pitch_monolith(voice_name, index, selector=trinton.pleaves()):
 
     fundamental_handler = evans.PitchHandler(
         pitch_list=trinton.rotated_sequence(
-            [
-                -27,
-                -26,
-                -26,
-            ],
+            _voice_name_to_fundamental_list[voice_name],
             index,
         )
     )
