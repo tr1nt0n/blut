@@ -188,6 +188,12 @@
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
                                 \once \override Stem.transparent = ##t
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
                                 c'''4...
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -195,7 +201,6 @@
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \>
-                                \glissando
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override NoteHead.duration-log = 2
@@ -204,6 +209,12 @@
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
                                 \once \override Stem.transparent = ##t
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
                                 c'''32
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -347,6 +358,12 @@
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
                                 \once \override Stem.transparent = ##t
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
                                 c'4...
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -354,7 +371,6 @@
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \>
-                                \glissando
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override NoteHead.duration-log = 2
@@ -363,6 +379,12 @@
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
                                 \once \override Stem.transparent = ##t
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -493,8 +515,6 @@
                                         \clef "bass"
                                         c,2...
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
@@ -521,14 +541,16 @@
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
                                         \once \override Stem.transparent = ##t
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
                                         c,16
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
                                         % ARTICULATIONS:
                                         \fffff
-                                        % SPANNER_STARTS:
-                                        \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         \stopTextSpanThree
@@ -553,12 +575,9 @@
                                         \once \override Stem.transparent = ##t
                                         c,2...
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         - \tweak padding #6.5
@@ -573,6 +592,12 @@
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
                                         \once \override Stem.transparent = ##t
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
                                         c,16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -716,14 +741,16 @@
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
                                         \once \override Stem.transparent = ##t
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
                                         a16
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
                                         % ARTICULATIONS:
                                         \fffff
-                                        % SPANNER_STARTS:
-                                        \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         \stopTextSpanThree
@@ -748,12 +775,9 @@
                                         \once \override Stem.transparent = ##t
                                         a2...
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        \glissando
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         - \tweak padding #3.5
@@ -768,10 +792,14 @@
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
                                         \once \override Stem.transparent = ##t
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
                                         a16
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
                                         % ARTICULATIONS:
                                         \!
                                         % ABSOLUTE_AFTER:

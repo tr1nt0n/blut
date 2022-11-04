@@ -93,18 +93,7 @@ trinton.make_music(
     evans.PitchHandler([24]),
     library.invisible_rests(),
     library.noteheads_only(),
-    trinton.attachment_command(
-        attachments=[
-            abjad.Glissando(),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-            ],
-            pitched=True,
-        ),
-    ),
+    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -154,18 +143,7 @@ trinton.make_music(
     evans.RhythmHandler(evans.tuplet([(-1, 1), (15, 1, -16)])),
     library.invisible_rests(),
     library.noteheads_only(),
-    trinton.attachment_command(
-        attachments=[
-            abjad.Glissando(),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-            ],
-            pitched=True,
-        ),
-    ),
+    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -254,27 +232,7 @@ trinton.make_music(
         style="dashed-line-with-arrow",
         padding=6.5,
     ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.Glissando(),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-                2,
-            ]
-        ),
-    ),
-    library.tremolo(
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-                2,
-            ]
-        ),
-    ),
+    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -339,27 +297,7 @@ trinton.make_music(
         style="dashed-line-with-arrow",
         padding=3.5,
     ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.Glissando(),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-                2,
-            ]
-        ),
-    ),
-    library.tremolo(
-        selector=trinton.select_leaves_by_index(
-            [
-                1,
-                2,
-                3,
-            ]
-        ),
-    ),
+    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
