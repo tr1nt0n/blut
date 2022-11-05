@@ -1739,6 +1739,9 @@
                                     \p
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \italic { 9:6 }
                                     % OPEN_BRACKETS:
                                     \times 2/3
                                     {
@@ -1783,6 +1786,9 @@
                                         ^ \markup \upright { "II" }
                                     % CLOSE_BRACKETS:
                                     }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
