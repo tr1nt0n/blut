@@ -110,6 +110,9 @@ trinton.make_music(
             ],
         ),
     ),
+    library.transparent_noteheads(
+        selector=trinton.select_leaves_by_index([-1], pitched=True)
+    ),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_quarters_preprocessor(
         (
@@ -162,6 +165,9 @@ trinton.make_music(
     ),
     library.perc_instrument(
         instrument_string="Ocean Drum", selector=trinton.select_leaves_by_index([0])
+    ),
+    library.transparent_noteheads(
+        selector=trinton.select_leaves_by_index([-1], pitched=True)
     ),
     voice=score["percussion voice"],
     preprocessor=trinton.fuse_quarters_preprocessor(
@@ -249,6 +255,9 @@ trinton.make_music(
             ]
         ),
     ),
+    library.transparent_noteheads(
+        selector=trinton.select_leaves_by_index([-1], pitched=True)
+    ),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_quarters_preprocessor(
         (
@@ -313,6 +322,9 @@ trinton.make_music(
                 3,
             ]
         ),
+    ),
+    library.transparent_noteheads(
+        selector=trinton.select_leaves_by_index([-1], pitched=True)
     ),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_quarters_preprocessor(

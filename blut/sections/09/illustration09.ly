@@ -210,10 +210,12 @@
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override NoteHead.duration-log = 2
+                                \once \override NoteHead.no-ledgers = ##t
                                 % GROB_OVERRIDES:
                                 \once \override Beam.transparent = ##t
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
+                                \once \override NoteHead.transparent = ##t
                                 \once \override Stem.transparent = ##t
                                 % OPENING:
                                 % COMMANDS:
@@ -380,10 +382,12 @@
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override NoteHead.duration-log = 2
+                                \once \override NoteHead.no-ledgers = ##t
                                 % GROB_OVERRIDES:
                                 \once \override Beam.transparent = ##t
                                 \once \override Dots.transparent = ##t
                                 \once \override Flag.transparent = ##t
+                                \once \override NoteHead.transparent = ##t
                                 \once \override Stem.transparent = ##t
                                 % OPENING:
                                 % COMMANDS:
@@ -593,10 +597,12 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
                                         % GROB_OVERRIDES:
                                         \once \override Beam.transparent = ##t
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
+                                        \once \override NoteHead.transparent = ##t
                                         \once \override Stem.transparent = ##t
                                         % OPENING:
                                         % COMMANDS:
@@ -793,10 +799,12 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
                                         % GROB_OVERRIDES:
                                         \once \override Beam.transparent = ##t
                                         \once \override Dots.transparent = ##t
                                         \once \override Flag.transparent = ##t
+                                        \once \override NoteHead.transparent = ##t
                                         \once \override Stem.transparent = ##t
                                         % OPENING:
                                         % COMMANDS:

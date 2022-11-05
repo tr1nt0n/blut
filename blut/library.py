@@ -744,6 +744,21 @@ def noteheads_only():
     return only_noteheads
 
 
+def transparent_noteheads(selector):
+    def transparent(argument):
+        selections = selector(argument)
+        for leaf in abjad.select.leaves(selections):
+            abjad.override(leaf).NoteHead.transparent = True
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override NoteHead.no-ledgers = ##t", "before"
+                ),
+                leaf,
+            )
+
+    return transparent
+
+
 def one_line(
     score,
     leaves,
