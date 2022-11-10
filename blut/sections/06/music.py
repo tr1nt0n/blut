@@ -433,7 +433,7 @@ trinton.make_music(
         attachments=[abjad.Dynamic("p")], selector=trinton.select_leaves_by_index([0])
     ),
     library.perc_instrument(
-        instrument_string="Lion`s Roar",
+        instrument_string="Lion's Roar",
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.hooked_spanner_command(

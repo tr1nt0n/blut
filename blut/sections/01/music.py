@@ -728,7 +728,7 @@ library.one_line(score=score, leaves=[0])
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     library.perc_instrument(
-        instrument_string="Lion`s Roar", selector=trinton.select_leaves_by_index([0])
+        instrument_string="Lion's Roar", selector=trinton.select_leaves_by_index([0])
     ),
     voice=score["percussion voice"],
 )

@@ -485,7 +485,7 @@
                             \startTextSpan
                             \<
                             % COMMANDS:
-                            \boxed-markup "Lion`s Roar" 1
+                            \boxed-markup "Lion\'s Roar" 1
                             c'8
                             % AFTER:
                             % ARTICULATIONS:

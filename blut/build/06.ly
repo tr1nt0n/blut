@@ -922,7 +922,7 @@
                                 - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
                                 \startTextSpan
                                 % COMMANDS:
-                                \boxed-markup "Lion`s Roar" 1
+                                \boxed-markup "Lion\'s Roar" 1
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:

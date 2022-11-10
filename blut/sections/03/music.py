@@ -120,7 +120,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.beam_logical_ties(),
     library.perc_instrument(
-        instrument_string="Lion`s Roar", selector=trinton.select_leaves_by_index([0])
+        instrument_string="Lion's Roar", selector=trinton.select_leaves_by_index([0])
     ),
     trinton.hooked_spanner_command(
         string="pizz.",

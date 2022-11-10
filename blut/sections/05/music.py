@@ -322,7 +322,7 @@ trinton.make_music(
     ),
     library.beam_logical_ties(),
     library.perc_instrument(
-        instrument_string="Lion`s Roar",
+        instrument_string="Lion's Roar",
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.hooked_spanner_command(

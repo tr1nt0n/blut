@@ -648,7 +648,7 @@
                             r4
                             % AFTER:
                             % COMMANDS:
-                            \boxed-markup "Lion`s Roar" 1
+                            \boxed-markup "Lion\'s Roar" 1
                             % BEFORE:
                             % GROB_OVERRIDES:
                             \override TupletNumber.text = \markup \italic 5:4
