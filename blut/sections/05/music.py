@@ -685,10 +685,6 @@ trinton.make_music(
     ),
 )
 
-abjad.override(
-    abjad.select.tuplet(score["cello 2 voice"], 7)
-).TupletNumber.text = r"\markup \italic { 9:6 }"
-
 # attachments
 
 for voice_name in ["cello 1 voice", "cello 2 voice", "percussion voice"]:
@@ -825,6 +821,8 @@ trinton.attach_multiple(
         ),
     ],
 )
+
+trinton.tuplet_brackets(score, library.all_voice_names)
 
 # parts
 

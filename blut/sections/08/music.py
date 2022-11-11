@@ -236,6 +236,7 @@ for voice_name in library.all_voice_names:
             selector=trinton.select_leaves_by_index([0, 1, 1, -1]),
         ),
         library.glissando(),
+        trinton.notehead_bracket_command(),
         voice=score[voice_name],
     )
 
@@ -339,6 +340,7 @@ trinton.make_music(
         ),
         padding=7,
     ),
+    trinton.notehead_bracket_command(),
     voice=score["percussion voice"],
 )
 
@@ -618,6 +620,8 @@ trinton.attach_multiple(
         ),
     ],
 )
+
+trinton.tuplet_brackets(score, ["cello 1 voice", "cello 2 voice"])
 
 # parts
 

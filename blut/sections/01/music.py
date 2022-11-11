@@ -1191,6 +1191,8 @@ for voice_name in library.all_voice_names:
             voice=score[voice_name],
         )
 
+trinton.tuplet_brackets(score, library.all_voice_names)
+
 # fermate
 
 library.fermata_measures(

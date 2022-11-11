@@ -1263,6 +1263,8 @@ trinton.attach_multiple(
     ],
 )
 
+trinton.tuplet_brackets(score, library.all_voice_names)
+
 # parts
 
 trinton.extract_parts(score)

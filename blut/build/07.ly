@@ -194,6 +194,7 @@
                             ]
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 9) (ly:make-duration 3 0))
                             \times 9/16
                             {
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -291,6 +292,7 @@
                             \textSpannerUp
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 2 0))
                             \times 14/16
                             {
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -614,7 +616,7 @@
                             - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
                             \startTextSpan
                             % COMMANDS:
-                            \boxed-markup "Lion\'s Roar" 1
+                            \boxed-markup "Lion's Roar" 1
                             c'8
                             c'8
                             % AFTER:
@@ -1039,6 +1041,7 @@
                                     ^ \markup \upright { "II" }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 3 0))
                                     \times 5/8
                                     {
                                         \tweak style #'harmonic-mixed
@@ -1103,6 +1106,7 @@
                                     ~
                                     a4
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
                                     \times 4/7
                                     {
                                         % OPENING:
@@ -1143,6 +1147,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 5) (ly:make-duration 3 0))
                                     \times 5/3
                                     {
                                         \tweak style #'harmonic-mixed
@@ -1220,6 +1225,7 @@
                                     ^ \markup \upright { "II" }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 3 0))
                                     \times 5/8
                                     {
                                         % OPENING:
@@ -1294,6 +1300,7 @@
                                     s1 * 1/2
                                     s1 * 1
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
                                     \times 4/7
                                     {
                                         \tweak style #'harmonic-mixed
@@ -1345,6 +1352,7 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
                                         c,8
@@ -1367,6 +1375,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 3 0))
                                     \times 5/8
                                     {
                                         \tweak style #'harmonic-mixed

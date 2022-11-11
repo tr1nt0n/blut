@@ -390,6 +390,7 @@
                             ]
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 11) (ly:make-duration 4 0))
                             \times 11/16
                             {
                                 ef!2
@@ -545,6 +546,7 @@
                             \stopStaff \startStaff
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 13) (ly:make-duration 4 0))
                             \times 13/16
                             {
                                 gqf!2
@@ -910,6 +912,7 @@
                             ]
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 5 0))
                             \times 13/12
                             {
                                 c'16
@@ -922,7 +925,7 @@
                                 - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
                                 \startTextSpan
                                 % COMMANDS:
-                                \boxed-markup "Lion\'s Roar" 1
+                                \boxed-markup "Lion's Roar" 1
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -938,6 +941,7 @@
                             }
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 5 0))
                             \times 9/8
                             {
                                 c'16
@@ -979,6 +983,7 @@
                             c'16
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 4 0))
                             \times 4/3
                             {
                                 c'16
@@ -990,6 +995,7 @@
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 4 0))
                             \times 8/11
                             {
                                 c'16
@@ -1038,6 +1044,7 @@
                             \stopStaff \startStaff
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 17) (ly:make-duration 5 0))
                             \times 17/16
                             {
                                 c'16
@@ -1067,6 +1074,7 @@
                             }
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 5 0))
                             \times 9/8
                             {
                                 c'16
@@ -1267,6 +1275,7 @@
                                     \stopTextSpanTwo
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 11) (ly:make-duration 4 0))
                                     \times 11/13
                                     {
                                         r8
@@ -1655,6 +1664,7 @@
                                     \stopTextSpanTwo
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 5) (ly:make-duration 4 0))
                                     \times 5/3
                                     {
                                         % OPENING:
@@ -1690,6 +1700,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 4 0))
                                     \times 6/5
                                     {
                                         % OPENING:
@@ -1868,6 +1879,7 @@
                                     \stopStaff \startStaff
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 4 0))
                                     \times 4/3
                                     {
                                         \tweak style #'harmonic-mixed
@@ -1904,6 +1916,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 4 0))
                                     \times 9/8
                                     {
                                         c,8
@@ -2136,6 +2149,7 @@
                                     \stopTextSpanTwo
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 11) (ly:make-duration 4 0))
                                     \times 11/9
                                     {
                                         \tweak style #'triangle
@@ -2638,6 +2652,7 @@
                                     \stopStaff \startStaff
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
                                     \times 4/3
                                     {
                                         % OPENING:
@@ -2696,6 +2711,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 3 0))
                                     \times 6/7
                                     {
                                         c,8.

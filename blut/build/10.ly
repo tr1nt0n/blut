@@ -73,6 +73,7 @@
             - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \break
             \once \override Score.BarLine.transparent = ##f
             % OPENING:
             % COMMANDS:
@@ -106,6 +107,7 @@
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
@@ -131,6 +133,7 @@
                         {
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
                             \times 6/8
                             {
                                 % BEFORE:
@@ -223,6 +226,7 @@
                         {
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
                             \times 6/8
                             {
                                 % ABSOLUTE_BEFORE:
@@ -280,6 +284,7 @@
                             s1 * 1/2
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                             \times 12/13
                             {
                                 % BEFORE:
@@ -314,6 +319,7 @@
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                             \times 8/10
                             {
                                 % BEFORE:
@@ -345,6 +351,7 @@
                             }
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                             \times 12/13
                             {
                                 % BEFORE:
@@ -394,6 +401,7 @@
                             \set stemRightBeamCount = 1
                             c'8
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
                             \times 8/13
                             {
                                 % BEFORE:
@@ -416,6 +424,7 @@
                             }
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 5 0))
                             \times 6/7
                             {
                                 % BEFORE:
@@ -467,6 +476,7 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                             \times 4/5
                             {
                                 % BEFORE:
@@ -516,6 +526,7 @@
                             \ff
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 5 0))
                             \times 6/7
                             {
                                 % BEFORE:
@@ -562,6 +573,7 @@
                             % COMMANDS:
                             \stopStaff \startStaff
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                             \times 8/12
                             {
                                 % BEFORE:
@@ -604,6 +616,7 @@
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
                             \times 8/13
                             {
                                 % BEFORE:
@@ -627,6 +640,7 @@
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 4 0))
                             \times 4/7
                             {
                                 % BEFORE:
@@ -648,6 +662,7 @@
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 5 0))
                             \times 8/11
                             {
                                 c'4
@@ -714,6 +729,7 @@
                             ]
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 33 20) (ly:make-duration 5 0))
                             \times 20/33
                             {
                                 c'2...
@@ -772,6 +788,7 @@
                                 {
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
                                     \times 6/8
                                     {
                                         % BEFORE:
@@ -955,6 +972,7 @@
                                     \revert TupletNumber.text
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 9) (ly:make-duration 4 0))
                                     \times 9/11
                                     {
                                         \tweak style #'triangle
@@ -1084,6 +1102,7 @@
                                     r8.
                                     r16
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
                                     \times 8/13
                                     {
                                         % OPENING:
@@ -1120,6 +1139,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) (ly:make-duration 4 0))
                                     \times 6/10
                                     {
                                         <
@@ -1187,6 +1207,7 @@
                                     s1 * 3/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) (ly:make-duration 4 0))
                                     \times 6/10
                                     {
                                         <
@@ -1221,6 +1242,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 4 0))
                                     \times 10/13
                                     {
                                         <
@@ -1266,6 +1288,7 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 8/12
                                     {
                                         <
@@ -1305,6 +1328,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
                                     \times 7/13
                                     {
                                         <
@@ -1377,6 +1401,7 @@
                                 {
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
                                     \times 6/8
                                     {
                                         % BEFORE:
@@ -1560,6 +1585,7 @@
                                     \revert TupletNumber.text
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 4 0))
                                     \times 9/7
                                     {
                                         \tweak style #'triangle
@@ -1677,6 +1703,7 @@
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
                                     \times 8/11
                                     {
                                         % OPENING:
@@ -1722,6 +1749,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 5 0))
                                     \times 12/13
                                     {
                                         <
@@ -1765,6 +1793,7 @@
                                     }
                                     s1 * 13/16
                                     % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 8/12
                                     {
                                         <
@@ -1798,6 +1827,7 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
                                     \times 7/13
                                     {
                                         <
@@ -1854,6 +1884,7 @@
                                     s1 * 13/16
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 9) (ly:make-duration 4 0))
                                     \times 9/13
                                     {
                                         <

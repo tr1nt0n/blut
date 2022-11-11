@@ -47,6 +47,7 @@ for voice_name in library.all_voice_names:
             selector=trinton.select_leaves_by_index([0, 0, 1, 1, -1]),
         ),
         library.glissando(),
+        trinton.notehead_bracket_command(),
         voice=score[voice_name],
     )
 
@@ -295,6 +296,7 @@ for voice_name, extra_count, seed in zip(
             attachments=[abjad.Dynamic("p"), abjad.StartHairpin("<")],
             selector=trinton.select_leaves_by_index([0]),
         ),
+        trinton.notehead_bracket_command(),
         voice=score[voice_name],
     )
 
@@ -398,6 +400,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 2, 2, -1], pitched=True),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
         (
@@ -449,6 +452,7 @@ trinton.make_music(
         ),
         padding=6.5,
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((3, 10, 2, 7)),
 )
@@ -522,6 +526,7 @@ trinton.make_music(
             ]
         ),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -560,6 +565,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 3, 3, -1]),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -590,6 +596,7 @@ trinton.make_music(
         ),
         padding=6.5,
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 2 voice"],
 )
 
@@ -688,6 +695,15 @@ trinton.attach(
     attachment=abjad.LilyPondLiteral(r"\pageBreak", "absolute_after"),
 )
 
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        7,
+        11,
+    ],
+    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
+)
+
 trinton.attach_multiple(
     score=score,
     voice="Global Context",
@@ -701,6 +717,8 @@ trinton.attach_multiple(
         ),
     ],
 )
+
+trinton.tuplet_brackets(score, ["bassclarinet voice", "percussion voice"])
 
 # parts
 

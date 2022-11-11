@@ -518,6 +518,8 @@ trinton.attach(
     attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
 )
 
+trinton.tuplet_brackets(score, library.all_voice_names)
+
 # parts
 
 trinton.extract_parts(score)

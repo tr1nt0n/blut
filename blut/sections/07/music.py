@@ -129,6 +129,7 @@ trinton.make_music(
             ]
         ),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["bassclarinet voice"],
 )
 
@@ -155,6 +156,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 1, 1, 3, 4, 4, -1]),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["bassclarinet voice"],
 )
 
@@ -722,6 +724,8 @@ trinton.attach_multiple(
         ),
     ],
 )
+
+trinton.tuplet_brackets(score, ["cello 1 voice", "cello 2 voice"])
 
 # parts
 
