@@ -380,7 +380,7 @@ trinton.make_music(
         l_string=r'\markup { \abs-fontsize #12 \upright { "Accel." } }',
         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"117" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=9.5,
+        padding=8.5,
         tempo=True,
     ),
     voice=score["Global Context"],
@@ -397,7 +397,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string="Rall.",
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=9.5,
+        padding=8.5,
     ),
     voice=score["Global Context"],
 )

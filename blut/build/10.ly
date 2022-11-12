@@ -17,7 +17,7 @@
             s1 * 11/16
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #9.5
+            - \tweak padding #8.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \upright { "Rit." } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
@@ -35,7 +35,7 @@
             s1 * 1/2
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #9.5
+            - \tweak padding #8.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \upright { "Accel." } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
