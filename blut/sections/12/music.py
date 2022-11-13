@@ -994,6 +994,14 @@ trinton.attach_multiple(
     ],
 )
 
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        -1,
+    ],
+    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
+)
+
 trinton.fill_empty_staves_with_skips(score["cello 2 voice"])
 
 trinton.tuplet_brackets(score, library.all_voice_names)

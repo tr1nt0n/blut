@@ -103,6 +103,7 @@
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
