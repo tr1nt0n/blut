@@ -684,7 +684,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.hooked_spanner_command(
-        string="legno trat., molto flaut. pont.",
+        string="legno bat.",
         selector=trinton.select_leaves_by_index(
             [
                 0,

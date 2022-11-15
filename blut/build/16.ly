@@ -2756,7 +2756,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #5
                                         - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "legno bat." } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
