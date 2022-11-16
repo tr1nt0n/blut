@@ -726,6 +726,57 @@ def electroshock_attachments():
 
     return attach
 
+def ghost_attachments(contour=None):
+    def attach(argument):
+        if contour == "lwy":
+            counts = [6, 6, 5,]
+        else:
+            counts = [6, 6, 5,]
+        logical_ties = abjad.select.logical_ties(argument)
+        counts = [counts for _ in logical_ties]
+        counts = evans.Sequence(counts).flatten()
+        gliss_groups = abjad.sequence.partition_by_counts(
+            sequence=logical_ties,
+            counts=counts,
+            overhang=True,
+        )
+        for group in gliss_groups:
+            abjad.slur(group)
+            all_but_last_tie = abjad.select.exclude(group, [-1])
+            all_but_first_leaf = abjad.select.exclude(abjad.select.leaves(group), [0])
+            for tie in all_but_last_tie:
+                if len(tie) > 1:
+                    abjad.glissando(
+                        abjad.select.with_next_leaf(tie),
+                        allow_repeats=True,
+                        allow_ties=True,
+                        zero_padding=True
+                    )
+                else:
+                    abjad.attach(abjad.Glissando(zero_padding=True), tie[0])
+
+            for leaf in all_but_first_leaf:
+                abjad.attach(
+                    abjad.LilyPondLiteral("\once \override Accidental.stencil = ##f", "before"),
+                    leaf
+                )
+                abjad.attach(
+                    abjad.LilyPondLiteral("\\tweak X-extent #'(0 . 0)", "before"),
+                    leaf
+                )
+                abjad.attach(
+                    abjad.LilyPondLiteral("\\tweak transparent ##t", "before"),
+                    leaf
+                )
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override NoteHead.no-ledgers = ##t", "before"
+                    ),
+                    leaf,
+                )
+
+    return attach
+
 
 def noteheads_only():
     def only_noteheads(argument):

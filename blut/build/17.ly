@@ -329,7 +329,31 @@
                             s1 * 15/32
                             s1 * 13/32
                             s1 * 1/2
-                            s1 * 1/2
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \three-eighths-flat-markup
+                            g!4
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            (
+                            - \tweak circled-tip ##t
+                            \<
+                            \glissando
+                            fs!8..
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            \glissando
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-eighth-flat-markup
+                            g!32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \fff
+                            % SPANNER_STOPS:
+                            )
+                            % STOP_BEAM:
+                            ]
                             s1 * 17/32
                             % BEFORE:
                             % COMMANDS:
@@ -464,10 +488,142 @@
                             s1 * 17/32
                             s1 * 7/16
                             s1 * 15/32
-                            s1 * 13/32
-                            s1 * 1/2
-                            s1 * 1/2
-                            s1 * 17/32
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 13) (ly:make-duration 5 0))
+                            \times 91/56
+                            {
+                                % ABSOLUTE_BEFORE:
+                                % COMMANDS:
+                                \staff-line-count 2
+                                % OPENING:
+                                % COMMANDS:
+                                \clef "percussion"
+                                <b d'>16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                % COMMANDS:
+                                \boxed-markup "Frame Drum + Slit Drum w/ drum sticks" 1
+                                <b d'>16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
+                            \times 4/7
+                            {
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
+                            \times 4/5
+                            {
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                <b d'>8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                \fff
+                                % STOP_BEAM:
+                                ]
+                            % CLOSE_BRACKETS:
+                            }
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \staff-line-count 1
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "percussion"
+                            r8..
+                            % AFTER:
+                            % COMMANDS:
+                            \boxed-markup "Chinese Cymbal w/ bow" 1
+                            r16
+                            r16
+                            r32
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 0
+                            \set stemRightBeamCount = 3
+                            c'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \pp
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 0
+                            c'8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % STOP_BEAM:
+                            ]
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1106,8 +1262,8 @@
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 10 13) (ly:make-duration 5 0))
-                                    \times 13/10
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 14 15) (ly:make-duration 4 0))
+                                    \times 15/14
                                     {
                                         \tweak style #'triangle
                                         bqs,16
@@ -1119,13 +1275,6 @@
                                         g16
                                         \tweak style #'triangle
                                         bqs,16
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 20 17) (ly:make-duration 5 0))
-                                    \times 17/20
-                                    {
                                         \tweak style #'triangle
                                         g16
                                         r16
@@ -1143,14 +1292,15 @@
                                         g16
                                         \tweak style #'triangle
                                         bqs,16
-                                        r8
+                                        r16
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 30 29) (ly:make-duration 5 0))
-                                    \times 29/30
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 7) (ly:make-duration 4 0))
+                                    \times 7/9
                                     {
+                                        r16
                                         \tweak style #'triangle
                                         g16
                                         % ABSOLUTE_AFTER:
@@ -1172,6 +1322,13 @@
                                         bqs,16
                                         \tweak style #'triangle
                                         g16
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 15) (ly:make-duration 5 0))
+                                    \times 15/16
+                                    {
                                         \tweak style #'triangle
                                         bqs,16
                                         \tweak style #'triangle
@@ -1188,9 +1345,12 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \mp
+                                        % SPANNER_STARTS:
+                                        \<
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
                                         \stopTextSpanThree
+                                        r16
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -1198,7 +1358,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 5 0))
                                     \times 13/12
                                     {
-                                        r16
                                         \tweak style #'triangle
                                         bqs,16
                                         \tweak style #'triangle
@@ -1206,26 +1365,8 @@
                                         \tweak style #'triangle
                                         c16
                                         r8
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
-                                    \times 8/7
-                                    {
                                         \tweak style #'triangle
                                         g16
-                                        \tweak style #'triangle
-                                        c16
-                                        r16
-                                        \tweak style #'triangle
-                                        g16
-                                        \tweak style #'triangle
-                                        bqs,16
-                                        \tweak style #'triangle
-                                        g16
-                                        \tweak style #'triangle
-                                        bqs,16
                                         % AFTER:
                                         % STOP_BEAM:
                                         ]
@@ -1235,8 +1376,191 @@
                                         \stopTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
-                                    s1 * 1/2
-                                    s1 * 17/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 0
+                                    \set stemRightBeamCount = 1
+                                    fs'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    - \tweak padding #6
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                    \startTextSpanTwo
+                                    - \tweak padding #8
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 1
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    fs'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 2
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \tweak style #'harmonic-mixed
+                                    fs'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 0
+                                    \set stemRightBeamCount = 2
+                                    \tweak style #'harmonic-mixed
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 1
+                                    \set stemRightBeamCount = 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    fs'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set stemLeftBeamCount = 2
+                                    \set stemRightBeamCount = 0
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % STOP_BEAM:
+                                    ]
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
+                                    r8..
+                                    r16
+                                    r32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 5 0))
+                                    \times 7/13
+                                    {
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >4.
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
+                                        % ARTICULATIONS:
+                                        \pp
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #6
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { pont. }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >32
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :256
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1543,18 +1867,18 @@
                                     \<
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #10.5
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "legno" } \hspace #0.5 }
-                                    \startTextSpanOne
-                                    - \tweak padding #6
+                                    - \tweak padding #4
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "molto tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }\startTextSpanThree
-                                    - \tweak padding #8
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "bat. ( no horizontal motion )" } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "trat. ( full bows as possible )" } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #8
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "legno" } \hspace #0.5 }
+                                    \startTextSpanOne
                                     \tweak style #'triangle
                                     bqs,16
                                     \tweak style #'triangle
@@ -1612,7 +1936,7 @@
                                     fqs16
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #6
+                                    - \tweak padding #4
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "molto tast." } \hspace #0.5 }\startTextSpanThree
@@ -1682,7 +2006,7 @@
                                     c32
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    - \tweak padding #8
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "." } \hspace #0.5 }
                                     \startTextSpanTwo
@@ -1726,6 +2050,9 @@
                                     r16
                                     \tweak style #'triangle
                                     fqs16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \<
                                     r16
                                     \tweak style #'triangle
                                     c16
@@ -1774,13 +2101,206 @@
                                     \tweak style #'triangle
                                     fqs32
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    \fff
                                     % STOP_BEAM:
                                     ]
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
-                                    s1 * 17/32
+                                    fs,32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    ef,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    d,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    d,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    d,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    bf,32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    af,32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    af,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    af,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    af,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    af,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    af,32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    af,32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    g,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    fs,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    e,32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \tweak X-extent #'(0 . 0)
+                                    \tweak transparent ##t
+                                    d,32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
