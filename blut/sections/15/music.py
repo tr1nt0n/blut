@@ -502,7 +502,7 @@ trinton.attach_multiple(
     ],
     attachments=[
         abjad.Markup(
-            r'\markup { \right-align \abs-fontsize #15 { \upright "×3" } }',
+            r'\markup { \abs-fontsize #15 { \upright "×3" } }',
         ),
         abjad.BarLine(".|:", "before"),
         abjad.LilyPondLiteral(

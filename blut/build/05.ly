@@ -1585,6 +1585,9 @@
                                         \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     <
                                         fqs'
                                         \tweak style #'harmonic
@@ -1597,19 +1600,24 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     fqs'8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
-                                    fqs'8.
                                     % AFTER:
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    fqs'8.
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                                     \times 12/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fqs'
                                             \tweak style #'harmonic
@@ -1637,6 +1645,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             fqs'
                                             \tweak style #'harmonic

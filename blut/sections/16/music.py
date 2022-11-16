@@ -774,7 +774,7 @@ trinton.attach_multiple(
     ],
     attachments=[
         abjad.Markup(
-            r'\markup { \right-align \abs-fontsize #15 { \upright "×4" } }',
+            r'\markup { \abs-fontsize #15 { \upright "×4" } }',
         ),
         abjad.BarLine(".|:", "before"),
         abjad.LilyPondLiteral(

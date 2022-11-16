@@ -1206,6 +1206,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 7 0))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1236,6 +1239,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'64
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1247,6 +1251,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                                     \times 12/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1276,6 +1283,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1294,6 +1302,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 6 0))
                                     \times 8/10
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1324,6 +1335,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'128
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1335,6 +1347,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                                     \times 12/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1364,6 +1379,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1382,6 +1398,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 8/12
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1410,6 +1429,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'32.
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1421,6 +1441,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                                     \times 12/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1451,6 +1474,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1471,6 +1495,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
                                     \times 4/7
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1493,6 +1520,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'8.
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1505,6 +1533,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 1))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1529,6 +1560,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1550,15 +1582,11 @@
                                     % ARTICULATIONS:
                                     - \tenuto
                                     \sfz
-                                    % START_BEAM:
-                                    [
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
                                     \sfz
-                                    % STOP_BEAM:
-                                    ]
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 7) (ly:make-duration 4 0))
@@ -1582,6 +1610,7 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1596,6 +1625,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1608,6 +1638,9 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     <
                                         gqs'
                                         \tweak style #'harmonic
@@ -1621,20 +1654,26 @@
                                     [
                                     % SPANNER_STARTS:
                                     \(
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     gqs'16
                                     % AFTER:
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
                                     gqs'16
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     \)
-                                    % STOP_BEAM:
-                                    ]
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 8/12
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1674,6 +1713,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1688,6 +1728,9 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     <
                                         fs'
                                         \tweak style #'harmonic
@@ -1699,16 +1742,18 @@
                                     \mp
                                     % START_BEAM:
                                     [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
                                     fs'8.
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 9) (ly:make-duration 4 0))
@@ -1757,6 +1802,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 27 20) (ly:make-duration 6 0))
                                     \times 20/27
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1780,6 +1828,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         gqs'8.
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1790,6 +1839,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1831,6 +1883,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1849,6 +1902,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 1))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1872,6 +1928,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'8...
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1884,6 +1941,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
                                     \times 8/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1913,6 +1973,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1933,6 +1994,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                                     \times 8/10
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1964,6 +2028,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'64
                                         % AFTER:
                                         % STOP_BEAM:
@@ -2020,6 +2085,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 8/12
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2050,6 +2118,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'32.
                                         % AFTER:
                                         % STOP_BEAM:
@@ -2164,6 +2233,7 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2180,6 +2250,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2196,6 +2267,9 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     <
                                         fs'
                                         \tweak style #'harmonic
@@ -2209,6 +2283,9 @@
                                     % SPANNER_STARTS:
                                     \(
                                     \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     fs'32
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2263,6 +2340,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                                     \times 4/5
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -2288,6 +2368,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         gqs'16
                                         % AFTER:
                                         % STEM_TREMOLOS:
@@ -2309,15 +2390,22 @@
                                     % ARTICULATIONS:
                                     - \tenuto
                                     \pp
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     <
                                         gqs'
                                         \tweak style #'harmonic
                                         cqs''
                                     >32.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     <
                                         gqs'
                                         \tweak style #'harmonic
@@ -2335,6 +2423,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
                                     \times 4/7
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -2355,6 +2446,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'8
                                         % AFTER:
                                         % STOP_BEAM:
@@ -2716,6 +2808,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 5 0))
                                     \times 6/7
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2738,6 +2833,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2751,6 +2847,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                                     \times 12/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2779,6 +2878,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2801,6 +2901,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2834,6 +2937,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'64
                                         % AFTER:
                                         % STOP_BEAM:
@@ -2902,6 +3006,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
                                     \times 4/7
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -2927,6 +3034,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             d'
                                             \tweak style #'harmonic
@@ -2941,6 +3049,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
                                     \times 8/13
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         d'8.
                                         % AFTER:
                                         % STEM_TREMOLOS:
@@ -2967,6 +3078,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             d'
                                             \tweak style #'harmonic
@@ -2987,6 +3099,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 5 0))
                                     \times 8/9
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             d'
                                             \tweak style #'harmonic
@@ -3022,6 +3137,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             d'
                                             \tweak style #'harmonic
@@ -3040,6 +3156,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
                                     \times 8/11
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         d'8
                                         % AFTER:
                                         % STEM_TREMOLOS:
@@ -3073,6 +3192,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         <
                                             d'
                                             \tweak style #'harmonic

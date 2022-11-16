@@ -367,14 +367,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.visas_pitches(20, 1)),
-    trinton.beam_durations(
-        [
-            (1, 4),
-            (1, 8),
-            (3, 16),
-            (1, 8),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.arrow_spanner_command(
@@ -410,6 +402,7 @@ trinton.make_music(
             2,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -420,14 +413,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.visas_pitches(20, 1)),
-    trinton.beam_durations(
-        [
-            (3, 16),
-            (5, 8),
-            (1, 8),
-            (7, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.arrow_spanner_command(
@@ -455,6 +440,7 @@ trinton.make_music(
     trinton.notehead_bracket_command(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((3, 10, 2, 7)),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -499,7 +485,6 @@ trinton.make_music(
     ),
     trinton.treat_tuplets(),
     evans.PitchHandler(pitch_list=library.visas_pitches(0, 2)),
-    abjad.beam,
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.arrow_spanner_command(
@@ -534,6 +519,7 @@ trinton.make_music(
             3,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -573,6 +559,7 @@ trinton.make_music(
             4,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(

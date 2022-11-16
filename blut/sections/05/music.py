@@ -547,12 +547,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.visas_pitches(5, 2)),
-    trinton.beam_durations(
-        divisions=[
-            (6, 16),
-            (7, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.arrow_spanner_command(
@@ -583,6 +577,7 @@ trinton.make_music(
             7,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -593,14 +588,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.visas_pitches(18, 2)),
-    trinton.beam_durations(
-        divisions=[
-            (7, 16),
-            (6, 16),
-            (3, 16),
-            (5, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.arrow_spanner_command(
@@ -642,6 +629,7 @@ trinton.make_music(
             5,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(

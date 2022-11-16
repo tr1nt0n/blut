@@ -1108,6 +1108,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "tenorvarC"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             gqs'
                                             \tweak style #'harmonic
@@ -1131,6 +1132,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         gqs'64
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1291,6 +1293,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 8/12
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             fs'
                                             \tweak style #'harmonic
@@ -1320,6 +1325,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         fs'32.
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1709,6 +1715,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "tenorvarC"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         <
                                             e'
                                             \tweak style #'harmonic
@@ -1741,6 +1748,7 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
                                         e'32
                                         % AFTER:
                                         % STOP_BEAM:

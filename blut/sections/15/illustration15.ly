@@ -57,7 +57,7 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            - \markup { \right-align \abs-fontsize #15 { \upright "×3" } }
+            - \markup { \abs-fontsize #15 { \upright "×3" } }
             % BEFORE:
             % COMMANDS:
             \set Score.repeatCommands = #'((volta "1 - 2"))

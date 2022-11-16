@@ -58,24 +58,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.visas_pitches(0, 1)),
-    trinton.beam_durations(
-        divisions=[
-            (1, 16),
-            (3, 16),
-            (1, 16),
-            (3, 16),
-            (2, 16),
-            (3, 16),
-            (2, 16),
-            (3, 16),
-            (2, 16),
-            (7, 16),
-            (5, 16),
-            (2, 16),
-            (7, 16),
-            (9, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.linear_attachment_command(
@@ -205,6 +187,7 @@ trinton.make_music(
             9,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -224,21 +207,6 @@ trinton.make_music(
     evans.PitchHandler(pitch_list=library.visas_pitches(20, 1)),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(),
-    trinton.beam_durations(
-        divisions=[
-            (5, 16),
-            (2, 16),
-            (3, 16),
-            (2, 16),
-            (2, 16),
-            (5, 16),
-            (2, 16),
-            (5, 16),
-            (6, 16),
-            (7, 16),
-            (1, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.linear_attachment_command(
@@ -398,6 +366,7 @@ trinton.make_music(
             1,
         )
     ),
+    beam_meter=True,
 )
 
 # bass clarinet music commands
@@ -880,15 +849,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(),
     evans.PitchHandler(pitch_list=library.visas_pitches(0, 2)),
-    trinton.beam_durations(
-        divisions=[
-            (3, 16),
-            (3, 16),
-            (4, 16),
-            (2, 16),
-            (4, 16),
-        ]
-    ),
     library.artificial_harmonics(),
     library.visas_attachments(),
     trinton.linear_attachment_command(
@@ -950,6 +910,7 @@ trinton.make_music(
             4,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -1037,18 +998,6 @@ trinton.make_music(
             ],
         ),
     ),
-    trinton.beam_durations(
-        divisions=[
-            (1, 8),
-            (1, 8),
-            (2, 8),
-            (1, 8),
-            (3, 8),
-            (2, 8),
-            (4, 8),
-            (5, 8),
-        ]
-    ),
     trinton.arrow_spanner_command(
         l_string="wide",
         r_string="tight",
@@ -1112,6 +1061,7 @@ trinton.make_music(
             5,
         )
     ),
+    beam_meter=True,
 )
 
 for voice_name in ["cello 1 voice", "cello 2 voice"]:

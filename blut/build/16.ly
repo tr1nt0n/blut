@@ -57,7 +57,7 @@
             s1 * 13/16
             % AFTER:
             % MARKUP:
-            - \markup { \right-align \abs-fontsize #15 { \upright "×4" } }
+            - \markup { \abs-fontsize #15 { \upright "×4" } }
             % COMMANDS:
             \bar ":|."
             \once \override Score.BarLine.transparent = ##f
