@@ -310,10 +310,9 @@
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
                                 \pp
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r8
                             % CLOSE_BRACKETS:
                             }
@@ -325,29 +324,25 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
@@ -358,9 +353,8 @@
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r4
                             % CLOSE_BRACKETS:
                             }
@@ -401,17 +395,15 @@
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
                             \pp
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             c'8.
                             % AFTER:
@@ -446,64 +438,55 @@
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r32
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r32
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r32
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
                                 \!
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                             % CLOSE_BRACKETS:
                             }
                             % BEFORE:
@@ -517,89 +500,77 @@
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
                             \ppp
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
-                            r32
-                            r32
-                            c'32
-                            % AFTER:
-                            % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r32
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
-                            r32
-                            c'32
-                            % AFTER:
-                            % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
-                            r32
-                            c'32
-                            % AFTER:
-                            % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
-                            c'32
-                            % AFTER:
-                            % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r32
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            r32
+                            c'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            r32
+                            c'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            c'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r32
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            r32
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r32
                             c'32
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            r32
+                            c'32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

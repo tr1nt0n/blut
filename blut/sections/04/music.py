@@ -235,9 +235,10 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.LilyPondLiteral(r"- \baca-circle-markup", "after"),
+            abjad.Articulation("baca-circle-markup"),
         ],
         selector=trinton.pleaves(),
+        direction=abjad.UP,
     ),
     trinton.attachment_command(
         attachments=[
@@ -285,9 +286,10 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.LilyPondLiteral(r"- \baca-circle-markup", "after"),
+            abjad.Articulation("baca-circle-markup"),
         ],
         selector=trinton.pleaves(),
+        direction=abjad.UP,
     ),
     trinton.attachment_command(
         attachments=[
@@ -346,9 +348,10 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.LilyPondLiteral(r"- \baca-circle-markup", "after"),
+            abjad.Articulation("baca-circle-markup"),
         ],
         selector=trinton.pleaves(),
+        direction=abjad.UP,
     ),
     trinton.attachment_command(
         attachments=[
@@ -399,9 +402,10 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.LilyPondLiteral(r"- \baca-circle-markup", "after"),
+            abjad.Articulation("baca-circle-markup"),
         ],
         selector=trinton.pleaves(),
+        direction=abjad.UP,
     ),
     trinton.attachment_command(
         attachments=[

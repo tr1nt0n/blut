@@ -320,7 +320,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     library.perc_instrument(
         instrument_string="Lion's Roar",
         selector=trinton.select_leaves_by_index([0]),
@@ -491,8 +490,8 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([4]),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
+    beam_meter=True,
 )
 
 # cello 2 music commands
@@ -675,7 +674,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -683,6 +681,7 @@ trinton.make_music(
             2,
         )
     ),
+    beam_meter=True,
 )
 
 # attachments

@@ -214,7 +214,6 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=6.5,
     ),
-    library.beam_logical_ties(),
     trinton.notehead_bracket_command(),
     voice=score["percussion voice"],
 )
@@ -268,8 +267,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
+    beam_meter=True,
 )
 
 # cello 2 music commands
@@ -330,8 +329,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 # markups and beams

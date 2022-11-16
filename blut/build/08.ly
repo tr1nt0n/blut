@@ -1217,6 +1217,7 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     cqs'''16
                                     % AFTER:
@@ -1224,6 +1225,8 @@
                                     \fff
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
+                                    % START_BEAM:
+                                    [
                                     % SPANNER_STARTS:
                                     - \tweak padding #9.5
                                     - \abjad-dashed-line-with-hook
@@ -1237,11 +1240,14 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     cqs'''16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
+                                    % STOP_BEAM:
+                                    ]
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
@@ -1252,21 +1258,29 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     a''16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
                                     \tweak style #'harmonic-mixed
                                     cqs'''16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     c'16
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 7/5
                                     s1 * 12/11
                                     s1 * 15/14
@@ -1445,12 +1459,15 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         a8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \fff
                                         % MARKUP:
                                         ^ \markup \upright { "I" }
+                                        % START_BEAM:
+                                        [
                                         % SPANNER_STARTS:
                                         - \tweak padding #9.5
                                         - \abjad-dashed-line-with-hook
@@ -1475,12 +1492,15 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
+                                        \revert Staff.Stem.stemlet-length
                                         c,8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "IV" }
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 7/5

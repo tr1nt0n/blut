@@ -431,8 +431,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -506,8 +506,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(

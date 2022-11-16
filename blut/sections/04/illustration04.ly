@@ -469,18 +469,16 @@
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
                             \ppp
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r4
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r4.
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
@@ -491,16 +489,14 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                             % CLOSE_BRACKETS:
                             }
@@ -510,9 +506,8 @@
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             c'4.
                             % AFTER:
@@ -528,18 +523,16 @@
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
                             \pp
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             r16
                             r8
@@ -551,25 +544,22 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r8
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r8
                             % CLOSE_BRACKETS:
                             }
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r8
                             c'2
                             % AFTER:
@@ -584,26 +574,23 @@
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
                             \p
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             r16
                             r16
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            - \stopped
-                            % COMMANDS:
-                            - \baca-circle-markup
+                            ^ \baca-circle-markup
+                            ^ \stopped
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                             \times 2/3
@@ -612,9 +599,8 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                             % CLOSE_BRACKETS:
                             }
@@ -635,17 +621,15 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
                                 \mp
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r8
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                - \stopped
-                                % COMMANDS:
-                                - \baca-circle-markup
+                                ^ \baca-circle-markup
+                                ^ \stopped
                                 r16
                             % CLOSE_BRACKETS:
                             }

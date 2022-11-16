@@ -808,7 +808,6 @@ trinton.make_music(
     library.vc_bells_attachments(
         instrument="cello 1",
     ),
-    library.beam_logical_ties(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("p"),
@@ -824,6 +823,7 @@ trinton.make_music(
         ),
     ),
     voice=score["cello 1 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -847,7 +847,6 @@ trinton.make_music(
     library.vc_bells_attachments(
         instrument="cello 1",
     ),
-    library.beam_logical_ties(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("p"),
@@ -869,6 +868,7 @@ trinton.make_music(
             9,
         )
     ),
+    beam_meter=True,
 )
 
 for voice_name in ["cello 1 voice", "cello 2 voice"]:
@@ -1086,8 +1086,8 @@ trinton.make_music(
     library.vc_bells_attachments(
         instrument="cello 2",
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -1112,7 +1112,6 @@ trinton.make_music(
     library.vc_bells_attachments(
         instrument="cello 2",
     ),
-    library.beam_logical_ties(),
     trinton.attachment_command(
         attachments=[abjad.Clef("treble"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([0]),
@@ -1124,6 +1123,7 @@ trinton.make_music(
             2,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -1145,8 +1145,8 @@ trinton.make_music(
         attachments=[abjad.Clef("treble"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([-3]),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 # markups and beams

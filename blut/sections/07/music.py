@@ -452,7 +452,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -461,6 +460,7 @@ trinton.make_music(
             3,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -495,7 +495,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -504,6 +503,7 @@ trinton.make_music(
             4,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -535,7 +535,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (
@@ -545,6 +544,7 @@ trinton.make_music(
             1,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -576,8 +576,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 # cello 2 music commands
@@ -612,8 +612,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -641,8 +641,8 @@ trinton.make_music(
             ]
         ),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 2 voice"],
+    beam_meter=True,
 )
 
 # markups and beams

@@ -354,14 +354,9 @@
                             c'8
                             c'16
                             % AFTER:
-                            % START_BEAM:
-                            [
                             % SPANNER_STARTS:
                             ~
                             c'16
-                            % AFTER:
-                            % STOP_BEAM:
-                            ]
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
@@ -486,11 +481,14 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         g''16
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "III" }
+                                        % START_BEAM:
+                                        [
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
@@ -525,13 +523,14 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \revert Staff.Stem.stemlet-length
                                         \tweak style #'harmonic-mixed
                                         dqs'''32
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "III" }
-                                        % START_BEAM:
-                                        [
+                                        % STOP_BEAM:
+                                        ]
                                         % SPANNER_STARTS:
                                         ~
                                     % CLOSE_BRACKETS:
@@ -541,11 +540,14 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 11) (ly:make-duration 5 0))
                                     \times 11/7
                                     {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         dqs'''32
                                         % AFTER:
-                                        % STOP_BEAM:
-                                        ]
+                                        % START_BEAM:
+                                        [
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
@@ -561,10 +563,13 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
+                                        \revert Staff.Stem.stemlet-length
                                         c,8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "IV" }
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -590,11 +595,14 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         cqs'''16
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "III" }
+                                        % START_BEAM:
+                                        [
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
@@ -605,6 +613,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \revert Staff.Stem.stemlet-length
                                         \tweak style #'harmonic-mixed
                                         g''32
                                         % AFTER:
@@ -614,6 +623,8 @@
                                         ^ \markup \upright { "III" }
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -657,11 +668,14 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         g''16
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "III" }
+                                        % START_BEAM:
+                                        [
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
@@ -689,85 +703,101 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
+                                        \revert Staff.Stem.stemlet-length
                                         a8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \upright { "I" }
-                                        % START_BEAM:
-                                        [
+                                        % STOP_BEAM:
+                                        ]
                                         % SPANNER_STARTS:
                                         ~
                                     % CLOSE_BRACKETS:
                                     }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     a16
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     d'''32
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     d'''32
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     gqs'''32
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     gqs'''32
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                    \revert Staff.Stem.stemlet-length
                                     c,16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "IV" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
                                     c,16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     c'''16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                    \revert Staff.Stem.stemlet-length
                                     a32
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
                                     % MARKUP:
                                     ^ \markup \upright { "I" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
                                     a16
@@ -779,9 +809,6 @@
                                     % SPANNER_STARTS:
                                     ~
                                     a16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
@@ -803,61 +830,83 @@
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     d'''16
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     gqs'''32
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     gqs'''32
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                    \revert Staff.Stem.stemlet-length
                                     c,32
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "IV" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
                                     c,8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     c,32
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     c'''32
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
-                                    % START_BEAM:
-                                    [
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     c'''32
                                     % AFTER:
-                                    % STOP_BEAM:
-                                    ]
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     c'32
                                     % AFTER:
@@ -865,6 +914,8 @@
                                     \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

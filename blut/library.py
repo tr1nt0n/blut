@@ -926,17 +926,6 @@ def perc_instrument(instrument_string, selector):
     return command
 
 
-# beaming
-
-
-def beam_logical_ties():
-    def beam(argument):
-        for tie in abjad.select.logical_ties(argument):
-            abjad.beam(tie, beam_rests=False)
-
-    return beam
-
-
 # spanners
 
 

@@ -118,7 +118,6 @@ trinton.make_music(
     ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    library.beam_logical_ties(),
     library.perc_instrument(
         instrument_string="Lion's Roar", selector=trinton.select_leaves_by_index([0])
     ),
@@ -202,8 +201,8 @@ trinton.make_music(
         attachments=[abjad.Dynamic("p"), abjad.Clef("treble")],
         selector=trinton.select_leaves_by_index([0]),
     ),
-    library.beam_logical_ties(),
     voice=score["cello 1 voice"],
+    beam_meter=True,
 )
 
 trinton.make_music(
@@ -331,7 +330,6 @@ trinton.make_music(
     trinton.force_rest(trinton.select_logical_ties_by_index([0, -1])),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    library.beam_logical_ties(),
     library.vc_bells_handler(instrument="cello 2", index=0, seed=13),
     library.vc_bells_attachments(instrument="cello 2"),
     trinton.attachment_command(
@@ -347,6 +345,7 @@ trinton.make_music(
             1,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(
