@@ -786,6 +786,7 @@ trinton.make_music(
             6,
         )
     ),
+    beam_meter=True,
 )
 
 trinton.make_music(

@@ -1676,6 +1676,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         g''16
                                         % AFTER:
@@ -1683,6 +1684,8 @@
                                         \p
                                         % MARKUP:
                                         ^ \markup \upright { "III" }
+                                        % START_BEAM:
+                                        [
                                         % SPANNER_STARTS:
                                         - \tweak padding #9.5
                                         - \abjad-dashed-line-with-hook
@@ -1696,12 +1699,15 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
+                                        \revert Staff.Stem.stemlet-length
                                         c,16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ff
                                         % MARKUP:
                                         ^ \markup \upright { "IV" }
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -1712,6 +1718,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'harmonic-mixed
                                         fs'''16
                                         % AFTER:
@@ -1719,6 +1726,8 @@
                                         \p
                                         % MARKUP:
                                         ^ \markup \upright { "II" }
+                                        % START_BEAM:
+                                        [
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
@@ -1731,6 +1740,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
+                                        \revert Staff.Stem.stemlet-length
                                         \tweak style #'harmonic-mixed
                                         dqs'''16
                                         % AFTER:
@@ -1740,6 +1750,8 @@
                                         ^ \markup \upright { "III" }
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
