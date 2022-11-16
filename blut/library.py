@@ -726,12 +726,21 @@ def electroshock_attachments():
 
     return attach
 
+
 def ghost_attachments(contour=None):
     def attach(argument):
         if contour == "lwy":
-            counts = [6, 6, 5,]
+            counts = [
+                6,
+                6,
+                5,
+            ]
         else:
-            counts = [6, 6, 5,]
+            counts = [
+                6,
+                6,
+                5,
+            ]
         logical_ties = abjad.select.logical_ties(argument)
         counts = [counts for _ in logical_ties]
         counts = evans.Sequence(counts).flatten()
@@ -750,23 +759,23 @@ def ghost_attachments(contour=None):
                         abjad.select.with_next_leaf(tie),
                         allow_repeats=True,
                         allow_ties=True,
-                        zero_padding=True
+                        zero_padding=True,
                     )
                 else:
                     abjad.attach(abjad.Glissando(zero_padding=True), tie[0])
 
             for leaf in all_but_first_leaf:
                 abjad.attach(
-                    abjad.LilyPondLiteral("\once \override Accidental.stencil = ##f", "before"),
-                    leaf
+                    abjad.LilyPondLiteral(
+                        "\once \override Accidental.stencil = ##f", "before"
+                    ),
+                    leaf,
                 )
                 abjad.attach(
-                    abjad.LilyPondLiteral("\\tweak X-extent #'(0 . 0)", "before"),
-                    leaf
+                    abjad.LilyPondLiteral("\\tweak X-extent #'(0 . 0)", "before"), leaf
                 )
                 abjad.attach(
-                    abjad.LilyPondLiteral("\\tweak transparent ##t", "before"),
-                    leaf
+                    abjad.LilyPondLiteral("\\tweak transparent ##t", "before"), leaf
                 )
                 abjad.attach(
                     abjad.LilyPondLiteral(

@@ -2125,6 +2125,10 @@
                                     (
                                     - \abjad-zero-padding-glissando
                                     \glissando
+                                    - \tweak padding #5.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    \startTextSpan
                                     \>
                                     % BEFORE:
                                     % COMMANDS:
@@ -2305,6 +2309,7 @@
                                     \!
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpan
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:

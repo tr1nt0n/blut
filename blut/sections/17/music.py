@@ -185,7 +185,13 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (17, 19)),
-    library.hyperventilation_perc_rhythms([4, 7, 5,]),
+    library.hyperventilation_perc_rhythms(
+        [
+            4,
+            7,
+            5,
+        ]
+    ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([[2, -1]]),
@@ -220,11 +226,12 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.Dynamic("pp"), abjad.StartHairpin("--"), abjad.StopHairpin()],
-        selector=trinton.select_leaves_by_index(
-            [0, 0, -1],
-            pitched=True
-        ),
+        attachments=[
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("--"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     voice=score["percussion voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((3,)),
@@ -441,10 +448,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.id_spanner_command(
-        selector=trinton.select_leaves_by_index(
-            [0, -1],
-            pitched=True
-        ),
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         id="One",
         left_text="legno",
         style="dashed-line-with-hook",
@@ -476,10 +480,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (15, 17)),
     trinton.id_spanner_command(
-        selector=trinton.select_leaves_by_index(
-            [0, -1],
-            pitched=True
-        ),
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         id="Two",
         left_text=".",
         style="dashed-line-with-hook",
@@ -513,7 +514,7 @@ trinton.make_music(
             abjad.Dynamic("f"),
             abjad.StartHairpin(">"),
             abjad.Dynamic("mp"),
-            abjad.StartHairpin("<")
+            abjad.StartHairpin("<"),
         ],
         selector=trinton.select_leaves_by_index(
             [
@@ -533,9 +534,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(
         _,
-        (
-            18, 19
-        ),
+        (18, 19),
     ),
     evans.RhythmHandler(
         evans.talea(
@@ -550,8 +549,16 @@ trinton.make_music(
         )
     ),
     trinton.treat_tuplets(),
-    trinton.force_rest(selector=trinton.select_leaves_by_index([6,])),
-    evans.RewriteMeterCommand(boundary_depth=-2,),
+    trinton.force_rest(
+        selector=trinton.select_leaves_by_index(
+            [
+                6,
+            ]
+        )
+    ),
+    evans.RewriteMeterCommand(
+        boundary_depth=-2,
+    ),
     evans.PitchHandler([6]),
     trinton.beam_groups(beam_rests=False),
     library.electroshock_attachments(),
@@ -565,7 +572,8 @@ trinton.make_music(
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index(
             [
-                0, -1,
+                0,
+                -1,
             ]
         ),
         id="Two",
@@ -577,10 +585,7 @@ trinton.make_music(
         attachments=[
             abjad.Dynamic("fff"),
         ],
-        selector=trinton.select_leaves_by_index(
-            [-1],
-            pitched=True
-        )
+        selector=trinton.select_leaves_by_index([-1], pitched=True),
     ),
     voice=score["cello 1 voice"],
 )
@@ -938,10 +943,54 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (20,)),
-    evans.RhythmHandler(evans.talea([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,], 32)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+            ],
+            32,
+        )
+    ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-18, -21, -22, -22, -22, -14, -16, -16, -16, -16, -16, -16, -16, -17, -18, -20, -22,]),
+    evans.PitchHandler(
+        [
+            -18,
+            -21,
+            -22,
+            -22,
+            -22,
+            -14,
+            -16,
+            -16,
+            -16,
+            -16,
+            -16,
+            -16,
+            -16,
+            -17,
+            -18,
+            -20,
+            -22,
+        ]
+    ),
     library.ghost_attachments(contour="lwy"),
     trinton.beam_durations([(3, 16), (3, 16), (5, 32)]),
     trinton.linear_attachment_command(
@@ -953,7 +1002,21 @@ trinton.make_music(
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 6, 6, 12, -1,])
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                6,
+                6,
+                12,
+                -1,
+            ]
+        ),
+    ),
+    trinton.hooked_spanner_command(
+        string="IV",
+        selector=trinton.select_leaves_by_index([0, -1]),
+        padding=5.5,
     ),
     voice=score["cello 2 voice"],
 )
