@@ -738,8 +738,8 @@ def ghost_attachments(contour=None):
         else:
             counts = [
                 6,
-                6,
                 5,
+                6,
             ]
         logical_ties = abjad.select.logical_ties(argument)
         counts = [counts for _ in logical_ties]
@@ -785,6 +785,25 @@ def ghost_attachments(contour=None):
                 )
 
     return attach
+
+
+def invisible_tuplet_brackets():
+    def command(argument):
+        for tuplet in abjad.select.tuplets(argument):
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletBracket.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletNumber.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+
+    return command
 
 
 def noteheads_only():
@@ -1089,7 +1108,7 @@ def write_short_instrument_names(score):
 # fermate
 
 
-def fermata_measures(score, measures, fermata="ufermata"):
+def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
     for voice_name in [
         "bassclarinet voice",
         "percussion voice",
@@ -1107,7 +1126,8 @@ def fermata_measures(score, measures, fermata="ufermata"):
 
         for measure in measures:
             abjad.attach(start_command, all_measures[measure - 1][0])
-            abjad.attach(stop_command, all_measures[measure - 1][0])
+            if last_measure is False:
+                abjad.attach(stop_command, all_measures[measure - 1][0])
 
     trinton.attach_multiple(
         score=score,

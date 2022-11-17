@@ -146,6 +146,7 @@
 
         \override InstrumentName.self-alignment-X = #CENTER
         \override InstrumentName.font-name = "Bodoni72 Book"
+        % \RemoveEmptyStaves
     }
 
     \context {
