@@ -147,25 +147,23 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override Rest.transparent = ##t
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 r2
                                 % ABSOLUTE_BEFORE:
                                 % COMMANDS:
                                 \staff-line-count 5
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "treble"
@@ -188,12 +186,11 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -209,14 +206,14 @@
                                 \>
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override NoteHead.no-ledgers = ##t
+                                \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
                                 \once \override NoteHead.transparent = ##t
-                                \once \override Stem.transparent = ##t
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -229,13 +226,12 @@
                                 \!
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override Rest.transparent = ##t
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 r2
                             % CLOSE_BRACKETS:
                             }
@@ -316,13 +312,12 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override Rest.transparent = ##t
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 r2
                                 % AFTER:
                                 % COMMANDS:
@@ -332,12 +327,11 @@
                                 \staff-line-count 1
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "percussion"
@@ -360,12 +354,11 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -381,14 +374,14 @@
                                 \>
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override NoteHead.no-ledgers = ##t
+                                \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
                                 \once \override NoteHead.transparent = ##t
-                                \once \override Stem.transparent = ##t
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -401,13 +394,12 @@
                                 \!
                                 % BEFORE:
                                 % COMMANDS:
+                                \once \override Beam.stencil = ##f
+                                \once \override Dots.stencil = ##f
+                                \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
                                 \once \override Rest.transparent = ##t
-                                % GROB_OVERRIDES:
-                                \once \override Beam.transparent = ##t
-                                \once \override Dots.transparent = ##t
-                                \once \override Flag.transparent = ##t
-                                \once \override Stem.transparent = ##t
+                                \once \override Stem.stencil = ##f
                                 r2
                             % CLOSE_BRACKETS:
                             }
@@ -488,12 +480,11 @@
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
                                     \once \override NoteHead.duration-log = 2
-                                    % GROB_OVERRIDES:
-                                    \once \override Beam.transparent = ##t
-                                    \once \override Dots.transparent = ##t
-                                    \once \override Flag.transparent = ##t
-                                    \once \override Stem.transparent = ##t
+                                    \once \override Stem.stencil = ##f
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -514,12 +505,11 @@
                                         \staff-line-count 5
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
@@ -545,12 +535,11 @@
                                         - \tweak bound-details.right.text \markup \concat { { \upright "trem. tight 0°" } \hspace #0.5 }\startTextSpanThree
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -577,12 +566,11 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         c,2...
                                         % AFTER:
                                         % SPANNER_STARTS:
@@ -596,14 +584,14 @@
                                         - \tweak bound-details.right.text \markup \concat { { \upright "no trem. -45°" } \hspace #0.5 }\startTextSpanThree
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
                                         \once \override NoteHead.transparent = ##t
-                                        \once \override Stem.transparent = ##t
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -690,12 +678,11 @@
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
                                     \once \override NoteHead.duration-log = 2
-                                    % GROB_OVERRIDES:
-                                    \once \override Beam.transparent = ##t
-                                    \once \override Dots.transparent = ##t
-                                    \once \override Flag.transparent = ##t
-                                    \once \override Stem.transparent = ##t
+                                    \once \override Stem.stencil = ##f
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -716,12 +703,11 @@
                                         \staff-line-count 5
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
@@ -747,12 +733,11 @@
                                         \startTextSpanOne
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -779,12 +764,11 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
-                                        % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
-                                        \once \override Stem.transparent = ##t
+                                        \once \override Stem.stencil = ##f
                                         a2...
                                         % AFTER:
                                         % SPANNER_STARTS:
@@ -798,14 +782,14 @@
                                         - \tweak bound-details.right.text \markup \concat { { \upright "trem. tight 45°" } \hspace #0.5 }\startTextSpanThree
                                         % BEFORE:
                                         % COMMANDS:
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
-                                        \once \override Beam.transparent = ##t
-                                        \once \override Dots.transparent = ##t
-                                        \once \override Flag.transparent = ##t
                                         \once \override NoteHead.transparent = ##t
-                                        \once \override Stem.transparent = ##t
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil

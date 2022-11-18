@@ -158,14 +158,10 @@
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                                e'''!4.
+                                e'''4.
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \ppp
-                                % MARKUP:
-                                ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                                 % SPANNER_STARTS:
                                 \<
                                 % OPENING:
@@ -174,14 +170,10 @@
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                                e'''!16
+                                e'''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \ff
-                                % MARKUP:
-                                ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                             % CLOSE_BRACKETS:
                             }
                             s1 * 11/16
@@ -825,19 +817,10 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \abjad-natural  }
-                                            c,
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
-                                            ff'!
-                                        >4.
+                                        <c, f'>4.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ppp
-                                        % MARKUP:
-                                        ^ \markup \upright { "+50" }
                                         % SPANNER_STARTS:
                                         \<
                                         % OPENING:
@@ -846,19 +829,10 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \abjad-natural  }
-                                            c,
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
-                                            ff'!
-                                        >16
+                                        <c, f'>16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ff
-                                        % MARKUP:
-                                        ^ \markup \upright { "+50" }
                                         % SPANNER_STOPS:
                                         \stopTextSpan
                                     % CLOSE_BRACKETS:
@@ -1444,19 +1418,10 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \abjad-natural  }
-                                            c,
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
-                                            af'!
-                                        >4.
+                                        <c, a'>4.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ppp
-                                        % MARKUP:
-                                        ^ \markup \upright { "-31" }
                                         % SPANNER_STARTS:
                                         \<
                                         % OPENING:
@@ -1465,19 +1430,10 @@
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \abjad-natural  }
-                                            c,
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
-                                            af'!
-                                        >16
+                                        <c, a'>16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ff
-                                        % MARKUP:
-                                        ^ \markup \upright { "-31" }
                                         % SPANNER_STOPS:
                                         \stopTextSpan
                                     % CLOSE_BRACKETS:

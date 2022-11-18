@@ -786,6 +786,7 @@ trinton.attach(
     attachment=abjad.LilyPondLiteral(r"\pageBreak", "after"),
     leaves=[
         1,
+        -2,
     ],
 )
 
@@ -819,26 +820,6 @@ library.two_lines(
         42,
     ],
 )
-
-# for leaf, tempo in zip(
-#     [
-#         0,
-#         2,
-#         17,
-#         19,
-#     ],
-#     [
-#         3,
-#         1,
-#         2,
-#         0,
-#     ],
-# ):
-#     trinton.attach(
-#         voice=score["Global Context"],
-#         leaves=[leaf],
-#         attachment=library.tempi[tempo],
-#     )
 
 trinton.make_music(
     lambda _: trinton.select_target(

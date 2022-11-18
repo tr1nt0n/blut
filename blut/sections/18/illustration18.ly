@@ -100,6 +100,9 @@
             #(ly:expect-warning "strange time signature found")
             \time 5/12
             s1 * 5/12
+            % AFTER:
+            % COMMANDS:
+            \pageBreak
             % OPENING:
             % COMMANDS:
             \time 1/2

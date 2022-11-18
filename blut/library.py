@@ -809,10 +809,22 @@ def invisible_tuplet_brackets():
 def noteheads_only():
     def only_noteheads(argument):
         for leaf in abjad.select.leaves(argument):
-            abjad.override(leaf).Stem.transparent = True
-            abjad.override(leaf).Beam.transparent = True
-            abjad.override(leaf).Flag.transparent = True
-            abjad.override(leaf).Dots.transparent = True
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Stem.stencil = ##f", "before"),
+                leaf,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Beam.stencil = ##f", "before"),
+                leaf,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Flag.stencil = ##f", "before"),
+                leaf,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Dots.stencil = ##f", "before"),
+                leaf,
+            )
             abjad.attach(
                 abjad.LilyPondLiteral(
                     r"\once \override NoteHead.duration-log = 2", "before"
@@ -836,6 +848,17 @@ def transparent_noteheads(selector):
             )
 
     return transparent
+
+
+def change_tuplet_text(selector, text):
+    def change(argument):
+        tuplets = selector(argument)
+        for tuplet in tuplets:
+            abjad.override(
+                tuplet
+            ).TupletNumber.text = rf'\markup \upright {{ "{ text }" }}'
+
+    return change
 
 
 def one_line(
@@ -921,15 +944,25 @@ def tremolo(selector=None):
     return call_stem_tremolo
 
 
-def glissando():
+def glissando(selector=None):
     def call_glissando(argument):
-        leaves = abjad.select.leaves(argument, pitched=True)
-        abjad.glissando(
-            leaves,
-            hide_middle_note_heads=True,
-            allow_repeats=True,
-            allow_ties=True,
-        )
+        if selector is not None:
+            leaves = selector(argument)
+            for group in leaves:
+                abjad.glissando(
+                    group,
+                    hide_middle_note_heads=True,
+                    allow_repeats=True,
+                    allow_ties=True,
+                )
+        else:
+            leaves = abjad.select.leaves(argument, pitched=True)
+            abjad.glissando(
+                leaves,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
 
     return call_glissando
 

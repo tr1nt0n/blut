@@ -240,17 +240,29 @@ for voice_name in library.all_voice_names:
         voice=score[voice_name],
     )
 
-for voice_name in ["bassclarinet voice", "cello 1 voice", "cello 2 voice"]:
-    for leaf in [0, 1, 2]:
-        trinton.make_music(
-            lambda _: trinton.select_target(_, (16,)),
-            library.pitch_monolith(
-                voice_name=voice_name,
-                selector=trinton.select_leaves_by_index([leaf]),
-                index=2,
-            ),
-            voice=score[voice_name],
-        )
+for voice_name, second_pitch_list in zip(
+    ["bassclarinet voice", "cello 1 voice", "cello 2 voice"],
+    [
+        [
+            28,
+        ],
+        [[-24, 5]],
+        [[-24, 9]],
+    ],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (16,)),
+        library.pitch_monolith(
+            voice_name=voice_name,
+            selector=trinton.select_leaves_by_index([0]),
+            index=2,
+        ),
+        trinton.pitch_with_selector_command(
+            pitch_list=second_pitch_list,
+            selector=trinton.select_leaves_by_index([1, 2]),
+        ),
+        voice=score[voice_name],
+    )
 
 # percussion music commands
 
