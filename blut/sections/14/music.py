@@ -65,13 +65,14 @@ for voice_name, measure_range in zip(
             attachments=[
                 abjad.Articulation("tenuto"),
             ],
-            selector=trinton.patterned_leaf_index_selector(
+            selector=trinton.patterned_tie_index_selector(
                 [
                     0,
                     2,
                 ],
-                8,
+                7,
                 pitched=True,
+                first=True
             ),
         ),
         voice=score[voice_name],
@@ -95,26 +96,28 @@ for voice_name, measure_range in zip(
                 attachments=[
                     abjad.Dynamic("p"),
                 ],
-                selector=trinton.patterned_leaf_index_selector(
+                selector=trinton.patterned_tie_index_selector(
                     [
                         0,
                         2,
                     ],
-                    8,
+                    7,
                     pitched=True,
+                    first=True
                 ),
             ),
             trinton.attachment_command(
                 attachments=[
                     abjad.Dynamic("ppp"),
                 ],
-                selector=trinton.patterned_leaf_index_selector(
+                selector=trinton.patterned_tie_index_selector(
                     [
                         1,
                         3,
                     ],
-                    8,
+                    7,
                     pitched=True,
+                    first=True
                 ),
             ),
             library.perc_instrument(

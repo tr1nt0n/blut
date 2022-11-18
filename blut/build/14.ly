@@ -255,10 +255,10 @@
                             % SPANNER_STARTS:
                             ~
                             d'32
+                            b8
                             % AFTER:
                             % ARTICULATIONS:
                             \ppp
-                            b8
                             b8
                             b8
                             b8
@@ -280,18 +280,19 @@
                             ~
                             b32
                             % AFTER:
-                            % ARTICULATIONS:
-                            - \tenuto
-                            \p
                             % STOP_BEAM:
                             ]
                             d'8
                             % AFTER:
                             % ARTICULATIONS:
-                            \ppp
+                            - \tenuto
+                            \p
                             % START_BEAM:
                             [
                             b8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
                             b8
                             b8
                             b8
@@ -313,18 +314,19 @@
                             ~
                             b32
                             % AFTER:
-                            % ARTICULATIONS:
-                            - \tenuto
-                            \p
                             % STOP_BEAM:
                             ]
                             d'8
                             % AFTER:
                             % ARTICULATIONS:
-                            \ppp
+                            - \tenuto
+                            \p
                             % START_BEAM:
                             [
                             b8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ppp
                             b8
                             b8
                             b8
