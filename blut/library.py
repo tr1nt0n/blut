@@ -1171,7 +1171,7 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
                 rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }} '
             ),
             abjad.LilyPondLiteral(
-                r"\once \override Score.TimeSignature.transparent = ##t",
+                r"\once \override Score.TimeSignature.stencil = ##f",
                 "before",
             ),
             abjad.LilyPondLiteral(

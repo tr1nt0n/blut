@@ -83,21 +83,21 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
             % SPANNER_STOPS:
             \stopTextSpan
             % COMMANDS:
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            \break
+            % \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:

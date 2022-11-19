@@ -26,7 +26,7 @@
             s1 * 9/8
             % AFTER:
             % COMMANDS:
-            \pageBreak
+            % \pageBreak
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -57,14 +57,14 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uveryshortfermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.uveryshortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -96,7 +96,7 @@
             s1 * 5/12
             % AFTER:
             % COMMANDS:
-            \pageBreak
+            % \pageBreak
             % OPENING:
             % COMMANDS:
             \time 1/2

@@ -72,7 +72,7 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
@@ -95,7 +95,7 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16

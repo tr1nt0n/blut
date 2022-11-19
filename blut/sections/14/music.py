@@ -72,7 +72,7 @@ for voice_name, measure_range in zip(
                 ],
                 7,
                 pitched=True,
-                first=True
+                first=True,
             ),
         ),
         voice=score[voice_name],
@@ -103,7 +103,7 @@ for voice_name, measure_range in zip(
                     ],
                     7,
                     pitched=True,
-                    first=True
+                    first=True,
                 ),
             ),
             trinton.attachment_command(
@@ -117,7 +117,7 @@ for voice_name, measure_range in zip(
                     ],
                     7,
                     pitched=True,
-                    first=True
+                    first=True,
                 ),
             ),
             library.perc_instrument(

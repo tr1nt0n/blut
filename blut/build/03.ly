@@ -43,7 +43,7 @@
             s1 * 1/4
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            \break
+            % \break
             % OPENING:
             % COMMANDS:
             \time 12/32
@@ -70,14 +70,14 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
