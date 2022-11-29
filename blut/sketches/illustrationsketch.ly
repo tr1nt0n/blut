@@ -31,22 +31,22 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                        fs''!1
+                        gs'''!1
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \concat { F+41 } }
+                        ^ \markup \center-align { \concat { G+41 } }
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
-                        ef''!1
+                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                        f'''!1
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \concat { E-49 } }
+                        ^ \markup \center-align { \concat { F\raise #0.75 { \teeny \smaller \sharp } -49 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                        d''!1
+                        e'''!1
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +42 } }
+                        ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -109,7 +109,7 @@
                             >1
                             % AFTER:
                             % MARKUP:
-                            ^ \markup \upright { "+4" }
+                            ^ \markup \upright { "+50" }
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -136,7 +136,7 @@
                             >1
                             % AFTER:
                             % MARKUP:
-                            ^ \markup \upright { "31" }
+                            ^ \markup \upright { "-31" }
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
@@ -147,7 +147,7 @@
                             >1
                             % AFTER:
                             % MARKUP:
-                            ^ \markup \upright { "31" }
+                            ^ \markup \upright { "-12" }
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-natural  }
@@ -158,7 +158,7 @@
                             >1
                             % AFTER:
                             % MARKUP:
-                            ^ \markup \upright { "31" }
+                            ^ \markup \upright { "-31" }
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:

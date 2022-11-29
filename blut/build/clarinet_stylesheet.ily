@@ -41,6 +41,7 @@
         \Score
         \numericTimeSignature
         \accepts TimeSignatureContext
+        \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
         % \override SpacingSpanner.strict-note-spacing = ##t
         % \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/256)
         % proportionalNotationDuration = #(ly:make-moment 1 30)
