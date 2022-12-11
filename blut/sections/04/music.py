@@ -1132,13 +1132,13 @@ trinton.attach_multiple(
     ],
 )
 
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[
-        1,
-    ],
-    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
-)
+# trinton.attach(
+#     voice=score["Global Context"],
+#     leaves=[
+#         1,
+#     ],
+#     attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
+# )
 
 trinton.tuplet_brackets(score, library.all_voice_names)
 

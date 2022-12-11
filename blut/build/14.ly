@@ -57,7 +57,7 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
@@ -155,9 +155,11 @@
                                 - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
                                 \startTextSpan
                                 \glissando
-                                ~
                                 % TRILL_SPANNER_STARTS:
                                 \startTrillSpan
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -168,6 +170,9 @@
                                 % AFTER:
                                 % START_BEAM:
                                 [
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 e'8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -600,7 +605,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "IV, trem. pont." } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -613,6 +620,9 @@
                                         :128
                                         % START_BEAM:
                                         [
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         d,8
                                         % AFTER:
                                         % STEM_TREMOLOS:

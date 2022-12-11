@@ -187,6 +187,7 @@
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override Beam.stencil = ##f
+                                \once \override Dots.staff-position = #2
                                 \once \override Dots.stencil = ##f
                                 \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
@@ -355,6 +356,7 @@
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override Beam.stencil = ##f
+                                \once \override Dots.staff-position = #2
                                 \once \override Dots.stencil = ##f
                                 \once \override Flag.stencil = ##f
                                 \once \override NoteHead.duration-log = 2
@@ -536,6 +538,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -567,6 +570,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -734,6 +738,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -765,6 +770,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2

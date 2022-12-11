@@ -40,9 +40,6 @@
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \upright { "Accel." } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
             \startTextSpan
-            % ABSOLUTE_AFTER:
-            % COMMANDS:
-            % \pageBreak
             % OPENING:
             % COMMANDS:
             \time 8/16
@@ -70,10 +67,9 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" }
+            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            % \break
             \once \override Score.BarLine.transparent = ##f
             % OPENING:
             % COMMANDS:
@@ -102,12 +98,11 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
             % COMMANDS:
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            % \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
@@ -152,6 +147,9 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \>
                                 \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -243,6 +241,9 @@
                                 \glissando
                                 % COMMANDS:
                                 \boxed-markup "Stone Wind Chimes" 1
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -279,10 +280,6 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
                             \times 12/13
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 1
                                 c'8.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -296,8 +293,7 @@
                                 \boxed-markup "Lion's Roar" 1
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 4
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -316,16 +312,14 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 4
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'64
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \fff
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -333,11 +327,9 @@
                                 % SPANNER_STARTS:
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
-                                ~
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 4
+                                \once \override Dots.staff-position = #2
                                 c'64
                             % CLOSE_BRACKETS:
                             }
@@ -348,8 +340,7 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'8.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -359,8 +350,7 @@
                                 \<
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 4
+                                \once \override Dots.staff-position = #2
                                 c'64
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -369,16 +359,14 @@
                             }
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 4
-                            \set stemRightBeamCount = 3
+                            \once \override Dots.staff-position = #2
                             c'64
                             % AFTER:
                             % ARTICULATIONS:
                             \f
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 3
+                            \once \override Dots.staff-position = #2
                             c'32.
                             % AFTER:
                             % ARTICULATIONS:
@@ -386,11 +374,9 @@
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \>
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             c'8
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
@@ -398,16 +384,14 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'8.
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mf
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 4
+                                \once \override Dots.staff-position = #2
                                 c'64
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -421,16 +405,14 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
+                                \once \override Dots.staff-position = #2
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \fff
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'8.
                                 % AFTER:
                                 % SPANNER_STARTS:
@@ -441,8 +423,7 @@
                             }
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
+                            \once \override Dots.staff-position = #2
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
@@ -450,16 +431,13 @@
                             % SPANNER_STARTS:
                             - \tweak stencil #constante-hairpin
                             \<
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 3
+                            \once \override Dots.staff-position = #2
                             c'32
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
+                            \once \override Dots.staff-position = #2
                             c'16.
                             % AFTER:
                             % ARTICULATIONS:
@@ -473,8 +451,7 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
+                                \once \override Dots.staff-position = #2
                                 c'16.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -484,8 +461,7 @@
                                 \<
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -494,24 +470,20 @@
                             }
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             c'8
                             % AFTER:
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             - \tweak stencil #abjad-flared-hairpin
                             \>
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 3
+                            \once \override Dots.staff-position = #2
                             c'32.
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 4
+                            \once \override Dots.staff-position = #2
                             c'64
                             % AFTER:
                             % ARTICULATIONS:
@@ -523,18 +495,13 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
+                                \once \override Dots.staff-position = #2
                                 c'16.
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mp
                                 % SPANNER_STARTS:
                                 \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -568,10 +535,6 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                             \times 8/12
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 4
                                 c'64
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -582,8 +545,7 @@
                                 \glissando
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -596,11 +558,9 @@
                                 \ppp
                                 % SPANNER_STARTS:
                                 \<
-                                ~
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 3
+                                \once \override Dots.staff-position = #2
                                 c'32.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -613,8 +573,7 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
+                                \once \override Dots.staff-position = #2
                                 c'8.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -623,8 +582,7 @@
                                 \<
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 4
+                                \once \override Dots.staff-position = #2
                                 c'64
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -637,14 +595,16 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
+                                \once \override Dots.staff-position = #2
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \p
                                 % STOP_BEAM:
                                 ]
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 c'4.
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -657,25 +617,25 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 5 0))
                             \times 8/11
                             {
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 c'4
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \fp
                                 % SPANNER_STARTS:
                                 \<
-                                ~
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
+                                \once \override Dots.staff-position = #2
                                 c'16
                                 % AFTER:
                                 % START_BEAM:
                                 [
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
+                                \once \override Dots.staff-position = #2
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -684,8 +644,7 @@
                             }
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
+                            \once \override Dots.staff-position = #2
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
@@ -693,16 +652,13 @@
                             % SPANNER_STARTS:
                             - \tweak stencil #constante-hairpin
                             \<
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             c'8
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
@@ -710,11 +666,9 @@
                             % SPANNER_STARTS:
                             - \tweak stencil #constante-hairpin
                             \<
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 0
+                            \once \override Dots.staff-position = #2
                             c'16
                             % AFTER:
                             % STOP_BEAM:
@@ -724,16 +678,15 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 33 20) (ly:make-duration 5 0))
                             \times 20/33
                             {
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 c'2...
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mp
                                 % SPANNER_STARTS:
                                 \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -811,6 +764,9 @@
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -881,9 +837,6 @@
                                     \times 1/1
                                     {
                                         % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
                                         \tweak style #'triangle
@@ -897,43 +850,19 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
                                         \startTextSpan
                                         \>
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         bqs,32 * 45/32
                                         r32 * 3/2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         g32 * 13/8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         c32 * 59/32
                                         r32 * 17/8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         g32 * 5/2
                                         r32 * 93/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         bqs,32 * 105/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         g32 * 55/16
                                         % AFTER:
@@ -1025,9 +954,6 @@
                                     \times 1/1
                                     {
                                         % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #right
                                         \tweak style #'triangle
@@ -1040,23 +966,11 @@
                                         % SPANNER_STARTS:
                                         \<
                                         r32 * 115/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         dqf32 * 91/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 35/16
                                         r32 * 29/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         c32 * 13/8
                                         % AFTER:
@@ -1136,6 +1050,9 @@
                                         \startTextSpan
                                         \>
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1150,8 +1067,6 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :32
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1197,6 +1112,9 @@
                                         % SPANNER_STARTS:
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1204,9 +1122,6 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         gqs'4
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1283,6 +1198,9 @@
                                         % SPANNER_STARTS:
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1290,9 +1208,6 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         fs'8
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1412,6 +1327,9 @@
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1482,9 +1400,6 @@
                                     \times 1/1
                                     {
                                         % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
                                         \tweak style #'triangle
@@ -1498,43 +1413,19 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
                                         \startTextSpan
                                         \>
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         c32 * 45/32
                                         r32 * 3/2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 13/8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         c32 * 59/32
                                         r32 * 17/8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 5/2
                                         r32 * 93/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         dqf32 * 105/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         fqs32 * 55/16
                                         % AFTER:
@@ -1618,9 +1509,6 @@
                                     \times 1/1
                                     {
                                         % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #right
                                         \tweak style #'triangle
@@ -1633,23 +1521,11 @@
                                         % SPANNER_STARTS:
                                         \<
                                         r32 * 115/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         dqf32 * 91/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 35/16
                                         r32 * 29/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         dqf32 * 13/8
                                         % AFTER:
@@ -1684,6 +1560,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1697,7 +1576,6 @@
                                         % SPANNER_STARTS:
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1770,6 +1648,9 @@
                                         - \tweak circled-tip ##t
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1777,9 +1658,6 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         d'4
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil

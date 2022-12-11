@@ -103,7 +103,6 @@
             \bar "||"
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
@@ -145,7 +144,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -176,7 +177,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -227,7 +230,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -235,9 +240,9 @@
                             \override NoteColumn.glissando-skip = ##t
                             \override NoteHead.no-ledgers = ##t
                             dqs'4
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             dqs'16
                             % AFTER:
                             % START_BEAM:
@@ -264,7 +269,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -295,7 +302,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -325,7 +334,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -379,7 +390,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -409,7 +422,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -440,7 +455,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -469,7 +486,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -502,7 +521,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -533,7 +554,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -613,7 +636,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -743,7 +768,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -775,7 +802,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -895,7 +924,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -906,8 +937,9 @@
                             % AFTER:
                             % STEM_TREMOLOS:
                             :32
-                            % SPANNER_STARTS:
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             c'16
                             % AFTER:
                             % STEM_TREMOLOS:
@@ -938,7 +970,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -974,7 +1008,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1009,7 +1045,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1069,7 +1107,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1132,7 +1172,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1143,8 +1185,9 @@
                             % AFTER:
                             % STEM_TREMOLOS:
                             :32
-                            % SPANNER_STARTS:
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             c'16
                             % AFTER:
                             % STEM_TREMOLOS:
@@ -1202,7 +1245,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1265,7 +1310,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1306,7 +1353,9 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                ~
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1407,7 +1456,9 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                ~
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1446,9 +1497,11 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                ~
                             % CLOSE_BRACKETS:
                             }
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1487,7 +1540,9 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
-                                ~
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1560,7 +1615,9 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                ~
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1654,6 +1711,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }\startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1664,6 +1724,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     b8..
                                     % AFTER:
                                     % START_BEAM:
@@ -1711,6 +1774,9 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "flaut. molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1751,6 +1817,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1790,6 +1859,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1830,6 +1902,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1920,6 +1995,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1931,6 +2009,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     b16
                                     % AFTER:
@@ -1975,6 +2056,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2024,6 +2108,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2071,6 +2158,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2121,6 +2211,9 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2173,6 +2266,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2219,6 +2315,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2270,6 +2369,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2316,6 +2418,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2408,6 +2513,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2460,6 +2568,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2510,6 +2621,9 @@
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2606,6 +2720,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2658,6 +2775,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2887,6 +3007,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }\startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2897,6 +3020,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     bf8..
                                     % AFTER:
                                     % START_BEAM:
@@ -2982,6 +3108,9 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3068,6 +3197,9 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "flaut. molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3108,6 +3240,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3147,6 +3282,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3187,6 +3325,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3277,6 +3418,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3288,6 +3432,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     af16
                                     % AFTER:
@@ -3332,6 +3479,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3381,6 +3531,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3428,6 +3581,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3524,6 +3680,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3574,6 +3733,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3621,6 +3783,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3715,6 +3880,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3760,6 +3928,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3809,6 +3980,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3903,6 +4077,9 @@
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -3959,6 +4136,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 3 0))
                                     \times 8/9
                                     {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -4009,6 +4189,9 @@
                                         - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead

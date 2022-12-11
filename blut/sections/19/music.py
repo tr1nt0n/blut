@@ -43,7 +43,7 @@ for measure, time_mark, dynamic in zip(
     for voice_name in library.all_voice_names:
         trinton.make_music(
             lambda _: trinton.select_target(_, (measure,)),
-            evans.RhythmHandler(evans.tuplet([(28, 1)])),
+            evans.RhythmHandler(evans.tuplet([(28, 1)], treat_tuplets=False)),
             library.glissando(),
             trinton.linear_attachment_command(
                 attachments=[
@@ -216,7 +216,6 @@ for measure, dynamic in zip(
                 (3, 16),
             ]
         ),
-        library.totem_attachments(),
         library.tremolo(),
         library.perc_instrument(
             instrument_string="Slit Drum w/ rubber mallets",
@@ -237,6 +236,7 @@ for measure, dynamic in zip(
             ),
             selector=trinton.logical_ties(first=True),
         ),
+        library.totem_attachments(),
         voice=score["percussion voice"],
     )
 

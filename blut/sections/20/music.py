@@ -38,8 +38,11 @@ for measure, time_mark, dynamic, preprocessor in zip(
     for voice_name in library.all_voice_names:
         trinton.make_music(
             lambda _: trinton.select_target(_, (measure,)),
-            evans.RhythmHandler(evans.tuplet([(28, 1)])),
-            library.glissando(selector=lambda _: abjad.select.tuplets(_)),
+            evans.RhythmHandler(evans.tuplet([(28, 1)], treat_tuplets=False)),
+            trinton.attachment_command(
+                attachments=[abjad.Glissando()],
+                selector=trinton.select_leaves_by_index([0, -2]),
+            ),
             trinton.linear_attachment_command(
                 attachments=[
                     abjad.Dynamic(dynamic),
@@ -51,6 +54,7 @@ for measure, time_mark, dynamic, preprocessor in zip(
             library.change_tuplet_text(
                 selector=lambda _: abjad.select.tuplets(_), text=time_mark
             ),
+            # library.glissando(selector=lambda _: abjad.select.tuplets(_)),
             voice=score[voice_name],
             preprocessor=trinton.fuse_quarters_preprocessor(preprocessor),
         )
@@ -124,7 +128,7 @@ for voice_name, second_pitch_list in zip(
 for voice_name in ["bassclarinet voice", "cello 1 voice", "cello 2 voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (7,)),
-        evans.RhythmHandler(evans.tuplet([(1,)])),
+        evans.RhythmHandler(evans.tuplet([(1,)], treat_tuplets=False)),
         library.noteheads_only(),
         library.transparent_noteheads(selector=trinton.pleaves()),
         voice=score[voice_name],
@@ -276,7 +280,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3, 6)),
-    evans.RhythmHandler(evans.tuplet([(15, 1)])),
+    evans.RhythmHandler(evans.tuplet([(15, 1)], treat_tuplets=False)),
     library.pitch_monolith(
         voice_name="cello 1 voice",
         selector=trinton.select_leaves_by_index(
@@ -302,6 +306,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
+    trinton.notehead_bracket_command(),
     voice=score["cello 1 voice"],
     preprocessor=trinton.fuse_preprocessor((4,)),
 )
@@ -369,7 +374,7 @@ for voice_name in ["cello 1 voice", "cello 2 voice"]:
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3, 4)),
-    evans.RhythmHandler(evans.tuplet([(15, 1)])),
+    evans.RhythmHandler(evans.tuplet([(15, 1)], treat_tuplets=False)),
     library.pitch_monolith(
         voice_name="cello 2 voice",
         selector=trinton.select_leaves_by_index(
@@ -387,7 +392,6 @@ trinton.make_music(
             ]
         ),
     ),
-    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin(">"),
@@ -396,6 +400,8 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1, -1]),
     ),
+    trinton.notehead_bracket_command(),
+    library.glissando(),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_preprocessor((4,)),
 )

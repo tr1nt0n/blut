@@ -175,8 +175,6 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 1
                                 \textSpannerDown
                                 \vibrato #'(0 1 1 1 2 9) #1  #0.2
                                 ef8
@@ -194,10 +192,6 @@
                                 \glissando
                                 % TRILL_SPANNER_STARTS:
                                 \startTrillSpan
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -250,13 +244,11 @@
                                 - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
                                 \startTextSpan
                                 \glissando
-                                ~
                                 % TRILL_SPANNER_STARTS:
                                 \startTrillSpan
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -267,10 +259,6 @@
                                 % AFTER:
                                 % START_BEAM:
                                 [
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -355,8 +343,6 @@
                             r8
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 0
-                            \set stemRightBeamCount = 1
                             \textSpannerDown
                             \vibrato #'(0 1 1 1 2 9) #1  #0.2
                             ef8
@@ -372,13 +358,11 @@
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
                             \startTextSpan
                             \glissando
-                            ~
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -386,10 +370,6 @@
                             \override NoteColumn.glissando-skip = ##t
                             \override NoteHead.no-ledgers = ##t
                             ef8
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 0
                             % OPENING:
                             % COMMANDS:
                             \revert Accidental.stencil
@@ -450,8 +430,6 @@
                             {
                                 % BEFORE:
                                 % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
                                 \textSpannerDown
                                 \vibrato #'(1 1 1 7 2 1 1) #0.75  #0.2
                                 ef16
@@ -468,10 +446,6 @@
                                 \glissando
                                 % TRILL_SPANNER_STARTS:
                                 \startTrillSpan
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -506,8 +480,6 @@
                             r4
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             \textSpannerDown
                             \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
                             bf8
@@ -535,18 +507,12 @@
                             ~
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 0
-                            \set stemRightBeamCount = 1
                             bf8
                             % AFTER:
                             % START_BEAM:
                             [
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 0
                             \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
                             af8
                             % AFTER:
@@ -571,18 +537,12 @@
                             ~
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 0
-                            \set stemRightBeamCount = 1
                             e'8
                             % AFTER:
                             % START_BEAM:
                             [
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
                             ef8
                             % AFTER:
@@ -590,23 +550,13 @@
                             \stopTrillSpan
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             bf8
                             % AFTER:
                             % SPANNER_STARTS:
                             ~
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             bf8
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 0
                             \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
                             af8
                             % AFTER:
@@ -666,10 +616,6 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                             \times 4/5
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 1
                                 c'8
                                 % AFTER:
                                 % START_BEAM:
@@ -679,10 +625,6 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -720,10 +662,6 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
                             \times 3/4
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 1
                                 c'8.
                                 % AFTER:
                                 % START_BEAM:
@@ -733,10 +671,6 @@
                                 - \tweak stencil #abjad-flared-hairpin
                                 \<
                                 \glissando
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -817,11 +751,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 0
-                            \set stemRightBeamCount = 1
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -832,10 +764,6 @@
                             % AFTER:
                             % START_BEAM:
                             [
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 0
                             % OPENING:
                             % COMMANDS:
                             \revert Accidental.stencil
@@ -872,10 +800,6 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                             \times 2/3
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
                                 c'16
                                 % AFTER:
                                 % START_BEAM:
@@ -884,10 +808,6 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 0
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1227,6 +1147,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1237,8 +1160,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \pp
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1323,6 +1244,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1333,8 +1257,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \pp
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1419,6 +1341,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1426,9 +1351,6 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         e'8
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1609,7 +1531,9 @@
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1698,7 +1622,9 @@
                                         \startTextSpan
                                         \<
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1868,7 +1794,9 @@
                                         - \tweak bound-details.right.text \markup \upright { tight }
                                         \startTextSpan
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2015,6 +1943,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2027,7 +1958,6 @@
                                         \pp
                                         % SPANNER_STARTS:
                                         \<
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2106,6 +2036,9 @@
                                         [
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2116,8 +2049,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2232,7 +2163,9 @@
                                         - \tweak bound-details.right.text \markup \upright { tight pont. }
                                         \startTextSpan
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2489,10 +2422,6 @@
                                     % COMMANDS:
                                     \clef "tenorvarC"
                                     r16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     <
                                         d'
                                         \tweak style #'harmonic
@@ -2513,11 +2442,9 @@
                                     - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
                                     \startTextSpan
                                     \glissando
-                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2532,10 +2459,6 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :64
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -2585,10 +2508,6 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2694,11 +2613,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
                                     \startTextSpan
                                     \glissando
-                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2715,10 +2632,6 @@
                                     :64
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -2925,7 +2838,9 @@
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2969,6 +2884,9 @@
                                         - \tweak bound-details.right.text \markup \upright { wide molto tast. }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2985,8 +2903,6 @@
                                         :32
                                         % ARTICULATIONS:
                                         - \accent
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -3125,7 +3041,9 @@
                                         - \tweak bound-details.right.text \markup \upright { molt pont. }
                                         \startTextSpan
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -3181,7 +3099,9 @@
                                         \startTextSpan
                                         \<
                                         \glissando
-                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -3313,6 +3233,9 @@
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -3324,9 +3247,6 @@
                                             \tweak style #'harmonic
                                             bqf'
                                         >2
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil

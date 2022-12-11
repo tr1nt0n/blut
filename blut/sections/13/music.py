@@ -92,14 +92,14 @@ trinton.make_music(
                     8,
                     5,
                 )
-            ]
+            ],
+            treat_tuplets=False,
         )
     ),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.treat_tuplets(),
     evans.PitchHandler([2.5]),
-    library.glissando(),
     trinton.attachment_command(
         attachments=[
             abjad.Markup(library._written_pitch_to_fingering[2.5]),
@@ -131,6 +131,7 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    library.glissando(),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor(
         (
@@ -188,6 +189,7 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    trinton.beam_groups(),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((9,)),
 )
@@ -932,12 +934,12 @@ trinton.make_music(
             -22,
         ]
     ),
-    library.glissando(),
     library.tremolo(),
+    library.glissando(),
     trinton.hooked_spanner_command(
         string="IV, trem. pont.",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        padding=7.5,
+        padding=9.5,
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -956,6 +958,7 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    trinton.beam_groups(),
     voice=score["cello 2 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((9,)),
 )

@@ -109,6 +109,7 @@
         \override SustainPedal.padding = 5
 
         \override TextScript.font-name = "Bodoni72 Book"
+        \override TextSpanner.font-name = "Bodoni72 Book"
 
         \override Tie.stencil = #flare-tie
         \override Tie.height-limit = 6
@@ -122,11 +123,12 @@
         \override TupletBracket.layer = 2
         \override TupletBracket.whiteout-style = #'outline
         \override TupletBracket.whiteout = 1
-        \override TupletNumber.font-size = 1.5
+        \override TupletNumber.font-size = 2
         \override TupletNumber.layer = 3
         \override TupletNumber.whiteout-style = #'outline
         \override TupletNumber.whiteout = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
+        \override TupletNumber.font-name = "Bodoni72 Book Italic"
         \override TupletBracket.stencil =
             #(lambda (grob)
                (let* ((pos (ly:grob-property grob 'positions))
@@ -155,8 +157,9 @@
         \override Accidental.font-size = 1
     }
 }
-%
+
 \paper {
+    max-systems-per-page = 2
     system-separator-markup = \markup { \slashSeparator }
     system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
     indent = 20\mm

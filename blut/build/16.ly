@@ -124,7 +124,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -153,7 +155,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -232,7 +236,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -261,7 +267,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -290,7 +298,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -319,7 +329,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -350,7 +362,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -380,7 +394,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -411,7 +427,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -586,7 +604,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -647,7 +667,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -708,7 +730,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -742,7 +766,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -779,7 +805,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -813,7 +841,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -849,7 +879,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -885,7 +917,9 @@
                             [
                             % SPANNER_STARTS:
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -922,10 +956,6 @@
                                 % ABSOLUTE_BEFORE:
                                 % COMMANDS:
                                 \staff-line-count 2
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 1
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "percussion"
@@ -940,50 +970,26 @@
                                 \<
                                 % COMMANDS:
                                 \boxed-markup "Frame Drum + Slit Drum w/ drum sticks" 1
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 d'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 d'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 d'8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -994,18 +1000,10 @@
                             \tweak edge-height #'(0.7 . 0)
                             \times 4/5
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 d'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -1014,18 +1012,10 @@
                                 % SPANNER_STARTS:
                                 - \tweak stencil #constante-hairpin
                                 \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -1033,42 +1023,22 @@
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \>
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 d'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 0
                                 b8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -1134,6 +1104,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \>
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1204,6 +1177,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1242,6 +1218,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1279,6 +1258,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1317,6 +1299,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1354,6 +1339,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1392,6 +1380,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1429,6 +1420,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1499,6 +1493,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1537,6 +1534,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1574,6 +1574,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1644,6 +1647,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1682,6 +1688,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1975,10 +1984,6 @@
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "tenorvarC"
@@ -2009,8 +2014,7 @@
                                         \startTextSpanOne
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2021,10 +2025,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2039,10 +2039,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         \tweak style #'harmonic-mixed
                                         fs'8.
                                         % AFTER:
@@ -2058,8 +2054,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2072,16 +2067,11 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2095,10 +2085,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2113,8 +2099,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2127,16 +2112,14 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2149,16 +2132,11 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2173,10 +2151,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r8.
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -2193,8 +2167,7 @@
                                         \>
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2207,32 +2180,28 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2251,10 +2220,6 @@
                                         % ARTICULATIONS:
                                         - \accent
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         \tweak style #'harmonic-mixed
                                         fs'8
                                         % AFTER:
@@ -2274,8 +2239,7 @@
                                         \stopTextSpanTwo
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2288,16 +2252,11 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2324,8 +2283,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2338,10 +2296,6 @@
                                         - \accent
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2442,6 +2396,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2479,6 +2436,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2517,6 +2477,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2554,6 +2517,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2594,6 +2560,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2633,6 +2602,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2674,6 +2646,9 @@
                                     - \tweak thickness #2
                                     \glissando
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead

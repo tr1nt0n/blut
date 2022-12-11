@@ -290,7 +290,6 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (12, 16)),
     evans.RhythmHandler(evans.even_division([8])),
     trinton.treat_tuplets(),
-    evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.attachment_command(
         attachments=[
             abjad.Articulation(">"),

@@ -141,16 +141,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 g'''16
                             % CLOSE_BRACKETS:
                             }
@@ -189,16 +179,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 f'''16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -244,16 +224,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 e'''8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -275,7 +245,9 @@
                                 % SPANNER_STARTS:
                                 \>
                                 \glissando
-                                ~
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -413,16 +385,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 <b d'>16
                             % CLOSE_BRACKETS:
                             }
@@ -456,16 +418,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -506,16 +458,6 @@
                                 \once \override Stem.stencil = ##f
                                 % GROB_OVERRIDES:
                                 \once \override NoteHead.transparent = ##t
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -687,16 +629,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <a b'>16
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
@@ -757,16 +689,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <c, c''>16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -820,16 +742,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <c, f'>8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -841,6 +753,7 @@
                                     \revert TupletNumber.text
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 1 0))
                                     \times 10/16
                                     {
                                         <
@@ -976,16 +889,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <c, g'>16
                                         % ABSOLUTE_AFTER:
                                         % COMMANDS:
@@ -1046,16 +949,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <a af''>16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1119,16 +1012,6 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <c, a'>8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1140,6 +1023,7 @@
                                     \revert TupletNumber.text
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 2 0))
                                     \times 10/16
                                     {
                                         <

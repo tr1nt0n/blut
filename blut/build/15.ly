@@ -134,7 +134,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -168,7 +170,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -202,7 +206,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -233,7 +239,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -241,9 +249,9 @@
                             \override NoteColumn.glissando-skip = ##t
                             \override NoteHead.no-ledgers = ##t
                             fs'8
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             fs'32
                             % OPENING:
                             % COMMANDS:
@@ -267,7 +275,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -302,7 +312,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -310,9 +322,9 @@
                             \override NoteColumn.glissando-skip = ##t
                             \override NoteHead.no-ledgers = ##t
                             fs'8
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             fs'32
                             % OPENING:
                             % COMMANDS:
@@ -337,7 +349,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -389,7 +403,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -526,7 +542,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -648,8 +666,6 @@
                                         % COMMANDS:
                                         \set Staff.instrumentName = \markup \bold { Violoncello I }
                                         \set Staff.shortInstrumentName = \markup \bold { vc. I }
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
                                         % OPENING:
@@ -668,30 +684,14 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
                                         \startTextSpan
                                         \>
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         g32 * 25/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         c32 * 7/4
                                         r32 * 65/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         g32 * 79/32
                                         r32 * 49/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         bqs,32 * 29/8
                                         % AFTER:
@@ -944,6 +944,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpan
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1062,8 +1065,6 @@
                                         % COMMANDS:
                                         \set Staff.instrumentName = \markup \bold { Violoncello II }
                                         \set Staff.shortInstrumentName = \markup \bold{ vc. II }
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
                                         % OPENING:
@@ -1083,30 +1084,14 @@
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "legno trat., molto flaut. pont." } \hspace #0.5 }
                                         \startTextSpan
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 25/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         dqf32 * 7/4
                                         r32 * 65/32
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         \tweak style #'triangle
                                         fqs32 * 79/32
                                         r32 * 49/16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         \tweak style #'triangle
                                         dqf32 * 29/8
                                         % AFTER:
@@ -1145,6 +1130,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpan
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1188,6 +1176,9 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1230,6 +1221,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1270,6 +1264,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1281,6 +1278,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     bf32
                                     % OPENING:
@@ -1313,6 +1313,9 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1357,6 +1360,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1368,6 +1374,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     bf32
                                     % OPENING:
@@ -1401,6 +1410,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1469,6 +1481,9 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead

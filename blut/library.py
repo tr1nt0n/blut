@@ -659,6 +659,17 @@ def totem_attachments(
                     allow_ties=True,
                 )
 
+                middle_leaves = abjad.select.exclude(
+                    abjad.select.leaves(group), [0, -1]
+                )
+                for leaf in middle_leaves:
+                    abjad.attach(
+                        abjad.LilyPondLiteral(
+                            r"\once \override Dots.staff-position = #2", "before"
+                        ),
+                        leaf,
+                    )
+
             if bcl is True:
                 first_leaf = group[0][0]
 
@@ -669,6 +680,11 @@ def totem_attachments(
                     first_leaf,
                     direction=abjad.UP,
                 )
+
+            if vc is False:
+                for leaf in abjad.select.leaves(group):
+                    abjad.detach(abjad.Tie, leaf)
+
             if vc is True:
 
                 abjad.slur(group)
@@ -711,6 +727,16 @@ def electroshock_attachments():
                 allow_repeats=True,
                 allow_ties=True,
             )
+
+            middle_leaves = abjad.select.exclude(abjad.select.leaves(group), [0, -1])
+            for leaf in middle_leaves:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Dots.staff-position = #2", "before"
+                    ),
+                    leaf,
+                )
+
             if groups.index(group) % 3 == 1:
                 for leaf in group[0]:
                     abjad.tweak(leaf.note_head, rf"\tweak style #'harmonic-mixed")
@@ -783,6 +809,8 @@ def ghost_attachments(contour=None):
                     ),
                     leaf,
                 )
+
+            abjad.attach(abjad.BreathMark(), group[-1][-1])
 
     return attach
 
@@ -955,6 +983,17 @@ def glissando(selector=None):
                     allow_repeats=True,
                     allow_ties=True,
                 )
+                middle_leaves = abjad.select.exclude(group, [0, -1])
+                for leaf in middle_leaves:
+                    abjad.attach(
+                        abjad.LilyPondLiteral(
+                            r"\once \override Dots.staff-position = #2", "before"
+                        ),
+                        leaf,
+                    )
+
+                for leaf in group:
+                    abjad.detach(abjad.Tie, leaf)
         else:
             leaves = abjad.select.leaves(argument, pitched=True)
             abjad.glissando(
@@ -963,6 +1002,19 @@ def glissando(selector=None):
                 allow_repeats=True,
                 allow_ties=True,
             )
+
+            middle_leaves = abjad.select.exclude(leaves, [0, -1])
+
+            for leaf in middle_leaves:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Dots.staff-position = #2", "before"
+                    ),
+                    leaf,
+                )
+
+            for leaf in leaves:
+                abjad.detach(abjad.Tie, leaf)
 
     return call_glissando
 

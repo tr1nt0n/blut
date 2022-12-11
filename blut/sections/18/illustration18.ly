@@ -30,9 +30,6 @@
             % COMMANDS:
             \time 9/8
             s1 * 9/8
-            % AFTER:
-            % COMMANDS:
-            \pageBreak
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -100,9 +97,6 @@
             #(ly:expect-warning "strange time signature found")
             \time 5/12
             s1 * 5/12
-            % AFTER:
-            % COMMANDS:
-            \pageBreak
             % OPENING:
             % COMMANDS:
             \time 1/2
@@ -820,6 +814,9 @@
                                         \pp
                                         % SPANNER_STARTS:
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -827,9 +824,6 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         fs'2
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        ~
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -962,6 +956,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -1015,6 +1011,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         g,16
                                         % AFTER:
                                         % START_BEAM:
@@ -1079,6 +1077,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         fs,16
                                         % AFTER:
                                         % START_BEAM:
@@ -1145,6 +1145,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -1198,6 +1200,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         g,16
                                         % AFTER:
                                         % START_BEAM:
@@ -1251,6 +1255,8 @@
                                             \stopTextSpan
                                             % STOP_BEAM:
                                             ]
+                                            % COMMANDS:
+                                            \breathe
                                         % CLOSE_BRACKETS:
                                         }
                                     % CLOSE_BRACKETS:
@@ -1263,10 +1269,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "tenorvarC"
@@ -1297,8 +1299,7 @@
                                     \startTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1309,10 +1310,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1332,10 +1329,6 @@
                                     \times 5/7
                                     {
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1351,8 +1344,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1363,10 +1355,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1491,10 +1479,6 @@
                                         \stopTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "tenorvarC"
@@ -1525,8 +1509,7 @@
                                     \startTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1537,10 +1520,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1560,10 +1539,6 @@
                                     \times 5/7
                                     {
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1579,8 +1554,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1591,10 +1565,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1719,10 +1689,6 @@
                                         \stopTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "tenorvarC"
@@ -1753,8 +1719,7 @@
                                     \startTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1765,10 +1730,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1788,10 +1749,6 @@
                                     \times 5/7
                                     {
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1807,8 +1764,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1819,10 +1775,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1945,6 +1897,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2009,6 +1963,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2062,6 +2018,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         fs,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2126,6 +2084,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2192,6 +2152,7 @@
                                         ]
                                         % COMMANDS:
                                         \boxed-markup "( does not prolate with time signature )" 1
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2245,6 +2206,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         fs,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2309,6 +2272,8 @@
                                         )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \breathe
                                         af,16
                                         % AFTER:
                                         % START_BEAM:
@@ -2340,6 +2305,8 @@
                                             \stopTextSpan
                                             % STOP_BEAM:
                                             ]
+                                            % COMMANDS:
+                                            \breathe
                                         % CLOSE_BRACKETS:
                                         }
                                     % CLOSE_BRACKETS:
@@ -2423,6 +2390,9 @@
                                         - \tweak bound-details.right.text \markup \upright { tight tast. }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2509,6 +2479,9 @@
                                         - \tweak bound-details.right.text \markup \upright { tight tast. }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2642,6 +2615,9 @@
                                         - \tweak bound-details.right.text \markup \upright { tight tast. }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead

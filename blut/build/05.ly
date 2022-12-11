@@ -518,25 +518,15 @@
                             % CLOSE_BRACKETS:
                             }
                             c'8
-                            c'16
+                            c'8
                             % AFTER:
                             % ARTICULATIONS:
                             - \accent
-                            % SPANNER_STARTS:
-                            ~
-                            c'16
-                            c'16
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
-                            c'16
-                            c'16
+                            c'8
+                            c'8
                             % AFTER:
                             % ARTICULATIONS:
                             - \accent
-                            % SPANNER_STARTS:
-                            ~
-                            c'16
                             c'8
                             c'8
                             c'8
@@ -704,10 +694,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 1))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "tenorvarC"
@@ -735,10 +721,6 @@
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "IV, vibrato moltissimo" } \hspace #0.5 }
                                         \startTextSpanOne
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -757,10 +739,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -774,10 +752,6 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -797,10 +771,6 @@
                                         r4
                                     % CLOSE_BRACKETS:
                                     }
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -815,8 +785,7 @@
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -829,8 +798,7 @@
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     fs'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -847,13 +815,8 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -877,10 +840,6 @@
                                         - \tweak bound-details.left.text \markup \concat { { \upright "flaut." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }\startTextSpanTwo
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -894,10 +853,6 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -916,10 +871,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         \tweak style #'harmonic-mixed
                                         fs'8.
                                         % AFTER:
@@ -943,8 +894,7 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -955,24 +905,18 @@
                                         fs'16
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -986,10 +930,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1003,10 +943,6 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1031,10 +967,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 4 0))
                                     \times 4/7
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1045,6 +977,9 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1057,18 +992,13 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1086,10 +1016,6 @@
                                     }
                                     r16
                                     r8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \tweak style #'harmonic-mixed
                                     fs'16
                                     % AFTER:
@@ -1103,10 +1029,6 @@
                                     - \tweak bound-details.right.arrow ##t
                                     - \tweak thickness #2
                                     \glissando
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1124,10 +1046,6 @@
                                     % STOP_BEAM:
                                     ]
                                     r16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1142,8 +1060,7 @@
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1161,14 +1078,13 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 4 0))
                                     \times 6/7
                                     {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         fs'4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1181,10 +1097,6 @@
                                         % ARTICULATIONS:
                                         - \accent
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1203,8 +1115,7 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1213,10 +1124,6 @@
                                     \override NoteHead.no-ledgers = ##t
                                     \tweak style #'harmonic-mixed
                                     fs'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil

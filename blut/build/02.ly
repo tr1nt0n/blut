@@ -113,10 +113,6 @@
                             ~
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             ef8.
                             % AFTER:
                             % SPANNER_STOPS:
@@ -144,10 +140,6 @@
                                 - \tweak stencil #constante-hairpin
                                 \<
                                 ~
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
                                 e'16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -168,8 +160,6 @@
                             \stopStaff \startStaff
                             % BEFORE:
                             % COMMANDS:
-                            \set stemLeftBeamCount = 0
-                            \set stemRightBeamCount = 1
                             \textSpannerDown
                             \vibrato #'(1 1 7 0 12 1 0.5 0) #2  #0.2
                             bf8.
@@ -188,26 +178,14 @@
                             ~
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             bf8
                             % AFTER:
                             % SPANNER_STARTS:
                             ~
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             bf8.
                             % AFTER:
                             % SPANNER_STARTS:
                             ~
-                            % BEFORE:
-                            % COMMANDS:
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 0
                             bf8
                             % AFTER:
                             % ARTICULATIONS:
@@ -238,10 +216,6 @@
                                 - \tweak stencil #constante-hairpin
                                 \<
                                 ~
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 af8.
                             % CLOSE_BRACKETS:
                             }
@@ -259,10 +233,6 @@
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 ~
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 ef8
                                 % AFTER:
                                 % SPANNER_STOPS:
@@ -327,10 +297,6 @@
                                 % ABSOLUTE_BEFORE:
                                 % COMMANDS:
                                 \staff-line-count 2
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "percussion"
@@ -346,98 +312,50 @@
                                 \<
                                 % COMMANDS:
                                 \boxed-markup "Frame Drum + Slit Drum w/ drum sticks" 1
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 0
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -459,10 +377,6 @@
                             \tweak edge-height #'(0.7 . 0)
                             \times 4/5
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 0
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -473,82 +387,42 @@
                                 % SPANNER_STARTS:
                                 - \tweak stencil #constante-hairpin
                                 \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
                                 <b d'>16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -559,74 +433,38 @@
                             \tweak edge-height #'(0.7 . 0)
                             \times 4/7
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 0
                                 <b d'>8
                                 % AFTER:
                                 % ARTICULATIONS:

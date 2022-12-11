@@ -158,7 +158,6 @@ trinton.make_music(
             6,
         ]
     ),
-    library.totem_attachments(bcl=True),
     trinton.linear_attachment_command(
         attachments=cycle(
             [
@@ -172,6 +171,7 @@ trinton.make_music(
         ),
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
+    library.totem_attachments(bcl=True),
     voice=score["bassclarinet voice"],
 )
 
@@ -179,7 +179,6 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (6, 8)),
-    library.totem_attachments(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -196,6 +195,7 @@ trinton.make_music(
         instrument_string="Slit Drum w/ rubber mallets",
         selector=trinton.select_leaves_by_index([0]),
     ),
+    library.totem_attachments(),
     voice=score["percussion voice"],
 )
 

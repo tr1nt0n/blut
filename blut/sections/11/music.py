@@ -182,7 +182,6 @@ trinton.make_music(
         )
     ),
     trinton.treat_tuplets(),
-    evans.RewriteMeterCommand(),
     library.perc_instrument(
         instrument_string="Lion's Roar",
         selector=trinton.select_leaves_by_index([0]),

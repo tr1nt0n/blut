@@ -414,7 +414,8 @@ trinton.make_music(
                 1,
             ],
             16,
-        )
+            treat_tuplets=False,
+        ),
     ),
     evans.PitchHandler(
         [
@@ -620,6 +621,7 @@ trinton.make_music(
                 1,
             ],
             16,
+            treat_tuplets=False,
         )
     ),
     evans.PitchHandler(
@@ -781,14 +783,14 @@ for measure, dynamic in zip(
         voice=score["cello 2 voice"],
     )
 
-trinton.attach(
-    voice=score["Global Context"],
-    attachment=abjad.LilyPondLiteral(r"\pageBreak", "after"),
-    leaves=[
-        1,
-        -2,
-    ],
-)
+# trinton.attach(
+#     voice=score["Global Context"],
+#     attachment=abjad.LilyPondLiteral(r"\pageBreak", "after"),
+#     leaves=[
+#         1,
+#         -2,
+#     ],
+# )
 
 # markups and beams
 

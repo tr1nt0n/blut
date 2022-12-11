@@ -42,7 +42,6 @@
             \bar ":|."
             % ABSOLUTE_AFTER:
             % COMMANDS:
-            \break
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
@@ -187,6 +186,9 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -228,6 +230,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -265,6 +270,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -304,6 +312,9 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -349,6 +360,9 @@
                             - \tweak circled-tip ##t
                             \<
                             \glissando
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -391,6 +405,9 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -492,10 +509,17 @@
                                 r16
                             % CLOSE_BRACKETS:
                             }
-                            r8.
                             r16
-                            r8
-                            c'8
+                            r4
+                            r16
+                            c'16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            ^ \baca-circle-markup
+                            ^ \stopped
+                            % SPANNER_STARTS:
+                            ~
+                            c'16
                             % AFTER:
                             % ARTICULATIONS:
                             ^ \baca-circle-markup
@@ -507,11 +531,10 @@
                             \fff
                             % COMMANDS:
                             \boxed-markup "w/ bow" 1
-                            r16
+                            r8
                             % AFTER:
                             % COMMANDS:
                             \boxed-markup "w/ triangle beater" 1
-                            r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
@@ -525,9 +548,7 @@
                             % ARTICULATIONS:
                             ^ \baca-circle-markup
                             ^ \stopped
-                            r16
-                            r16
-                            r8
+                            r4
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 1))
                             \times 2/3
@@ -575,9 +596,7 @@
                             % ARTICULATIONS:
                             ^ \baca-circle-markup
                             ^ \stopped
-                            r16
-                            r16
-                            r16
+                            r8.
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
@@ -661,6 +680,9 @@
                                 \glissando
                                 % COMMANDS:
                                 \boxed-markup "Wooden Wind Chimes" 1
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -771,10 +793,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "tenorvarC"
@@ -803,8 +821,7 @@
                                     \startTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -821,40 +838,35 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8.
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -865,8 +877,7 @@
                                         \>
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -879,16 +890,14 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -900,10 +909,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) (ly:make-duration 3 0))
                                     \times 5/7
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -933,8 +938,7 @@
                                         \<
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -949,48 +953,42 @@
                                         [
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1004,21 +1002,18 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     fs'8
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1031,13 +1026,8 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1058,10 +1048,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 4 0))
                                     \times 6/7
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1075,6 +1061,9 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1087,8 +1076,7 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1104,8 +1092,7 @@
                                         \startTextSpanTwo
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1114,16 +1101,14 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1132,13 +1117,11 @@
                                     ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1148,8 +1131,7 @@
                                     \stopTextSpanTwo
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1159,16 +1141,14 @@
                                     \<
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     fs'8.
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1179,8 +1159,7 @@
                                     \>
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     fs'16
                                     % AFTER:
@@ -1188,10 +1167,6 @@
                                     - \accent
                                     % SPANNER_STARTS:
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1208,10 +1183,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 4 0))
                                     \times 4/7
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1229,8 +1200,7 @@
                                         \<
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1243,14 +1213,16 @@
                                         - \accent
                                         % STOP_BEAM:
                                         ]
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         fs'4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1265,24 +1237,21 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1301,37 +1270,29 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1346,10 +1307,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1370,8 +1327,7 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1391,8 +1347,7 @@
                                     \startTextSpanTwo
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1404,14 +1359,16 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 4 0))
                                     \times 10/13
                                     {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         fs'4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1420,24 +1377,21 @@
                                         [
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1447,8 +1401,7 @@
                                         \stopTextSpanTwo
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1458,16 +1411,14 @@
                                         \<
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1483,10 +1434,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 0))
                                     \times 4/5
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1498,10 +1445,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         \tweak style #'harmonic-mixed
                                         fs'8
                                         % AFTER:
@@ -1519,8 +1462,7 @@
                                         \<
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1535,16 +1477,11 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1601,10 +1538,6 @@
                                     \times 3/5
                                     {
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "tenorvarC"
@@ -1633,8 +1566,7 @@
                                         \startTextSpanOne
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1647,32 +1579,28 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8.
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1683,10 +1611,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1708,10 +1632,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
                                     \times 8/7
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1727,8 +1647,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1741,14 +1660,16 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % STOP_BEAM:
                                         ]
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         fs'4
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1760,8 +1681,7 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1773,8 +1693,7 @@
                                     \<
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1783,10 +1702,6 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1804,10 +1719,6 @@
                                     % ARTICULATIONS:
                                     \!
                                     r16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1834,8 +1745,7 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1848,40 +1758,32 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1896,10 +1798,6 @@
                                         % STOP_BEAM:
                                         ]
                                         r16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -1918,8 +1816,7 @@
                                     }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1933,38 +1830,33 @@
                                     ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
+                                    \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     fs'8
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1973,21 +1865,15 @@
                                     ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -2007,10 +1893,6 @@
                                     \times 4/5
                                     {
                                         r8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 2
                                         \tweak style #'harmonic-mixed
                                         fs'16
                                         % AFTER:
@@ -2026,8 +1908,7 @@
                                         \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2047,32 +1928,25 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2102,10 +1976,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 0))
                                     \times 4/5
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         fs'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2131,8 +2001,7 @@
                                         \startTextSpanOne
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2145,16 +2014,11 @@
                                         - \accent
                                         % BEFORE:
                                         % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
+                                        \once \override Dots.staff-position = #2
                                         fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 0
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2203,6 +2067,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2435,6 +2302,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead

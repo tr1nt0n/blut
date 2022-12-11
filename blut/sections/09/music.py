@@ -89,7 +89,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
-    evans.RhythmHandler(evans.tuplet([(-1, 1), (15, 1, -16)])),
+    evans.RhythmHandler(evans.tuplet([(-1, 1), (15, 1, -16)], treat_tuplets=False)),
     evans.PitchHandler([24]),
     library.invisible_rests(),
     library.noteheads_only(),
@@ -143,7 +143,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
-    evans.RhythmHandler(evans.tuplet([(-1, 1), (15, 1, -16)])),
+    evans.RhythmHandler(evans.tuplet([(-1, 1), (15, 1, -16)], treat_tuplets=False)),
     library.invisible_rests(),
     library.noteheads_only(),
     library.glissando(),
@@ -204,7 +204,7 @@ for voice_name in ["cello 1 voice", "cello 2 voice"]:
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
-    evans.RhythmHandler(evans.tuplet([(15, 1), (15, 1)])),
+    evans.RhythmHandler(evans.tuplet([(15, 1), (15, 1)], treat_tuplets=False)),
     evans.PitchHandler([-24]),
     library.noteheads_only(),
     trinton.id_spanner_command(
@@ -272,7 +272,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
-    evans.RhythmHandler(evans.tuplet([(15, 1), (15, 1)])),
+    evans.RhythmHandler(evans.tuplet([(15, 1), (15, 1)], treat_tuplets=False)),
     evans.PitchHandler([-3]),
     library.noteheads_only(),
     trinton.id_spanner_command(

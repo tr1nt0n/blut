@@ -275,10 +275,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     evans.RhythmHandler(
-        evans.even_division(
-            [16],
-            extra_counts=[2],
-        )
+        evans.even_division([16], extra_counts=[2], treat_tuplets=False)
     ),
     trinton.treat_tuplets(),
     trinton.force_rest(
@@ -435,6 +432,7 @@ trinton.make_music(
                 1,
                 -3,
             ],
+            treat_tuplets=False,
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
@@ -815,6 +813,7 @@ trinton.make_music(
                 1,
             ],
             16,
+            treat_tuplets=False,
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
@@ -1119,6 +1118,20 @@ trinton.attach_multiple(
         ),
     ],
 )
+
+# trinton.attach_multiple(
+#     score=score,
+#     voice="Global Context",
+#     leaves=[
+#         6,
+#     ],
+#     attachments=[
+#         abjad.LilyPondLiteral(
+#             r"\pageBreak",
+#             "after"
+#         ),
+#     ],
+# )
 
 trinton.attach_multiple(
     score=score,

@@ -371,7 +371,9 @@
                             % SPANNER_STARTS:
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -409,6 +411,9 @@
                                 - \tweak circled-tip ##t
                                 \<
                                 \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1092,9 +1097,11 @@
                             % SPANNER_STARTS:
                             \<
                             \glissando
-                            ~
                             % COMMANDS:
                             \boxed-markup "Slit Drum w/ rubber mallets" 1
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -1136,6 +1143,9 @@
                                 \glissando
                                 % COMMANDS:
                                 \boxed-markup "Stone Wind Chimes" 1
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
@@ -1312,6 +1322,9 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1365,6 +1378,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1513,6 +1529,9 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1566,6 +1585,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "III + IV" } \hspace #0.5 }
                                         \startTextSpan
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead

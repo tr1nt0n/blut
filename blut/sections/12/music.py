@@ -360,7 +360,6 @@ for voice_name, talea, extra_counts, rest_leaves in zip(
             27,
             28,
             -1,
-            -2,
         ],
     ],
 ):
@@ -414,7 +413,6 @@ trinton.make_music(
             8,
         ]
     ),
-    library.totem_attachments(bcl=True),
     trinton.linear_attachment_command(
         attachments=cycle(
             [
@@ -428,6 +426,7 @@ trinton.make_music(
         ),
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
+    library.totem_attachments(bcl=True),
     voice=score["bassclarinet voice"],
 )
 
@@ -452,7 +451,6 @@ trinton.make_music(
             13,
         ),
     ),
-    library.totem_attachments(),
     trinton.linear_attachment_command(
         attachments=cycle(
             [
@@ -468,6 +466,7 @@ trinton.make_music(
         ),
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
+    library.totem_attachments(),
     library.tremolo(),
     voice=score["percussion voice"],
 )
@@ -994,13 +993,13 @@ trinton.attach_multiple(
     ],
 )
 
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[
-        -1,
-    ],
-    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
-)
+# trinton.attach(
+#     voice=score["Global Context"],
+#     leaves=[
+#         -1,
+#     ],
+#     attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
+# )
 
 trinton.fill_empty_staves_with_skips(score["cello 2 voice"])
 

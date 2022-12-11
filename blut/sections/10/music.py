@@ -686,22 +686,22 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[
-        3,
-    ],
-    attachment=abjad.LilyPondLiteral(r"\pageBreak", "absolute_after"),
-)
-
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[
-        7,
-        11,
-    ],
-    attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
-)
+# trinton.attach(
+#     voice=score["Global Context"],
+#     leaves=[
+#         3,
+#     ],
+#     attachment=abjad.LilyPondLiteral(r"\pageBreak", "absolute_after"),
+# )
+#
+# trinton.attach(
+#     voice=score["Global Context"],
+#     leaves=[
+#         7,
+#         11,
+#     ],
+#     attachment=abjad.LilyPondLiteral(r"\break", "absolute_after"),
+# )
 
 trinton.attach_multiple(
     score=score,

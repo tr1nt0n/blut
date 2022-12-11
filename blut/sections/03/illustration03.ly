@@ -47,9 +47,6 @@
             % COMMANDS:
             \time 8/32
             s1 * 1/4
-            % ABSOLUTE_AFTER:
-            % COMMANDS:
-            \break
             % OPENING:
             % COMMANDS:
             \time 12/32
@@ -160,7 +157,9 @@
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
                             \hide NoteHead
@@ -682,6 +681,9 @@
                                     - \tweak circled-tip ##t
                                     \>
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -928,6 +930,9 @@
                                     - \tweak bound-details.right.text \markup \upright { flaut. molto pont. }
                                     \startTextSpan
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1054,6 +1059,9 @@
                                     - \tweak circled-tip ##t
                                     \>
                                     ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead

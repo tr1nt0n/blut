@@ -352,11 +352,7 @@
                             % CLOSE_BRACKETS:
                             }
                             c'8
-                            c'16
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
-                            c'16
+                            c'8
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
@@ -394,11 +390,13 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \accent
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
                                 \ffff
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \>
-                                c'16
                                 c'16
                                 c'16
                                 % AFTER:
