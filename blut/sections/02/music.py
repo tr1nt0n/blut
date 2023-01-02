@@ -29,7 +29,6 @@ trinton.make_music(
     evans.RhythmHandler(rmakers.note),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(pitch_list=library.teeth_on_reed_pitches(3)),
-    trinton.beam_groups(beam_rests=False),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("p"),
