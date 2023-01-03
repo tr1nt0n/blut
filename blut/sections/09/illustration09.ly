@@ -13,6 +13,7 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \tweak text "×4" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -23,7 +24,6 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
-            - \markup { \right-align \abs-fontsize #15 { \upright "×4" } }
             % SPANNER_STARTS:
             - \tweak padding #8
             - \abjad-dashed-line-with-hook
@@ -34,6 +34,7 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \stopMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.stencil = #(blank-time-signature)

@@ -47,6 +47,9 @@
             % COMMANDS:
             \time 4/8
             s1 * 1/2
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \tweak text "×3" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -55,9 +58,6 @@
             % COMMANDS:
             \time 8/8
             s1 * 1
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #15 { \upright "×3" } }
             % BEFORE:
             % COMMANDS:
             \set Score.repeatCommands = #'((volta "1 - 2"))
@@ -70,6 +70,9 @@
             \bar ":|."
             \once \override Score.BarLine.transparent = ##f
             \set Score.repeatCommands = #'((volta #f))
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \stopMeasureSpanner
         % CLOSE_BRACKETS:
         }
         % BEFORE:

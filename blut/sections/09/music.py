@@ -389,8 +389,8 @@ trinton.attach_multiple(
         0,
     ],
     attachments=[
-        abjad.Markup(
-            r'\markup { \right-align \abs-fontsize #15 { \upright "×4" } }',
+        abjad.LilyPondLiteral(
+            r'\tweak text "×4" \startMeasureSpanner', "absolute_before"
         ),
         abjad.BarLine(".|:", "before"),
         abjad.LilyPondLiteral(
@@ -400,6 +400,7 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
         ),
+        abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
     ],
 )
 

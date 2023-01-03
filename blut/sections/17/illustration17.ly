@@ -53,8 +53,6 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \pageBreak
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -119,6 +117,9 @@
             % COMMANDS:
             \time 16/32
             s1 * 1/2
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \tweak text "×5" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -130,7 +131,6 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
-            - \markup { \right-align \abs-fontsize #15 { \upright "×5" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -152,6 +152,7 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \stopMeasureSpanner
         % CLOSE_BRACKETS:
         }
         % BEFORE:

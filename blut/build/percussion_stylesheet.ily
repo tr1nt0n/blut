@@ -29,6 +29,7 @@
         \consists Axis_group_engraver
         \consists Time_signature_engraver
 		\consists Mark_engraver
+        \consists Measure_spanner_engraver
 		\consists Metronome_mark_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
@@ -86,6 +87,11 @@
         \override Glissando.breakable = ##t
 
         \override Hairpin.to-barline = ##f
+
+        \override MeasureSpanner.direction = #UP
+        \override MeasureSpanner.thickness = #1.5
+        \override MeasureSpanner.font-size = 7
+        \override MeasureSpanner.font-name = "Bodoni72 Book"
 
         \override Staff.thickness = #0.5
 

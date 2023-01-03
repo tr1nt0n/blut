@@ -10,6 +10,9 @@
         % OPEN_BRACKETS:
         \context TimeSignatureContext = "Global Context"
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \tweak text "×7" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -21,11 +24,12 @@
             \time 2/1
             s1 * 2
             % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #15 { \upright "×7" } }
             % COMMANDS:
             \bar ":|."
             \once \override Score.BarLine.transparent = ##f
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \stopMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \once \override Score.TimeSignature.stencil = #(blank-time-signature)

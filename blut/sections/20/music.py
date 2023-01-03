@@ -534,8 +534,8 @@ trinton.attach_multiple(
         0,
     ],
     attachments=[
-        abjad.Markup(
-            r'\markup { \abs-fontsize #15 { \upright "×7" } }',
+        abjad.LilyPondLiteral(
+            r'\tweak text "×7" \startMeasureSpanner', "absolute_before"
         ),
         abjad.LilyPondLiteral(
             rf'\boxed-markup "rearticulations cresc. dal niente" 1', "before"
@@ -548,6 +548,7 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "after"
         ),
+        abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
     ],
 )
 

@@ -1099,6 +1099,7 @@ trinton.attach_multiple(
             r"""\set Score.repeatCommands = #'((volta #f))""",
             "after",
         ),
+        abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
     ],
 )
 
@@ -1109,8 +1110,8 @@ trinton.attach_multiple(
         -2,
     ],
     attachments=[
-        abjad.Markup(
-            r'\markup { \right-align \abs-fontsize #15 { \upright "×5" } }',
+        abjad.LilyPondLiteral(
+            r'\tweak text "×5" \startMeasureSpanner', "absolute_before"
         ),
         abjad.BarLine(".|:", "before"),
         abjad.LilyPondLiteral(

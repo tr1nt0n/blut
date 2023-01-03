@@ -47,6 +47,9 @@
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"140" } }
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \tweak text "×4" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -56,11 +59,12 @@
             \time 13/16
             s1 * 13/16
             % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #15 { \upright "×4" } }
             % COMMANDS:
             \bar ":|."
             \once \override Score.BarLine.transparent = ##f
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \stopMeasureSpanner
         % CLOSE_BRACKETS:
         }
         % BEFORE:
