@@ -65,7 +65,7 @@
             s1 * 1/2
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #7
+            - \tweak padding #8.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \upright { "Rit." } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
@@ -1694,17 +1694,17 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "flaut." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "flaut." }
+                                    \startTextSpanTwo
                                     - \tweak padding #13
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "tast." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }\startTextSpanOne
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "molto pont." }
+                                    \startTextSpanOne
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1723,12 +1723,11 @@
                                     \once \override Dots.staff-position = #2
                                     b8..
                                     % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
+                                    % SPANNER_STOPS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -1761,13 +1760,11 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "flaut. molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "flaut. molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1919,11 +1916,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanOne
                                     b,4
                                     % AFTER:
                                     % MARKUP:
@@ -1937,15 +1932,14 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
                                     - \tweak padding #13
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
                                     % OPENING:
                                     % COMMANDS:
@@ -1964,8 +1958,6 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     b16
@@ -1982,13 +1974,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2023,11 +2014,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     b8
                                     % AFTER:
                                     % MARKUP:
@@ -2043,13 +2032,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2073,11 +2061,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af8
                                     % AFTER:
@@ -2095,13 +2081,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2125,11 +2110,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     b,8
                                     % AFTER:
                                     % MARKUP:
@@ -2145,13 +2128,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2175,12 +2157,10 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % STOP_BEAM:
-                                    ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
+                                    % STOP_BEAM:
+                                    ]
                                     b,4
                                     % AFTER:
                                     % MARKUP:
@@ -2194,17 +2174,16 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
                                     - \tweak padding #13
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2231,11 +2210,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     b8
                                     % AFTER:
@@ -2253,13 +2230,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2283,11 +2259,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     b4
                                     % AFTER:
                                     % MARKUP:
@@ -2302,13 +2276,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2335,11 +2308,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af16
                                     % AFTER:
@@ -2356,13 +2327,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2386,11 +2356,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     b,4
                                     % AFTER:
                                     % MARKUP:
@@ -2405,13 +2373,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2438,11 +2405,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     b8.
                                     % AFTER:
@@ -2459,12 +2424,11 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2481,11 +2445,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     b4
                                     % AFTER:
                                     % MARKUP:
@@ -2500,13 +2462,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2533,11 +2494,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af16
                                     % AFTER:
@@ -2555,13 +2514,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2585,11 +2543,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
@@ -2608,13 +2564,12 @@
                                         \glissando
                                         - \tweak circled-tip ##t
                                         \<
-                                        ~
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #14
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "fl." }
+                                        \startTextSpanTwo
+                                        ~
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Dots.staff-position = #2
@@ -2641,11 +2596,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         \tweak style #'harmonic-mixed
                                         b8.
                                         % AFTER:
@@ -2663,12 +2616,11 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #14
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "fl." }
+                                        \startTextSpanTwo
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2685,11 +2637,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         r4.
                                     % CLOSE_BRACKETS:
                                     }
@@ -2707,13 +2657,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2740,11 +2689,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af8
                                     % AFTER:
@@ -2762,13 +2709,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2792,11 +2738,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     r8
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 4 0))
@@ -2818,12 +2762,11 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #6
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "fl." }
+                                        \startTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2848,8 +2791,6 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         \stopTextSpanTwo
                                         r4.
                                         \tweak style #'harmonic-mixed
@@ -2868,12 +2809,11 @@
                                         \glissando
                                         - \tweak circled-tip ##t
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #11
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "fl." }
+                                        \startTextSpanTwo
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -2890,11 +2830,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         r8.
                                     % CLOSE_BRACKETS:
                                     }
@@ -2915,12 +2853,11 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2938,12 +2875,10 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % STOP_BEAM:
-                                    ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
+                                    % STOP_BEAM:
+                                    ]
                                     r16
                                     % BEFORE:
                                     % COMMANDS:
@@ -2990,17 +2925,17 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "flaut." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "flaut." }
+                                    \startTextSpanTwo
                                     - \tweak padding #13
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "tast." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }\startTextSpanOne
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "molto pont." }
+                                    \startTextSpanOne
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3019,12 +2954,11 @@
                                     \once \override Dots.staff-position = #2
                                     bf8..
                                     % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
+                                    % SPANNER_STOPS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -3058,15 +2992,14 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \>
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "flaut." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "1/2 scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "flaut." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "1/2 scr." }
+                                    \startTextSpanTwo
                                     - \tweak padding #14
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
                                     % OPENING:
                                     % COMMANDS:
@@ -3131,6 +3064,8 @@
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \center-column { \upright "II" \upright "+37" }
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanTwo
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
@@ -3143,9 +3078,6 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3163,11 +3095,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanOne
                                     b,16
                                     % AFTER:
                                     % MARKUP:
@@ -3184,13 +3114,11 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "flaut. molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "flaut. molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3342,11 +3270,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanOne
                                     bf4
                                     % AFTER:
                                     % MARKUP:
@@ -3360,15 +3286,14 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
                                     - \tweak padding #14
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
                                     % OPENING:
                                     % COMMANDS:
@@ -3387,8 +3312,6 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af16
@@ -3405,13 +3328,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3446,11 +3368,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     c8
                                     % AFTER:
                                     % MARKUP:
@@ -3466,13 +3386,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3496,11 +3415,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     bf8
                                     % AFTER:
@@ -3518,13 +3435,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scr." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "fl." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scr." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "fl." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3548,11 +3464,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     af8
                                     % AFTER:
                                     % MARKUP:
@@ -3568,13 +3482,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3598,12 +3511,10 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % STOP_BEAM:
-                                    ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanOne
                                     \stopTextSpanTwo
+                                    % STOP_BEAM:
+                                    ]
                                     bf8.
                                     % AFTER:
                                     % MARKUP:
@@ -3620,15 +3531,14 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
                                     - \tweak padding #14
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
                                     \startTextSpanOne
                                     % OPENING:
                                     % COMMANDS:
@@ -3647,11 +3557,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af4
                                     % AFTER:
@@ -3667,13 +3575,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3700,11 +3607,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     c16
                                     % AFTER:
                                     % MARKUP:
@@ -3720,13 +3625,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3750,11 +3654,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     bf4
                                     % AFTER:
@@ -3770,13 +3672,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3803,11 +3704,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     af8.
                                     % AFTER:
                                     % MARKUP:
@@ -3824,12 +3723,11 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -3847,11 +3745,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     c8
                                     % AFTER:
@@ -3867,13 +3763,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3897,8 +3792,6 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     \stopTextSpanTwo
                                     bf8.
                                     % AFTER:
@@ -3915,13 +3808,12 @@
                                     \glissando
                                     - \tweak circled-tip ##t
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3945,11 +3837,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     \tweak style #'harmonic-mixed
                                     af8
                                     % AFTER:
@@ -3967,13 +3857,12 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    ~
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -3997,11 +3886,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 9) (ly:make-duration 3 0))
@@ -4022,12 +3909,11 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -4045,8 +3931,6 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         \stopTextSpanTwo
                                         r8.
                                         \tweak style #'harmonic-mixed
@@ -4064,13 +3948,12 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        ~
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
+                                        ~
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Dots.staff-position = #2
@@ -4097,11 +3980,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         af8
                                         % AFTER:
                                         % MARKUP:
@@ -4117,13 +3998,12 @@
                                         \glissando
                                         - \tweak circled-tip ##t
                                         \<
-                                        ~
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
+                                        ~
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -4153,11 +4033,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         r2.
                                         \tweak style #'harmonic-mixed
                                         c4
@@ -4174,13 +4052,12 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        ~
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
+                                        ~
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -4209,11 +4086,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     bf8.
                                     % AFTER:
                                     % MARKUP:
@@ -4230,12 +4105,11 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scr." }
+                                    \startTextSpanTwo
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -4253,11 +4127,9 @@
                                     \ff
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     r8
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 3 0))
@@ -4282,12 +4154,11 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -4304,11 +4175,9 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
+                                        \stopTextSpanTwo
                                         % STOP_BEAM:
                                         ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
-                                        \stopTextSpanTwo
                                         r4.
                                         c8.
                                         % AFTER:
@@ -4325,12 +4194,11 @@
                                         \glissando
                                         - \tweak circled-tip ##t
                                         \<
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         - \tweak padding #12
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "fl." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "scr." } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fl." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "scr." }
+                                        \startTextSpanTwo
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -4348,12 +4216,10 @@
                                         \ff
                                         % SPANNER_STOPS:
                                         )
-                                        % STOP_BEAM:
-                                        ]
-                                        % ABSOLUTE_AFTER:
-                                        % COMMANDS:
                                         \stopTextSpanOne
                                         \stopTextSpanTwo
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:

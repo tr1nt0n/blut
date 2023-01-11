@@ -973,7 +973,7 @@ trinton.make_music(
         l_string=r'\markup { \abs-fontsize #12 \upright { "Rit." } }',
         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=7,
+        padding=8.5,
         tempo=True,
     ),
     voice=score["Global Context"],
