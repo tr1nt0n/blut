@@ -99,6 +99,7 @@
         \override MeasureSpanner.thickness = #1.5
         \override MeasureSpanner.font-size = 7
         \override MeasureSpanner.font-name = "Bodoni72 Book"
+        \override MeasureSpanner.padding = 9
 
         \override Staff.thickness = #0.5
 
@@ -145,6 +146,8 @@
                  (ly:grob-set-property! grob 'positions (cons new-pos new-pos))
                  (ly:tuplet-bracket::print grob)))
         % \override TupletBracket.direction = #up
+
+        \override VoltaBracketSpanner.padding = 8
     }
 
     \context {
