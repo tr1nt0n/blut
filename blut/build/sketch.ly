@@ -6,8 +6,30 @@
         {
             % OPENING:
             % COMMANDS:
-            \time 3/1
-            s1 * 3
+            \time 4/8
+            s1 * 1/2
+            % OPENING:
+            % COMMANDS:
+            \time 3/8
+            s1 * 3/8
+            % OPENING:
+            % COMMANDS:
+            \time 5/8
+            s1 * 5/8
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 5/8
+            s1 * 5/8
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 5/8
+            s1 * 5/8
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -19,30 +41,108 @@
                 % OPEN_BRACKETS:
                 \context Voice = "bassclarinet voice"
                 {
-                    % OPEN_BRACKETS:
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 1/1
-                    {
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                        gs'''!1
-                        % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \concat { G+41 } }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                        f'''!1
-                        % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \concat { F\raise #0.75 { \teeny \smaller \sharp } -49 } }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-tridecimal-third-tone-down  }
-                        e'''!1
-                        % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
-                    % CLOSE_BRACKETS:
-                    }
+                    d''4
+                    ef''4
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    ~
+                    % OPENING:
+                    % COMMANDS:
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef''16
+                    % AFTER:
+                    % START_BEAM:
+                    [
+                    e''16
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    ~
+                    e''8.
+                    % OPENING:
+                    % COMMANDS:
+                    \revert Staff.Stem.stemlet-length
+                    c'16
+                    % AFTER:
+                    % STOP_BEAM:
+                    ]
+                    % SPANNER_STARTS:
+                    ~
+                    c'4
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    ~
+                    % OPENING:
+                    % COMMANDS:
+                    \override Staff.Stem.stemlet-length = 0.75
+                    c'16
+                    % AFTER:
+                    % START_BEAM:
+                    [
+                    % OPENING:
+                    % COMMANDS:
+                    \revert Staff.Stem.stemlet-length
+                    cs'16
+                    % AFTER:
+                    % STOP_BEAM:
+                    ]
+                    % SPANNER_STARTS:
+                    ~
+                    % OPENING:
+                    % COMMANDS:
+                    \override Staff.Stem.stemlet-length = 0.75
+                    cs'8.
+                    % AFTER:
+                    % START_BEAM:
+                    [
+                    % OPENING:
+                    % COMMANDS:
+                    \revert Staff.Stem.stemlet-length
+                    e'16
+                    % AFTER:
+                    % STOP_BEAM:
+                    ]
+                    % SPANNER_STARTS:
+                    ~
+                    e'4
+                    ef'8
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    ~
+                    % OPENING:
+                    % COMMANDS:
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef'8
+                    % AFTER:
+                    % START_BEAM:
+                    [
+                    % OPENING:
+                    % COMMANDS:
+                    \revert Staff.Stem.stemlet-length
+                    d''8
+                    % AFTER:
+                    % STOP_BEAM:
+                    ]
+                    % SPANNER_STARTS:
+                    ~
+                    d''4
+                    ef''8
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    ~
+                    % OPENING:
+                    % COMMANDS:
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef''8
+                    % AFTER:
+                    % START_BEAM:
+                    [
+                    % OPENING:
+                    % COMMANDS:
+                    \revert Staff.Stem.stemlet-length
+                    e''8
+                    % AFTER:
+                    % STOP_BEAM:
+                    ]
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -53,7 +153,20 @@
                 % OPEN_BRACKETS:
                 \context Voice = "percussion voice"
                 {
-                    s1 * 3
+                    s1 * 1/2
+                    s1 * 3/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override Rest.transparent = ##t
+                    r1 * 5/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override Rest.transparent = ##t
+                    r1 * 5/8
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override Rest.transparent = ##t
+                    r1 * 5/8
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -67,45 +180,20 @@
                     % OPEN_BRACKETS:
                     \context Voice = "cello 1 voice"
                     {
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 1/1
-                        {
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                a
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                b'!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "+4" }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                c,
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                c''!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "+4" }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                c,
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-up \hspace #0.125 \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
-                                ff'!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "+50" }
-                        % CLOSE_BRACKETS:
-                        }
+                        s1 * 1/2
+                        s1 * 3/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -116,45 +204,20 @@
                     % OPEN_BRACKETS:
                     \context Voice = "cello 2 voice"
                     {
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 1/1
-                        {
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \natural-one-syntonic-comma-up  }
-                                c,
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-down  }
-                                g'!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "-31" }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                                a
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                                a''!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "-12" }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \abjad-natural  }
-                                c,
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \abjad-flat  }
-                                af'!
-                            >1
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \upright { "-31" }
-                        % CLOSE_BRACKETS:
-                        }
+                        s1 * 1/2
+                        s1 * 3/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Rest.transparent = ##t
+                        r1 * 5/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

@@ -8,22 +8,20 @@
             % COMMANDS:
             \time 3/8
             s1 * 3/8
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"140" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \center-column { \abs-fontsize #8.7 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -31,22 +29,20 @@
             % COMMANDS:
             \time 5/8
             s1 * 5/8
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \center-column { \abs-fontsize #8.7 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -54,22 +50,20 @@
             % COMMANDS:
             \time 1/8
             s1 * 1/8
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"117" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \center-column { \abs-fontsize #8.7 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -77,22 +71,20 @@
             % COMMANDS:
             \time 13/8
             s1 * 13/8
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \center-column { \abs-fontsize #8.7 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -100,43 +92,51 @@
             % COMMANDS:
             \time 3/8
             s1 * 3/8
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
+            % OPENING:
+            % COMMANDS:
+            \time 6/8
+            s1 * 3/4
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 6/8
             s1 * 3/4
             % OPENING:
             % COMMANDS:
-            \time 11/8
-            s1 * 11/8
+            \time 5/8
+            s1 * 5/8
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 5/8
+            s1 * 5/8
+            % OPENING:
+            % COMMANDS:
+            \time 6/8
+            s1 * 3/4
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 6/8
+            s1 * 3/4
+            % OPENING:
+            % COMMANDS:
+            \time 7/8
+            s1 * 7/8
             % OPENING:
             % COMMANDS:
             \time 8/8
             s1 * 1
-            % OPENING:
-            % COMMANDS:
-            \time 3/8
-            s1 * 3/8
-            % OPENING:
-            % COMMANDS:
-            \time 13/8
-            s1 * 13/8
             % OPENING:
             % COMMANDS:
             \time 9/8
             s1 * 9/8
-            % OPENING:
-            % COMMANDS:
-            \time 8/8
-            s1 * 1
-            % AFTER:
-            % COMMANDS:
-            \bar "||"
-            % ABSOLUTE_AFTER:
-            % COMMANDS:
-            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % BEFORE:
@@ -163,48 +163,48 @@
                             \set Staff.instrumentName = \markup \bold { Bass Clarinet }
                             \set Staff.shortInstrumentName = \markup \bold { b. cl. }
                             r4
+                            % BEFORE:
+                            % COMMANDS:
+                            \textSpannerDown
+                            \vibrato #'(0 1 1 1 2 9) #1  #0.2
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            ef8
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            - \tweak padding #10
+                            - \abjad-dashed-line-with-up-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
+                            \startTextSpan
+                            \glissando
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
                             % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
-                            \times 4/5
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \textSpannerDown
-                                \vibrato #'(0 1 1 1 2 9) #1  #0.2
-                                ef8
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                - \tweak padding #10
-                                - \abjad-dashed-line-with-up-hook
-                                - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
-                                \startTextSpan
-                                \glissando
-                                % TRILL_SPANNER_STARTS:
-                                \startTrillSpan
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                ef32
+                                ef16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \f
                                 % SPANNER_STOPS:
                                 \stopTextSpan
                                 \stopTrillSpan
-                                % STOP_BEAM:
-                                ]
                                 % COMMANDS:
                                 \textSpannerUp
                             % CLOSE_BRACKETS:
@@ -218,43 +218,44 @@
                             \stopStaff \startStaff
                             r4
                             r16
+                            % BEFORE:
+                            % COMMANDS:
+                            \textSpannerDown
+                            \vibrato #'(0 1 1 1 2 9) #1  #0.2
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            ef16
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            - \tweak padding #10
+                            - \abjad-dashed-line-with-up-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
+                            \startTextSpan
+                            \glissando
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
+                            % OPENING:
+                            % COMMANDS:
+                            \hide NoteHead
+                            \override Accidental.stencil = ##f
+                            \override NoteColumn.glissando-skip = ##t
+                            \override NoteHead.no-ledgers = ##t
+                            \afterGrace
+                            ef4
+                            % AFTER:
                             % OPEN_BRACKETS:
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 5 0))
-                            \times 10/13
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \textSpannerDown
-                                \vibrato #'(0 1 1 1 2 9) #1  #0.2
-                                ef4
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                - \tweak padding #10
-                                - \abjad-dashed-line-with-up-hook
-                                - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
-                                \startTextSpan
-                                \glissando
-                                % TRILL_SPANNER_STARTS:
-                                \startTrillSpan
-                                % BEFORE:
-                                % COMMANDS:
-                                \once \override Dots.staff-position = #2
                                 % OPENING:
                                 % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                ef16.
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % OPENING:
-                                % COMMANDS:
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
@@ -266,8 +267,6 @@
                                 % SPANNER_STOPS:
                                 \stopTextSpan
                                 \stopTrillSpan
-                                % STOP_BEAM:
-                                ]
                                 % COMMANDS:
                                 \textSpannerUp
                             % CLOSE_BRACKETS:
@@ -279,48 +278,48 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
+                            % BEFORE:
+                            % COMMANDS:
+                            \textSpannerDown
+                            \vibrato #'(0 1 1 1 2 9) #1  #0.2
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            ef8
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            - \tweak padding #10
+                            - \abjad-dashed-line-with-up-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
+                            \startTextSpan
+                            \glissando
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
                             % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                            \times 8/13
                             {
-                                % BEFORE:
-                                % COMMANDS:
-                                \textSpannerDown
-                                \vibrato #'(0 1 1 1 2 9) #1  #0.2
-                                ef8.
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                - \tweak padding #10
-                                - \abjad-dashed-line-with-up-hook
-                                - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
-                                \startTextSpan
-                                \glissando
-                                % TRILL_SPANNER_STARTS:
-                                \startTrillSpan
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                ef64
+                                ef16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \p
                                 % SPANNER_STOPS:
                                 \stopTextSpan
                                 \stopTrillSpan
-                                % STOP_BEAM:
-                                ]
                                 % COMMANDS:
                                 \textSpannerUp
                             % CLOSE_BRACKETS:
@@ -339,10 +338,11 @@
                             % COMMANDS:
                             \textSpannerDown
                             \vibrato #'(0 1 1 1 2 9) #1  #0.2
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
                             ef8
                             % AFTER:
-                            % START_BEAM:
-                            [
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             - \tweak stencil #abjad-flared-hairpin
@@ -350,6 +350,7 @@
                             - \tweak padding #10
                             - \abjad-dashed-line-with-up-hook
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
                             \startTextSpan
                             \glissando
                             % TRILL_SPANNER_STARTS:
@@ -363,24 +364,29 @@
                             \override Accidental.stencil = ##f
                             \override NoteColumn.glissando-skip = ##t
                             \override NoteHead.no-ledgers = ##t
-                            ef8
-                            % OPENING:
-                            % COMMANDS:
-                            \revert Accidental.stencil
-                            \revert NoteColumn.glissando-skip
-                            \revert NoteHead.no-ledgers
-                            \undo \hide NoteHead
-                            ef8
+                            \afterGrace
+                            ef4
                             % AFTER:
-                            % ARTICULATIONS:
-                            \ff
-                            % SPANNER_STOPS:
-                            \stopTextSpan
-                            \stopTrillSpan
-                            % STOP_BEAM:
-                            ]
-                            % COMMANDS:
-                            \textSpannerUp
+                            % OPEN_BRACKETS:
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \once \override Flag.stroke-style = #"grace"
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                ef16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \ff
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                \stopTrillSpan
+                                % COMMANDS:
+                                \textSpannerUp
+                            % CLOSE_BRACKETS:
+                            }
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -394,184 +400,37 @@
                             \vibrato #'(0 1 1 1 2 9) #1  #0.2
                             ef4.
                             % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTextSpan
-                            \stopTrillSpan
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \<
                             - \tweak padding #10
                             - \abjad-dashed-line-with-up-hook
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
                             \startTextSpan
+                            \glissando
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
-                            % COMMANDS:
-                            \textSpannerUp
-                            s1 * 3/4
+                            ef64
                             % AFTER:
                             % ARTICULATIONS:
                             \f
-                            % COMMANDS:
-                            \stopTextSpan
-                            \stopTextSpan
-                            \stopTrillSpan
-                            \stopTrillSpan
-                            s1 * 11/8
-                            % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
-                            \times 2/3
-                            {
-                                % BEFORE:
-                                % COMMANDS:
-                                \textSpannerDown
-                                \vibrato #'(1 1 1 7 2 1 1) #0.75  #0.2
-                                ef16
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \<
-                                - \tweak padding #10
-                                - \abjad-dashed-line-with-up-hook
-                                - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
-                                \startTextSpan
-                                \glissando
-                                % TRILL_SPANNER_STARTS:
-                                \startTrillSpan
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
-                                ef8
-                                % AFTER:
-                                % ARTICULATIONS:
-                                \p
-                                % SPANNER_STOPS:
-                                \stopTextSpan
-                                % STOP_BEAM:
-                                ]
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \>
-                                % COMMANDS:
-                                \textSpannerUp
-                            % CLOSE_BRACKETS:
-                            }
-                            r2..
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \!
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            r4
-                            % BEFORE:
-                            % COMMANDS:
-                            \textSpannerDown
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            bf8
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \p
-                            % SPANNER_STARTS:
-                            - \tweak padding #8
-                            - \abjad-dashed-line-with-up-hook
-                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
-                            \startTextSpan
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ~
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            bf4.
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            % SPANNER_STARTS:
-                            ~
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            bf8
-                            % AFTER:
-                            % START_BEAM:
-                            [
-                            % BEFORE:
-                            % COMMANDS:
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            af8
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            % STOP_BEAM:
-                            ]
-                            % SPANNER_STARTS:
-                            ~
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            af4
-                            ef2.
-                            % BEFORE:
-                            % COMMANDS:
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            e'2.
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            % SPANNER_STARTS:
-                            ~
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            e'8
-                            % AFTER:
-                            % START_BEAM:
-                            [
-                            % BEFORE:
-                            % COMMANDS:
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            ef8
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            bf8
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            ~
-                            bf8
-                            % BEFORE:
-                            % COMMANDS:
-                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
-                            af8
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            \stopTrillSpan
-                            % STOP_BEAM:
-                            ]
-                            % SPANNER_STARTS:
-                            ~
-                            % TRILL_SPANNER_STARTS:
-                            \startTrillSpan
-                            af2
-                            ef4
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \!
                             % SPANNER_STOPS:
                             \stopTextSpan
                             \stopTrillSpan
                             % COMMANDS:
                             \textSpannerUp
+                            r16..
+                            r4
+                            r4.
+                            s1 * 3/4
+                            s1 * 5/8
+                            s1 * 5/8
+                            s1 * 3/4
+                            s1 * 3/4
+                            s1 * 7/8
+                            s1 * 1
+                            s1 * 9/8
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -603,43 +462,37 @@
                             % AFTER:
                             % COMMANDS:
                             \boxed-markup "Lion's Roar" 1
-                            % BEFORE:
-                            % GROB_OVERRIDES:
-                            \override TupletNumber.text = \markup \italic 5:4
+                            \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            c'8
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            \glissando
                             % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
-                            \times 4/5
                             {
-                                c'8
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                \glissando
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                c'32
+                                c'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \f
-                                % STOP_BEAM:
-                                ]
                             % CLOSE_BRACKETS:
                             }
-                            % AFTER:
-                            % GROB_REVERTS:
-                            \revert TupletNumber.text
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -649,28 +502,26 @@
                             \stopStaff \startStaff
                             r4.
                             r16
-                            % BEFORE:
-                            % GROB_OVERRIDES:
-                            \override TupletNumber.text = \markup \italic 4:3
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            c'8.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            \glissando
                             % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
-                            \times 3/4
                             {
-                                c'8.
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                \glissando
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
@@ -679,13 +530,8 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mp
-                                % STOP_BEAM:
-                                ]
                             % CLOSE_BRACKETS:
                             }
-                            % AFTER:
-                            % GROB_REVERTS:
-                            \revert TupletNumber.text
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -693,43 +539,36 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            % BEFORE:
-                            % GROB_OVERRIDES:
-                            \override TupletNumber.text = \markup \italic 13:8
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            c'8
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            \glissando
                             % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                            \times 8/13
                             {
-                                c'8.
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                \glissando
                                 % OPENING:
                                 % COMMANDS:
                                 \hide NoteHead
                                 \override Accidental.stencil = ##f
                                 \override NoteColumn.glissando-skip = ##t
                                 \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
                                 \revert Accidental.stencil
                                 \revert NoteColumn.glissando-skip
                                 \revert NoteHead.no-ledgers
                                 \undo \hide NoteHead
-                                c'64
+                                c'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \p
-                                % STOP_BEAM:
-                                ]
                             % CLOSE_BRACKETS:
                             }
-                            % AFTER:
-                            % GROB_REVERTS:
-                            \revert TupletNumber.text
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -738,38 +577,36 @@
                             % COMMANDS:
                             \stopStaff \startStaff
                             r2..
-                            c'2
+                            % OPENING:
+                            % COMMANDS:
+                            #(define afterGraceFraction (cons 15 16))
+                            \afterGrace
+                            c'2.
                             % AFTER:
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             \glissando
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Dots.staff-position = #2
-                            % OPENING:
-                            % COMMANDS:
-                            \hide NoteHead
-                            \override Accidental.stencil = ##f
-                            \override NoteColumn.glissando-skip = ##t
-                            \override NoteHead.no-ledgers = ##t
-                            c'8
-                            % AFTER:
-                            % START_BEAM:
-                            [
-                            % OPENING:
-                            % COMMANDS:
-                            \revert Accidental.stencil
-                            \revert NoteColumn.glissando-skip
-                            \revert NoteHead.no-ledgers
-                            \undo \hide NoteHead
-                            c'8
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \ff
-                            % STOP_BEAM:
-                            ]
+                            % OPEN_BRACKETS:
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                \once \override Flag.stroke-style = #"grace"
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                c'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \ff
+                            % CLOSE_BRACKETS:
+                            }
                             % BEFORE:
                             % COMMANDS:
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -782,94 +619,22 @@
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \<
-                            s1 * 3/4
+                            \glissando
+                            c'64
                             % AFTER:
                             % ARTICULATIONS:
                             \f
-                            s1 * 11/8
-                            % BEFORE:
-                            % GROB_OVERRIDES:
-                            \override TupletNumber.text = \markup \italic 3:2
-                            % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
-                            \times 2/3
-                            {
-                                c'16
-                                % AFTER:
-                                % START_BEAM:
-                                [
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \<
-                                \glissando
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
-                                c'8
-                                % AFTER:
-                                % ARTICULATIONS:
-                                \p
-                                % STOP_BEAM:
-                                ]
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \>
-                            % CLOSE_BRACKETS:
-                            }
-                            % AFTER:
-                            % GROB_REVERTS:
-                            \revert TupletNumber.text
-                            r2
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \!
-                            % BEFORE:
-                            % GROB_OVERRIDES:
-                            \override TupletNumber.text = \markup \italic 24:19
-                            % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 24 19) (ly:make-duration 3 0))
-                            \times 57/72
-                            {
-                                c'1
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \<
-                                \glissando
-                                % OPENING:
-                                % COMMANDS:
-                                \hide NoteHead
-                                \override Accidental.stencil = ##f
-                                \override NoteColumn.glissando-skip = ##t
-                                \override NoteHead.no-ledgers = ##t
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
-                                c'\breve
-                                % AFTER:
-                                % ARTICULATIONS:
-                                \f
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \>
-                            % CLOSE_BRACKETS:
-                            }
-                            % AFTER:
-                            % GROB_REVERTS:
-                            \revert TupletNumber.text
-                            s1 * 9/8
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \!
+                            r16..
+                            r4
+                            r4.
+                            s1 * 3/4
+                            s1 * 5/8
+                            s1 * 5/8
+                            s1 * 3/4
+                            s1 * 3/4
+                            s1 * 7/8
                             s1 * 1
+                            s1 * 9/8
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -895,42 +660,42 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "cello 1 voice"
                                 {
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \set Staff.instrumentName = \markup \bold { Violoncello I }
+                                    \set Staff.shortInstrumentName = \markup \bold { vc. I }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \clef "tenorvarC"
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
+                                    \startTextSpan
+                                    \glissando
                                     % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 5 0))
-                                    \times 12/13
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set Staff.instrumentName = \markup \bold { Violoncello I }
-                                        \set Staff.shortInstrumentName = \markup \bold { vc. I }
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \clef "tenorvarC"
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >4.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #8
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
-                                        \startTextSpan
-                                        \glissando
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -939,10 +704,10 @@
                                             e'
                                             \tweak style #'harmonic
                                             a'
-                                        >32
+                                        >16
                                         % AFTER:
                                         % STEM_TREMOLOS:
-                                        :256
+                                        :128
                                         % ARTICULATIONS:
                                         \f
                                         % SPANNER_STOPS:
@@ -956,34 +721,50 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #10.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
                                     % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 4 0))
-                                    \times 10/13
                                     {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >2.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
-                                        \startTextSpan
-                                        \glissando
                                         % OPENING:
                                         % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -1009,35 +790,37 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #10.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \glissando
                                     % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                                    \times 8/13
                                     {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
-                                        \startTextSpan
-                                        \glissando
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -1046,16 +829,14 @@
                                             e'
                                             \tweak style #'harmonic
                                             a'
-                                        >64
+                                        >16
                                         % AFTER:
                                         % STEM_TREMOLOS:
-                                        :512
+                                        :128
                                         % ARTICULATIONS:
                                         \p
                                         % SPANNER_STOPS:
                                         \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -1065,11 +846,14 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
                                     <
                                         e'
                                         \tweak style #'harmonic
                                         a'
-                                    >1.
+                                    >2..
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
@@ -1077,33 +861,76 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #6
+                                    - \tweak padding #10.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     <
                                         e'
                                         \tweak style #'harmonic
                                         a'
-                                    >8
+                                    >4
                                     % AFTER:
                                     % STEM_TREMOLOS:
-                                    :64
-                                    % ARTICULATIONS:
-                                    \ff
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
+                                    :32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1122,1275 +949,18 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 7 0))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >128
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \f
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        fs'16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \pp
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        fs'64
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
-                                    \times 12/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight }
-                                        \startTextSpan
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 6 0))
-                                    \times 8/10
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >128
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \sfz
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        fs'16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \pp
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        fs'128
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
-                                    \times 12/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight }
-                                        \startTextSpan
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
-                                    \times 8/12
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >64
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \sfz
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        e'8
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        e'32.
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
-                                    \times 12/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % ARTICULATIONS:
-                                        \ff
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide }
-                                        \startTextSpan
-                                        \>
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % ARTICULATIONS:
-                                        \mp
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
-                                    \times 4/7
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >32
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \tenuto
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        e'8.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \tenuto
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 1))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8...
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \mf
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \>
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >64.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \pp
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    <
-                                        fs'
-                                        \tweak style #'harmonic
-                                        b'
-                                    >16
+                                    s1 * 3/4
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \tenuto
-                                    \sfz
-                                    fs'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    \sfz
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 7) (ly:make-duration 4 0))
-                                    \times 7/11
-                                    {
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >2
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >8
-                                        % AFTER:
-                                        % START_BEAM:
-                                        [
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \fff
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        gqs'
-                                        \tweak style #'harmonic
-                                        cqs''
-                                    >8.
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    \p
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    \(
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Staff.Stem.stemlet-length
-                                    gqs'16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    gqs'16
-                                    % AFTER:
-                                    % SPANNER_STOPS:
-                                    \)
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
-                                    \times 8/12
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >8
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide }
-                                        \startTextSpan
-                                        \<
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >32.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        fs'
-                                        \tweak style #'harmonic
-                                        b'
-                                    >8.
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    \mp
-                                    % START_BEAM:
-                                    [
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Staff.Stem.stemlet-length
-                                    fs'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    fs'8.
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 9) (ly:make-duration 4 0))
-                                    \times 9/13
-                                    {
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >2.
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \>
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "molto tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { molto pont. }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    s1 * 3/8
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 27 20) (ly:make-duration 6 0))
-                                    \times 20/27
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >8...
-                                        % AFTER:
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        gqs'8.
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >8
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \ff
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #7
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight }
-                                        \startTextSpan
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 1))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >64.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \sfz
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        fs'8...
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \p
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                                    \times 8/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #7
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide }
-                                        \startTextSpan
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % ARTICULATIONS:
-                                        \ff
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
-                                    \times 8/10
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >64
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        fs'8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \pp
-                                        % SPANNER_STARTS:
-                                        \<
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        fs'64
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 5 0))
-                                    \times 10/13
-                                    {
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >4.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % ARTICULATIONS:
-                                        \fff
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \>
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight tast. }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
-                                    \times 8/12
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >64
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \mp
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        e'8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \tenuto
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        e'32.
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 5 0))
-                                    \times 10/13
-                                    {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >4.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % ARTICULATIONS:
-                                        \sff
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight tast. }
-                                        \startTextSpan
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \>
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 4 0))
-                                    \times 6/7
-                                    {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \tenuto
-                                        \mf
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        e'4.
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \>
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 7) (ly:make-duration 4 0))
-                                    \times 7/11
-                                    {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >2
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \<
-                                        - \tweak padding #8.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight pont. }
-                                        \startTextSpan
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % ARTICULATIONS:
-                                        \fff
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        fs'
-                                        \tweak style #'harmonic
-                                        b'
-                                    >32
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \staccato
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    \(
-                                    \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Staff.Stem.stemlet-length
-                                    fs'32
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \staccato
-                                    % SPANNER_STOPS:
-                                    \)
-                                    % STOP_BEAM:
-                                    ]
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 33 20) (ly:make-duration 6 0))
-                                    \times 20/33
-                                    {
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >4...
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \mp
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \>
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { pont. }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >32.
-                                        % AFTER:
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
-                                    \times 4/5
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            gqs'
-                                            \tweak style #'harmonic
-                                            cqs''
-                                        >16.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % ARTICULATIONS:
-                                        \ppp
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        gqs'16
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % ARTICULATIONS:
-                                        \p
-                                        % STOP_BEAM:
-                                        ]
-                                        % SPANNER_STARTS:
-                                        \>
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    <
-                                        gqs'
-                                        \tweak style #'harmonic
-                                        cqs''
-                                    >8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    \pp
-                                    % SPANNER_STARTS:
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        gqs'
-                                        \tweak style #'harmonic
-                                        cqs''
-                                    >32.
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Staff.Stem.stemlet-length
-                                    <
-                                        gqs'
-                                        \tweak style #'harmonic
-                                        cqs''
-                                    >64
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \tenuto
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    \>
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
-                                    \times 4/7
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            fs'
-                                            \tweak style #'harmonic
-                                            b'
-                                        >16.
-                                        % AFTER:
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        fs'8
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    r16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    r4..
+                                    \f
+                                    s1 * 3/4
+                                    s1 * 5/8
+                                    s1 * 5/8
+                                    s1 * 3/4
+                                    s1 * 3/4
+                                    s1 * 7/8
+                                    s1 * 1
+                                    s1 * 9/8
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2416,6 +986,9 @@
                                     % COMMANDS:
                                     \clef "tenorvarC"
                                     r16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
                                     <
                                         d'
                                         \tweak style #'harmonic
@@ -2424,13 +997,11 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :128
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #8
+                                    - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
@@ -2445,34 +1016,38 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
                                     <
                                         d'
                                         \tweak style #'harmonic
                                         g'
-                                    >8..
+                                    >4
                                     % AFTER:
                                     % STEM_TREMOLOS:
-                                    :64
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    <
-                                        d'
-                                        \tweak style #'harmonic
-                                        g'
-                                    >32
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :256
-                                    % ARTICULATIONS:
-                                    \f
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
-                                    % STOP_BEAM:
-                                    ]
+                                    :32
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -2481,33 +1056,37 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     r4.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    <
+                                        d'
+                                        \tweak style #'harmonic
+                                        g'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #10.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \glissando
                                     % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 0))
-                                    \times 4/5
                                     {
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >4
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
-                                        \startTextSpan
-                                        \glissando
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -2533,35 +1112,37 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    <
+                                        d'
+                                        \tweak style #'harmonic
+                                        g'
+                                    >8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #10.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \glissando
                                     % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                                    \times 8/13
                                     {
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
-                                        \startTextSpan
-                                        \glissando
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -2570,16 +1151,14 @@
                                             d'
                                             \tweak style #'harmonic
                                             g'
-                                        >64
+                                        >16
                                         % AFTER:
                                         % STEM_TREMOLOS:
-                                        :512
+                                        :128
                                         % ARTICULATIONS:
                                         \p
                                         % SPANNER_STOPS:
                                         \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -2590,6 +1169,9 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     r4.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
                                     <
                                         d'
                                         \tweak style #'harmonic
@@ -2602,9 +1184,10 @@
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
-                                    - \tweak padding #6
+                                    - \tweak padding #10.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "sim." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -2616,36 +1199,38 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
                                     <
                                         d'
                                         \tweak style #'harmonic
                                         g'
-                                    >8
+                                    >4
                                     % AFTER:
                                     % STEM_TREMOLOS:
-                                    :64
-                                    % START_BEAM:
-                                    [
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    <
-                                        d'
-                                        \tweak style #'harmonic
-                                        g'
-                                    >8
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
-                                    % ARTICULATIONS:
-                                    \ff
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
-                                    % STOP_BEAM:
-                                    ]
+                                    :32
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -2664,648 +1249,28 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    s1 * 3/4
+                                    \glissando
+                                    <
+                                        d'
+                                        \tweak style #'harmonic
+                                        g'
+                                    >64
                                     % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :512
                                     % ARTICULATIONS:
                                     \f
-                                    r4.
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 4 0))
-                                    \times 10/13
-                                    {
-                                        <
-                                            fqs'
-                                            \tweak style #'harmonic
-                                            bqf'
-                                        >2.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \<
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight trem. tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide trem. pont. }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fqs'
-                                            \tweak style #'harmonic
-                                            bqf'
-                                        >16
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % ARTICULATIONS:
-                                        \fff
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    r4.
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 5 0))
-                                    \times 6/7
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \sfz
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        e'8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \p
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 6 0))
-                                    \times 12/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight pont. }
-                                        \startTextSpan
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % ARTICULATIONS:
-                                        \f
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    r8
-                                    r8
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \sff
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \>
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >32
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        e'64
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 5 0))
-                                    \times 8/11
-                                    {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #7
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight pont." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide molto tast. }
-                                        \startTextSpan
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >4
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % ARTICULATIONS:
-                                        \!
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    s1 * 3/8
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
-                                    \times 4/7
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \ff
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \>
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >8
-                                        % AFTER:
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 6 0))
-                                    \times 8/13
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        d'8.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        - \tweak padding #8
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % ARTICULATIONS:
-                                        \ff
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 5 0))
-                                    \times 8/9
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >8
-                                        % AFTER:
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        \<
-                                        - \tweak padding #5.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { molt pont. }
-                                        \startTextSpan
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >32
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \ff
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 6 0))
-                                    \times 8/11
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        d'8
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
-                                        % ARTICULATIONS:
-                                        \p
-                                        % START_BEAM:
-                                        [
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #8
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight }
-                                        \startTextSpan
-                                        \<
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        d'32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        \revert Staff.Stem.stemlet-length
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >64
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :512
-                                        % ARTICULATIONS:
-                                        \mf
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                        % STOP_BEAM:
-                                        ]
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 5 1))
-                                    \times 8/11
-                                    {
-                                        <
-                                            d'
-                                            \tweak style #'harmonic
-                                            g'
-                                        >32.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \staccato
-                                        \mp
-                                        % SPANNER_STARTS:
-                                        \(
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >4...
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \sfz
-                                        % SPANNER_STOPS:
-                                        \)
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 5 0))
-                                    \times 8/13
-                                    {
-                                        e'4.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % ARTICULATIONS:
-                                        \mp
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tight molto tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { wide molto pont. }
-                                        \startTextSpan
-                                        \<
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >32
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :256
-                                        % ARTICULATIONS:
-                                        - \staccato
-                                        \f
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
-                                    \times 8/10
-                                    {
-                                        <
-                                            e'
-                                            \tweak style #'harmonic
-                                            a'
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        % SPANNER_STARTS:
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \>
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            fqs'
-                                            \tweak style #'harmonic
-                                            bqf'
-                                        >2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fqs'
-                                            \tweak style #'harmonic
-                                            bqf'
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \pp
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) (ly:make-duration 4 0))
-                                    \times 10/13
-                                    {
-                                        fqs'2.
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
-                                        % ARTICULATIONS:
-                                        \mf
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \>
-                                        - \tweak padding #6.5
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "wide molto pont." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { tight molto tast. }
-                                        \startTextSpan
-                                        \glissando
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        <
-                                            fqs'
-                                            \tweak style #'harmonic
-                                            bqf'
-                                        >16
-                                        % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    r8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
+                                    r16..
                                     r4
+                                    r4.
+                                    s1 * 3/4
+                                    s1 * 5/8
+                                    s1 * 5/8
+                                    s1 * 3/4
+                                    s1 * 3/4
+                                    s1 * 7/8
                                     s1 * 1
+                                    s1 * 9/8
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:

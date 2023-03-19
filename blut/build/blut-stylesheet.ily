@@ -11,9 +11,9 @@
 \include "/Users/trintonprater/baca/baca/scm/baca-circle-bow-markups.ily"
 
 \header {
-    dedication = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #3 \center-column {"to 李惟怡" \fontsize #0.25 \with-color #white "."}
+    dedication = \markup \fontsize #3 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { to } \override #'(font-name . "Source Han Serif SC Bold") { 李惟怡 } } \fontsize #0.01 \with-color #white "."}
     title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #10 \center-column {"P O L Ú E I D O S, or : speichel und wasser" \fontsize #0.01 \with-color #white "."}
-    subtitle = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"for Bass Clarinet, Percussions, and two Violoncelli" \fontsize #0.01 \with-color #white "."}
+    subtitle = \markup \fontsize #3 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { for } \override #'(font-name . "Bodoni72 Book") { Bass Clarinet, Percussions, } \override #'(font-name . "Bodoni72 Book Italic") { and } \override #'(font-name . "Bodoni72 Book") { two Violoncelli } } \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton Hlynn (*2000)"}
 }
 
@@ -31,8 +31,11 @@
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
         \consists Measure_spanner_engraver
+        \consists Multi_measure_rest_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
+
+
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
@@ -100,6 +103,8 @@
         \override MeasureSpanner.font-size = 7
         \override MeasureSpanner.font-name = "Bodoni72 Book"
         \override MeasureSpanner.padding = 9
+
+        % \override SpacingSpanner.strict-grace-spacing = ##t
 
         \override Staff.thickness = #0.5
 

@@ -12,26 +12,30 @@ import itertools
 
 # immutables
 
-visas_tuplets = eval(
-    """[
-        (1, 10),
-        (12, 1),
-        (1, 9),
-        (12, 1),
-        (1, 11),
-        (12, 1),
-        (1, 6),
-        (10, 1),
-        (1, 1),
-        (10, 1),
-        (3, 2),
-        (11, 1),
-        (3, 4),
-        (12, 1),
-        (5, 4),
-        (10, 1),
-    ]"""
-)
+## old version ##
+
+# visas_tuplets = eval(
+#     """[
+#         (1, 10),
+#         (12, 1),
+#         (1, 9),
+#         (12, 1),
+#         (1, 11),
+#         (12, 1),
+#         (1, 6),
+#         (10, 1),
+#         (1, 1),
+#         (10, 1),
+#         (3, 2),
+#         (11, 1),
+#         (3, 4),
+#         (12, 1),
+#         (5, 4),
+#         (10, 1),
+#     ]"""
+# )
+
+## ##
 
 visas_1_pitch_list = eval(
     """[
@@ -187,10 +191,73 @@ def blut_score(time_signatures):
 
 # rhythm
 
+## old ##
 
-def visas_rhythms(index):
-    out = trinton.rotated_sequence(visas_tuplets, index)
-    return out
+# def visas_rhythms(index):
+#     out = trinton.rotated_sequence(visas_tuplets, index)
+#     return out
+
+##
+
+
+def visas_graces(
+    selector=trinton.pleaves(),
+    alternate=True,
+):
+    def graces(argument):
+        selections = selector(argument)
+
+        ties = abjad.select.logical_ties(selections)
+
+        handler = evans.GraceHandler(
+            boolean_vector=[1],
+            gesture_lengths=[
+                1,
+            ],
+            remove_skips=True,
+            forget=False,
+        )
+
+        if alternate is True:
+            for tie in ties:
+                if ties.index(tie) % 2 == 0:
+                    handler(tie)
+
+                else:
+                    string = r"#(define afterGraceFraction (cons 15 16))"
+
+                    literal = abjad.LilyPondLiteral(string)
+
+                    abjad.attach(literal, selections[0])
+
+                    container = abjad.AfterGraceContainer("c'16")
+
+                    slash_literal = abjad.LilyPondLiteral(
+                        r'\once \override Flag.stroke-style = #"grace"',
+                    )
+
+                    abjad.attach(slash_literal, container[0])
+
+                    abjad.attach(container, tie[-1])
+        else:
+            for tie in ties:
+                string = r"#(define afterGraceFraction (cons 15 16))"
+
+                literal = abjad.LilyPondLiteral(string)
+
+                abjad.attach(literal, selections[0])
+
+                container = abjad.AfterGraceContainer("c'16")
+
+                slash_literal = abjad.LilyPondLiteral(
+                    r'\once \override Flag.stroke-style = #"grace"',
+                )
+
+                abjad.attach(slash_literal, container[0])
+
+                abjad.attach(container, tie[-1])
+
+    return graces
 
 
 def bells_rhythms(index):
@@ -997,7 +1064,7 @@ def glissando(selector=None):
         else:
             leaves = abjad.select.leaves(argument, pitched=True)
             abjad.glissando(
-                leaves,
+                argument,
                 hide_middle_note_heads=True,
                 allow_repeats=True,
                 allow_ties=True,
@@ -1029,15 +1096,36 @@ def grunt(dynamic="ff", hairpin="o<|"):
     return attach
 
 
-def visas_attachments():
+## old ##
+
+# def visas_attachments():
+#     def attach(argument):
+#         tuplets = abjad.select.tuplets(argument)
+#         for tuplet in tuplets:
+#             if tuplets.index(tuplet) % 2 == 1:
+#                 tremolo()(tuplet)
+#             else:
+#                 pass
+#             glissando()(tuplet)
+#
+#     return attach
+
+## ##
+
+
+def visas_attachments(selector=trinton.pleaves(), solitary=False):
     def attach(argument):
-        tuplets = abjad.select.tuplets(argument)
-        for tuplet in tuplets:
-            if tuplets.index(tuplet) % 2 == 1:
-                tremolo()(tuplet)
+        selections = selector(argument)
+        non_grace_ties = abjad.select.logical_ties(selections, grace=False)
+
+        for tie in non_grace_ties:
+            with_next_leaf = abjad.select.with_next_leaf(tie)
+            if solitary is False:
+                if non_grace_ties.index(tie) % 2 == 1:
+                    tremolo()(tie)
+                    glissando()(with_next_leaf)
             else:
-                pass
-            glissando()(tuplet)
+                glissando()(with_next_leaf)
 
     return attach
 

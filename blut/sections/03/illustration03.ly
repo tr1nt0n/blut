@@ -12,23 +12,18 @@
         {
             % OPENING:
             % COMMANDS:
-            \time 9/32
-            s1 * 9/32
+            \time 5/8
+            s1 * 5/8
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
-            \time 8/32
-            s1 * 1/4
-            % OPENING:
-            % COMMANDS:
-            \time 9/32
-            s1 * 9/32
-            % OPENING:
-            % COMMANDS:
-            \time 14/32
-            s1 * 7/16
+            \time 5/8
+            s1 * 5/8
             % OPENING:
             % COMMANDS:
             \time 8/32
@@ -38,26 +33,18 @@
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"140" } }
             % OPENING:
             % COMMANDS:
-            \time 4/32
-            s1 * 1/8
+            \time 3/8
+            s1 * 3/8
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
             % OPENING:
             % COMMANDS:
-            \time 8/32
-            s1 * 1/4
-            % OPENING:
-            % COMMANDS:
-            \time 12/32
-            s1 * 3/8
+            \time 4/8
+            s1 * 1/2
             % AFTER:
             % MARKUP:
             - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
-            % OPENING:
-            % COMMANDS:
-            \time 4/32
-            s1 * 1/8
             % OPENING:
             % COMMANDS:
             \time 15/32
@@ -73,6 +60,7 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -146,6 +134,9 @@
                             \revert TupletNumber.text
                             s1 * 1/4
                             r16
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
                             dqs'16
                             % AFTER:
                             % MARKUP:
@@ -173,6 +164,7 @@
                             \revert NoteColumn.glissando-skip
                             \revert NoteHead.no-ledgers
                             \undo \hide NoteHead
+                            \revert Staff.Stem.stemlet-length
                             dqs'16
                             % AFTER:
                             % ARTICULATIONS:
@@ -180,8 +172,10 @@
                             % STOP_BEAM:
                             ]
                             r16
-                            s1 * 3/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Rest.transparent = ##t
+                            r1 * 1/2
                             s1 * 15/32
                             % BEFORE:
                             % COMMANDS:
@@ -222,62 +216,111 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "percussion"
+                                \override Staff.Stem.stemlet-length = 0.75
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \p
+                                % START_BEAM:
+                                [
                                 % SPANNER_STARTS:
                                 - \tweak padding #6
                                 - \abjad-dashed-line-with-hook
                                 - \tweak bound-details.left.text \markup \concat { \upright { "pizz." } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -1
                                 \startTextSpan
                                 % COMMANDS:
                                 \boxed-markup "Lion's Roar" 1
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Staff.Stem.stemlet-length
                                 c'8
+                                % AFTER:
+                                % STOP_BEAM:
+                                ]
                             % CLOSE_BRACKETS:
                             }
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                             \times 2/3
                             {
+                                % OPENING:
+                                % COMMANDS:
+                                \override Staff.Stem.stemlet-length = 0.75
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \accent
+                                % START_BEAM:
+                                [
                                 c'8
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Staff.Stem.stemlet-length
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \accent
+                                % STOP_BEAM:
+                                ]
                             % CLOSE_BRACKETS:
                             }
                             c'16.
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
                             c'16.
-                            c'16.
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            c'32
                             % AFTER:
                             % ARTICULATIONS:
                             - \accent
+                            % SPANNER_STARTS:
+                            ~
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Staff.Stem.stemlet-length
+                            c'16
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
                             % OPEN_BRACKETS:
                             \tweak text #tuplet-number::calc-fraction-text
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 10 7) (ly:make-duration 4 0))
                             \times 7/10
                             {
+                                % OPENING:
+                                % COMMANDS:
+                                \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                % AFTER:
+                                % START_BEAM:
+                                [
                                 c'8
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \accent
                                 c'8
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Staff.Stem.stemlet-length
                                 c'8
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \accent
                                 % SPANNER_STOPS:
                                 \stopTextSpan
+                                % STOP_BEAM:
+                                ]
                             % CLOSE_BRACKETS:
                             }
                             s1 * 1/4
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
                             c'8
                             % AFTER:
                             % STEM_TREMOLOS:
@@ -301,6 +344,7 @@
                             \revert NoteColumn.glissando-skip
                             \revert NoteHead.no-ledgers
                             \undo \hide NoteHead
+                            \revert Staff.Stem.stemlet-length
                             c'16
                             % AFTER:
                             % STEM_TREMOLOS:
@@ -320,11 +364,13 @@
                             - \tweak circled-tip ##t
                             - \tweak stencil #abjad-flared-hairpin
                             \>
-                            s1 * 3/8
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Rest.transparent = ##t
+                            r1 * 1/2
                             % AFTER:
                             % ARTICULATIONS:
                             \!
-                            s1 * 1/8
                             s1 * 15/32
                             % BEFORE:
                             % COMMANDS:
@@ -365,102 +411,55 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
-                                    cqs'''16.
+                                    cqs'''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \p
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
+                                    % START_BEAM:
+                                    [
                                     % SPANNER_STARTS:
                                     - \tweak padding #9.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "pizz. molto pont." } \hspace #0.5 }
                                     \startTextSpan
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    \tweak style #'harmonic-mixed
-                                    cqs'''32
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
-                                    a''16
+                                    a''8
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    \tweak style #'harmonic-mixed
-                                    a''16
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
-                                    cqs'''32
+                                    cqs'''8
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
                                     % STOP_BEAM:
                                     ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    \tweak style #'harmonic-mixed
-                                    cqs'''16
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    \tweak style #'harmonic-mixed
-                                    cqs'''32
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % OPENING:
-                                    % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
-                                    g''32
+                                    g''8
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    \tweak style #'harmonic-mixed
-                                    g''16
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    \tweak style #'harmonic-mixed
-                                    g''32
-                                    % AFTER:
                                     % START_BEAM:
                                     [
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
                                     \revert Staff.Stem.stemlet-length
-                                    c,32
+                                    c,8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ff
@@ -470,63 +469,32 @@
                                     ]
                                     % SPANNER_STARTS:
                                     ~
-                                    c,8.
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
-                                    c,16.
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    c,16
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
+                                    c,4
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
-                                    cqs'''32
+                                    cqs'''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \p
                                     % MARKUP:
                                     ^ \markup \upright { "III" }
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    \tweak style #'harmonic-mixed
-                                    cqs'''16
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
-                                    cqs'''32
+                                    a''8
                                     % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \upright { "II" }
                                     % START_BEAM:
                                     [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
-                                    \tweak style #'harmonic-mixed
-                                    a''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \upright { "II" }
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    ~
-                                    \tweak style #'harmonic-mixed
-                                    a''16.
                                     \tweak style #'harmonic-mixed
                                     cqs'''8
                                     % AFTER:
@@ -534,11 +502,14 @@
                                     ^ \markup \upright { "III" }
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 1/4
-                                    s1 * 1/8
+                                    r8
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     % AFTER:
                                     % MARKUP:
@@ -570,6 +541,7 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
                                     \tweak style #'harmonic-mixed
                                     bf16
                                     % AFTER:
@@ -580,6 +552,9 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     c8.
                                     % AFTER:
                                     % MARKUP:
@@ -619,15 +594,11 @@
                                     % SPANNER_STOPS:
                                     )
                                     \stopTextSpan
-                                    % STOP_BEAM:
-                                    ]
                                     \tweak style #'harmonic-mixed
                                     af8
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \center-column { \upright "II" \upright "+37" }
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     (
                                     - \tweak arrow-length #2
@@ -652,6 +623,7 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
                                     af16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -769,8 +741,7 @@
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \bold { Violoncello II }
                                     \set Staff.shortInstrumentName = \markup \bold{ vc. II }
-                                    r16.
-                                    r32
+                                    r8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
@@ -805,6 +776,7 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'harmonic-mixed
                                     gqs'''16
                                     % AFTER:
@@ -812,6 +784,8 @@
                                     \p
                                     % MARKUP:
                                     ^ \markup \upright { "II" }
+                                    % START_BEAM:
+                                    [
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'harmonic-mixed
@@ -819,15 +793,18 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
-                                    c,8.
+                                    \revert Staff.Stem.stemlet-length
+                                    c,16.
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ff
                                     % MARKUP:
-                                    ^ \markup \upright { "IV" }
+                                    - \markup \upright { "IV" }
+                                    % STOP_BEAM:
+                                    ]
                                     % SPANNER_STARTS:
                                     ~
-                                    c,16.
+                                    c,8.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
@@ -906,14 +883,12 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
-                                    b,8
+                                    b,4
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \fff
                                     % MARKUP:
                                     ^ \markup \center-column { \upright "III" \upright "+55" }
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     (
                                     - \tweak arrow-length #2
@@ -929,17 +904,6 @@
                                     - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { flaut. molto pont. }
                                     \startTextSpan
-                                    ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    b,8
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -952,12 +916,13 @@
                                     % SPANNER_STOPS:
                                     )
                                     \stopTextSpan
-                                    % STOP_BEAM:
-                                    ]
                                     r16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
                                     af8.
                                     % AFTER:
                                     % MARKUP:
@@ -997,15 +962,11 @@
                                     % SPANNER_STOPS:
                                     )
                                     \stopTextSpan
-                                    % STOP_BEAM:
-                                    ]
                                     \tweak style #'harmonic-mixed
                                     bf8
                                     % AFTER:
                                     % MARKUP:
                                     ^ \markup \center-column { \upright "II" \upright "+41" }
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     (
                                     - \tweak arrow-length #2
@@ -1030,6 +991,7 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
                                     bf16
                                     % AFTER:
                                     % ARTICULATIONS:

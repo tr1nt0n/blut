@@ -509,6 +509,37 @@ trinton.attach_multiple(
     ],
 )
 
+trinton.rebar(
+    score=score,
+    global_context=score["Global Context"],
+    selector_function=lambda _: trinton.select_target(_, (1, 4)),
+    replacement_signatures=[(5, 8), (5, 8)],
+    boundary_depth=-2,
+    rebeam=[score[_] for _ in library.all_voice_names],
+)
+
+trinton.rebar(
+    score=score,
+    global_context=score["Global Context"],
+    selector_function=lambda _: trinton.select_target(_, (4, 5)),
+    replacement_signatures=[(3, 8)],
+    boundary_depth=-2,
+    rebeam=[score[_] for _ in library.all_voice_names],
+)
+
+trinton.rebar(
+    score=score,
+    global_context=score["Global Context"],
+    selector_function=lambda _: trinton.select_target(_, (5, 6)),
+    replacement_signatures=[(4, 8)],
+    boundary_depth=-2,
+    rebeam=[score[_] for _ in library.all_voice_names],
+)
+
+trinton.fill_empty_staves_with_skips(score)
+
+trinton.remove_redundant_time_signatures(score=score)
+
 # trinton.attach(
 #     voice=score["Global Context"],
 #     leaves=[
