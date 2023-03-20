@@ -6,6 +6,7 @@ from abjadext import rmakers
 from abjadext import microtones
 from blut import library
 from blut import ts
+from itertools import cycle
 
 # score
 
@@ -303,184 +304,262 @@ trinton.make_music(
     beam_meter=True,
 )
 
-# trinton.make_music(
-#     lambda _: trinton.select_target(_, (14, 16)),
-#     evans.RhythmHandler(
-#         evans.tuplet(library.visas_rhythms(14)),
-#     ),
-#     trinton.force_rest(
-#         selector=trinton.select_tuplets_by_index(
-#             [
-#                 -1,
-#                 -2,
-#                 -3,
-#             ]
-#         )
-#     ),
-#     evans.PitchHandler(pitch_list=library.visas_pitches(20, 1)),
-#     trinton.treat_tuplets(),
-#     evans.RewriteMeterCommand(),
-#     library.artificial_harmonics(),
-#     library.visas_attachments(),
-#     trinton.linear_attachment_command(
-#         attachments=[
-#             abjad.StartHairpin("o<|"),
-#             abjad.Dynamic("ff"),
-#             abjad.Articulation(">"),
-#             abjad.Dynamic("sfz"),
-#             abjad.Articulation(">"),
-#             abjad.Dynamic("p"),
-#             abjad.StartHairpin("<|"),
-#             abjad.Dynamic("ff"),
-#             abjad.Articulation(">"),
-#             abjad.Dynamic("pp"),
-#             abjad.StartHairpin("<"),
-#             abjad.Dynamic("fff"),
-#             abjad.StartHairpin(">o"),
-#             abjad.Dynamic("mp"),
-#             abjad.Articulation("tenuto"),
-#             abjad.Dynamic("sff"),
-#             abjad.StartHairpin("|>"),
-#             abjad.Dynamic("mf"),
-#             abjad.Articulation("tenuto"),
-#             abjad.StartHairpin(">o"),
-#             abjad.StartHairpin("o<"),
-#             abjad.Dynamic("fff"),
-#             abjad.StartHairpin(">"),
-#             abjad.Articulation("staccato"),
-#             abjad.StartPhrasingSlur(),
-#             abjad.Articulation("staccato"),
-#             abjad.StopPhrasingSlur(),
-#             abjad.Dynamic("mp"),
-#             abjad.StartHairpin(">o"),
-#             abjad.Dynamic("ppp"),
-#             abjad.StartHairpin("<"),
-#             abjad.Dynamic("p"),
-#             abjad.StartHairpin(">"),
-#             abjad.Dynamic("pp"),
-#             abjad.Articulation("tenuto"),
-#             abjad.Articulation("tenuto"),
-#             abjad.StartHairpin(">o"),
-#             abjad.StopHairpin(),
-#         ],
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 0,
-#                 2,
-#                 2,
-#                 5,
-#                 5,
-#                 6,
-#                 7,
-#                 8,
-#                 9,
-#                 10,
-#                 10,
-#                 12,
-#                 12,
-#                 14,
-#                 15,
-#                 17,
-#                 17,
-#                 19,
-#                 19,
-#                 20,
-#                 21,
-#                 23,
-#                 24,
-#                 24,
-#                 24,
-#                 25,
-#                 25,
-#                 26,
-#                 26,
-#                 28,
-#                 28,
-#                 29,
-#                 29,
-#                 30,
-#                 30,
-#                 32,
-#                 32,
-#                 35,
-#             ]
-#         ),
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string="tight",
-#         r_string="wide",
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 7,
-#                 8,
-#             ]
-#         ),
-#         padding=7,
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string="wide",
-#         r_string="tight",
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 2,
-#                 4,
-#             ]
-#         ),
-#         padding=7,
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string="wide pont.",
-#         r_string="tight tast.",
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 12,
-#                 13,
-#                 17,
-#                 18,
-#             ]
-#         ),
-#         padding=6,
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string="wide tast.",
-#         r_string="tight pont.",
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 21,
-#                 23,
-#             ]
-#         ),
-#         padding=8.5,
-#     ),
-#     trinton.arrow_spanner_command(
-#         l_string="tast.",
-#         r_string="pont.",
-#         selector=trinton.select_leaves_by_index(
-#             [
-#                 26,
-#                 27,
-#             ]
-#         ),
-#         padding=6.5,
-#     ),
-#     voice=score["cello 1 voice"],
-#     preprocessor=trinton.fuse_sixteenths_preprocessor(
-#         (
-#             5,
-#             2,
-#             3,
-#             2,
-#             2,
-#             5,
-#             2,
-#             5,
-#             6,
-#             7,
-#             1,
-#         )
-#     ),
-#     beam_meter=True,
-# )
+trinton.make_music(
+    lambda _: trinton.select_target(_, (15, 18)),
+    evans.RhythmHandler(
+        evans.talea(
+            [10, 4, 6, 4, 4, 10, 4, 10, 12, 14, 1, 1, 10, 4, 6, 4, -20],
+            32,
+        ),
+    ),
+    trinton.replace_with_rhythm_selection(
+        rhythmhandler=evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (4, 3),
+                ]
+            )
+        ),
+        selector=trinton.select_leaves_by_index([0, 1]),
+    ),
+    trinton.replace_with_rhythm_selection(
+        rhythmhandler=evans.RhythmHandler(evans.tuplet([(3, 4)])),
+        selector=trinton.select_leaves_by_index(
+            [
+                -1,
+            ],
+            pitched=True,
+        ),
+    ),
+    trinton.replace_with_rhythm_selection(
+        rhythmhandler=evans.RhythmHandler(evans.tuplet([(3, 2)])),
+        selector=trinton.select_leaves_by_index(
+            [
+                -4,
+            ],
+            pitched=True,
+        ),
+    ),
+    rmakers.rewrite_dots,
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    library.visas_graces(
+        selector=trinton.ranged_selector(ranges=[range(4, 18)]),
+    ),
+    library.visas_graces(
+        selector=trinton.select_leaves_by_index(
+            [
+                2,
+                3,
+            ],
+            grace=False,
+        ),
+        alternate=False,
+    ),
+    library.visas_graces(
+        selector=trinton.select_leaves_by_index(
+            [
+                20,
+                21,
+            ],
+            grace=False,
+        ),
+        alternate=False,
+    ),
+    library.visas_graces(
+        selector=trinton.select_leaves_by_index(
+            [
+                24,
+                25,
+            ],
+            grace=False,
+        ),
+        alternate=False,
+    ),
+    evans.PitchHandler(pitch_list=library.visas_pitches(20, 1)),
+    library.artificial_harmonics(),
+    library.visas_attachments(
+        selector=trinton.ranged_selector(ranges=[range(4, 25)]),
+    ),
+    library.visas_attachments(
+        selector=trinton.select_leaves_by_index(
+            [
+                2,
+                3,
+            ],
+            grace=False,
+        ),
+        solitary=True,
+    ),
+    library.visas_attachments(
+        selector=trinton.select_leaves_by_index(
+            [
+                20,
+                21,
+            ],
+            grace=False,
+        ),
+        solitary=True,
+    ),
+    trinton.tremolo_command(selector=trinton.select_leaves_by_index([-8, -9])),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartHairpin("o<|"),
+            abjad.Dynamic("ff"),
+            abjad.Articulation(">"),
+            abjad.Dynamic("sfz"),
+            abjad.Articulation(">"),
+            abjad.Dynamic("p"),
+            abjad.StartHairpin("<|"),
+            abjad.Dynamic("ff"),
+            abjad.Articulation(">"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("fff"),
+            abjad.StartHairpin(">o"),
+            abjad.Dynamic("mp"),
+            abjad.Articulation("tenuto"),
+            abjad.Dynamic("sff"),
+            abjad.StartHairpin("|>"),
+            abjad.Dynamic("mf"),
+            abjad.Articulation("tenuto"),
+            abjad.StartHairpin(">o"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("fff"),
+            abjad.StartHairpin(">"),
+            abjad.Articulation("staccato"),
+            abjad.Articulation("staccato"),
+            abjad.Dynamic("mp"),
+            abjad.StartHairpin(">o"),
+            abjad.Dynamic("ppp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("p"),
+            abjad.StartHairpin(">"),
+            abjad.Dynamic("pp"),
+            abjad.Articulation("tenuto"),
+            abjad.Articulation("tenuto"),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                2,
+                2,
+                5,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                10,
+                11,
+                11,
+                14,
+                17,
+                17,
+                17,
+                20,
+                21,
+                21,
+                23,
+                26,
+                27,
+                27,
+                28,
+                29,
+                29,
+                32,
+                32,
+                33,
+                33,
+                34,
+                34,
+                36,
+                36,
+                -2,
+            ]
+        ),
+    ),
+    trinton.linear_attachment_command(
+        attachments=cycle(
+            [
+                abjad.StartSlur(),
+                abjad.StopSlur(),
+            ],
+        ),
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                18,
+                19,
+                22,
+                23,
+            ],
+            grace=False,
+        ),
+    ),
+    # trinton.arrow_spanner_command(
+    #     l_string="tight",
+    #     r_string="wide",
+    #     selector=trinton.select_leaves_by_index(
+    #         [
+    #             7,
+    #             8,
+    #         ]
+    #     ),
+    #     padding=7,
+    # ),
+    # trinton.arrow_spanner_command(
+    #     l_string="wide",
+    #     r_string="tight",
+    #     selector=trinton.select_leaves_by_index(
+    #         [
+    #             2,
+    #             4,
+    #         ]
+    #     ),
+    #     padding=7,
+    # ),
+    # trinton.arrow_spanner_command(
+    #     l_string="wide pont.",
+    #     r_string="tight tast.",
+    #     selector=trinton.select_leaves_by_index(
+    #         [
+    #             12,
+    #             13,
+    #             17,
+    #             18,
+    #         ]
+    #     ),
+    #     padding=6,
+    # ),
+    # trinton.arrow_spanner_command(
+    #     l_string="wide tast.",
+    #     r_string="tight pont.",
+    #     selector=trinton.select_leaves_by_index(
+    #         [
+    #             21,
+    #             23,
+    #         ]
+    #     ),
+    #     padding=8.5,
+    # ),
+    # trinton.arrow_spanner_command(
+    #     l_string="tast.",
+    #     r_string="pont.",
+    #     selector=trinton.select_leaves_by_index(
+    #         [
+    #             26,
+    #             27,
+    #         ]
+    #     ),
+    #     padding=6.5,
+    # ),
+    voice=score["cello 1 voice"],
+    beam_meter=True,
+)
 
 # bass clarinet music commands
 
@@ -1235,8 +1314,8 @@ for voice_name in library.all_voice_names:
             voice=score[voice_name],
         )
 
-# trinton.tuplet_brackets(score, library.all_voice_names)
-#
+trinton.tuplet_brackets(score, library.all_voice_names)
+
 # fermate
 
 trinton.fermata_measures(
