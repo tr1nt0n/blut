@@ -949,14 +949,586 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    s1 * 3/4
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \f
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    #(define afterGraceFraction (cons 15 16))
+                                    #(define afterGraceFraction (cons 15 16))
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \f
-                                    s1 * 3/4
-                                    s1 * 5/8
-                                    s1 * 5/8
-                                    s1 * 3/4
+                                    \pp
+                                    % SPANNER_STOPS:
+                                    )
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    \afterGrace
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \sfz
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % SPANNER_STOPS:
+                                    )
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % START_BEAM:
+                                    [
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \sfz
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    e'8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % START_BEAM:
+                                    [
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    e'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % SPANNER_STARTS:
+                                    ~
+                                    e'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    \>
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \sfz
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \sfz
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    #(define afterGraceFraction (cons 15 16))
+                                    #(define afterGraceFraction (cons 15 16))
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >8.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \fff
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        gqs'
+                                        \tweak style #'harmonic
+                                        cqs''
+                                    >8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \p
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    \(
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    gqs'8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \)
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \afterGrace
+                                    <
+                                        gqs'
+                                        \tweak style #'harmonic
+                                        cqs''
+                                    >8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    \<
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            gqs'
+                                            \tweak style #'harmonic
+                                            cqs''
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    fs'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    fs'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >8.
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { molto pont. }
+                                    - \tweak bound-details.right.padding 3
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
+                                    <
+                                        fs'
+                                        \tweak style #'harmonic
+                                        b'
+                                    >4.
+                                    % AFTER:
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fs'
+                                            \tweak style #'harmonic
+                                            b'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r4.
                                     s1 * 3/4
                                     s1 * 7/8
                                     s1 * 1

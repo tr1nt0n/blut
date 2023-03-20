@@ -1120,10 +1120,13 @@ def visas_attachments(selector=trinton.pleaves(), solitary=False):
 
         for tie in non_grace_ties:
             with_next_leaf = abjad.select.with_next_leaf(tie)
+            with_previous_leaf = abjad.select.with_previous_leaf(tie)
             if solitary is False:
                 if non_grace_ties.index(tie) % 2 == 1:
-                    tremolo()(tie)
+                    tremolo()(with_next_leaf)
                     glissando()(with_next_leaf)
+                if non_grace_ties.index(tie) % 2 == 0:
+                    abjad.slur(with_previous_leaf)
             else:
                 glissando()(with_next_leaf)
 
