@@ -1238,8 +1238,10 @@ tempi = [
     ),
 ]
 
-for tempo in tempi:
-    abjad.bundle(tempo, r"- \tweak padding #7")
+# for tempo in tempi:
+#     abjad.bundle(tempo, r"- \tweak padding #7")
+
+tempi = [abjad.bundle(tempo, r"- \tweak padding #8") for tempo in tempi]
 
 # instrument names
 

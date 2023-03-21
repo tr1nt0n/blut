@@ -14,6 +14,10 @@
             % COMMANDS:
             \time 3/8
             s1 * 3/8
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"140" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -35,6 +39,10 @@
             % COMMANDS:
             \time 5/8
             s1 * 5/8
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -56,6 +64,10 @@
             % COMMANDS:
             \time 1/8
             s1 * 1/8
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"117" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -77,6 +89,10 @@
             % COMMANDS:
             \time 13/8
             s1 * 13/8
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -98,6 +114,10 @@
             % COMMANDS:
             \time 3/8
             s1 * 3/8
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"47" } }
             % OPENING:
             % COMMANDS:
             \time 6/8
@@ -143,6 +163,12 @@
             % COMMANDS:
             \time 9/8
             s1 * 9/8
+            % AFTER:
+            % COMMANDS:
+            \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % BEFORE:
@@ -431,12 +457,147 @@
                             r4.
                             s1 * 3/4
                             s1 * 5/8
-                            s1 * 5/8
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 7/8
-                            s1 * 1
-                            s1 * 9/8
+                            % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                            \times 2/3
+                            {
+                                % BEFORE:
+                                % COMMANDS:
+                                \textSpannerDown
+                                \vibrato #'(1 1 1 7 2 1 1) #0.75  #0.2
+                                ef16
+                                % AFTER:
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                - \tweak padding #10
+                                - \abjad-dashed-line-with-up-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -6.5
+                                \startTextSpan
+                                \glissando
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan
+                                ef8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \p
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                \stopTrillSpan
+                                % STOP_BEAM:
+                                ]
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                                % COMMANDS:
+                                \textSpannerUp
+                            % CLOSE_BRACKETS:
+                            }
+                            r4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            r4
+                            r4.
+                            r4
+                            % BEFORE:
+                            % COMMANDS:
+                            \textSpannerDown
+                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
+                            bf8
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \p
+                            % SPANNER_STARTS:
+                            - \tweak padding #8
+                            - \abjad-dashed-line-with-up-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
+                            \startTextSpan
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ~
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            bf4.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            bf8
+                            af4
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTrillSpan
+                            % SPANNER_STARTS:
+                            ~
+                            % BEFORE:
+                            % COMMANDS:
+                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
+                            af8
+                            % AFTER:
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            ef4
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            ef2
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTrillSpan
+                            % BEFORE:
+                            % COMMANDS:
+                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
+                            e'2.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
+                            e'8
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Staff.Stem.stemlet-length
+                            ef8
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTrillSpan
+                            % STOP_BEAM:
+                            ]
+                            % BEFORE:
+                            % COMMANDS:
+                            \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
+                            bf4
+                            % AFTER:
+                            % TRILL_SPANNER_STARTS:
+                            \startTrillSpan
+                            af8
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            af4.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            af8
+                            ef4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            \stopTrillSpan
+                            % COMMANDS:
+                            \textSpannerUp
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -635,11 +796,57 @@
                             r4.
                             s1 * 3/4
                             s1 * 5/8
-                            s1 * 5/8
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 7/8
+                            % OPEN_BRACKETS:
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                            \times 2/3
+                            {
+                                c'16
+                                % AFTER:
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                c'8
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \p
+                                % STOP_BEAM:
+                                ]
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                            % CLOSE_BRACKETS:
+                            }
+                            r2
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 24 19) (ly:make-duration 3 0))
+                            \times 57/72
+                            {
+                                c'1
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \<
+                                \glissando
+                                c'\breve
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \f
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                \>
+                            % CLOSE_BRACKETS:
+                            }
                             s1 * 1
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
                             s1 * 9/8
                         % CLOSE_BRACKETS:
                         }
@@ -691,6 +898,7 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
+                                    - \tweak bound-details.right.padding 5
                                     \startTextSpan
                                     \glissando
                                     % OPEN_BRACKETS:
@@ -1566,10 +1774,18 @@
                                         cqs''
                                     >16
                                     % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
                                     % ARTICULATIONS:
                                     - \accent
                                     \ff
                                     % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
@@ -1588,6 +1804,8 @@
                                         cqs''
                                     >16
                                     % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
                                     % START_BEAM:
                                     [
                                     % OPEN_BRACKETS:
@@ -1604,6 +1822,11 @@
                                             \tweak style #'harmonic
                                             cqs''
                                         >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -1655,6 +1878,12 @@
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     \glissando
@@ -1681,6 +1910,8 @@
                                         :128
                                         % ARTICULATIONS:
                                         \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -1725,6 +1956,12 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight tast. }
+                                    - \tweak bound-details.right.padding 3
+                                    \startTextSpan
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
@@ -1764,6 +2001,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -1812,6 +2051,12 @@
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight tast. }
+                                    - \tweak bound-details.right.padding 3
+                                    \startTextSpan
                                     - \tweak stencil #abjad-flared-hairpin
                                     \>
                                     \glissando
@@ -1850,6 +2095,8 @@
                                         % AFTER:
                                         % STEM_TREMOLOS:
                                         :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -1906,6 +2153,12 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight pont. }
+                                    - \tweak bound-details.right.padding 3
+                                    \startTextSpan
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
@@ -1960,6 +2213,8 @@
                                         :128
                                         % ARTICULATIONS:
                                         \fff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     <
@@ -1996,6 +2251,12 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { pont. }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
@@ -2030,6 +2291,9 @@
                                             \tweak style #'harmonic
                                             b'
                                         >16
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -2129,11 +2393,15 @@
                                         % AFTER:
                                         % START_BEAM:
                                         [
+                                        % SPANNER_STARTS:
+                                        (
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Staff.Stem.stemlet-length
                                         fs'8
                                         % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2187,6 +2455,7 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \upright { "wide trem. tast." } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \upright { tight trem. pont. }
+                                    - \tweak bound-details.right.padding 5
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -2445,13 +2714,653 @@
                                     r16..
                                     r4
                                     r4.
-                                    s1 * 3/4
-                                    s1 * 5/8
-                                    s1 * 5/8
-                                    s1 * 3/4
-                                    s1 * 3/4
-                                    s1 * 7/8
-                                    s1 * 1
+                                    r4.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    <
+                                        fqs'
+                                        \tweak style #'harmonic
+                                        bqf'
+                                    >4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight trem. tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide trem. pont. }
+                                    - \tweak bound-details.right.padding 5
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
+                                    <
+                                        fqs'
+                                        \tweak style #'harmonic
+                                        bqf'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fqs'
+                                            \tweak style #'harmonic
+                                            bqf'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \fff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r8
+                                    r4
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \sfz
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STOPS:
+                                    )
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight pont. }
+                                    - \tweak bound-details.right.padding 2
+                                    \startTextSpan
+                                    \<
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        e'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        % SPANNER_STOPS:
+                                        )
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % ARTICULATIONS:
+                                    \sff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide molto tast. }
+                                    - \tweak bound-details.right.padding 3
+                                    \startTextSpan
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r4.
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 5 0))
+                                    \times 4/7
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Staff.Stem.stemlet-length
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >8
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \afterGrace
+                                    d'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) (ly:make-duration 5 0))
+                                    \times 8/9
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \override Staff.Stem.stemlet-length = 0.75
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >8
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        - \tweak padding #5.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { molt pont. }
+                                        \startTextSpan
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >32
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    d'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight }
+                                    - \tweak bound-details.right.padding 1.5
+                                    \startTextSpan
+                                    \<
+                                    \glissando
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        \mf
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        <
+                                            d'
+                                            \tweak style #'harmonic
+                                            g'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        \mp
+                                        % SPANNER_STARTS:
+                                        (
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \sfz
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    e'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tight molto tast." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { wide molto pont. }
+                                    - \tweak bound-details.right.padding 4
+                                    \startTextSpan
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    e'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % START_BEAM:
+                                    [
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            e'
+                                            \tweak style #'harmonic
+                                            a'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \afterGrace
+                                    <
+                                        e'
+                                        \tweak style #'harmonic
+                                        a'
+                                    >8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fqs'
+                                            \tweak style #'harmonic
+                                            bqf'
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    #(define afterGraceFraction (cons 15 16))
+                                    \revert Staff.Stem.stemlet-length
+                                    fqs'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    - \tweak padding #11
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "wide molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { tight molto tast. }
+                                    - \tweak bound-details.right.padding 5.5
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \afterGrace
+                                    fqs'2
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % OPEN_BRACKETS:
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \once \override Flag.stroke-style = #"grace"
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            fqs'
+                                            \tweak style #'harmonic
+                                            bqf'
+                                        >16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     s1 * 9/8
                                 % CLOSE_BRACKETS:
                                 }

@@ -127,6 +127,8 @@
         \override Tie.height-limit = 6
         \override Tie.thickness = 1.5
 
+        \override TrillSpanner.bound-details.right.padding = #-4.5
+
         tupletFullLength = ##t
         \override TupletBracket.full-length-to-extent = ##f
         \override TupletBracket.padding = 3
