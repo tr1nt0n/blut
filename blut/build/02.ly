@@ -10,7 +10,8 @@
             s1 * 9/16
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"94" } }
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -38,7 +39,8 @@
             s1 * 5/8
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"70" } }
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -95,6 +97,7 @@
                         {
                             % BEFORE:
                             % COMMANDS:
+                            \override TrillSpanner.bound-details.right.padding = #0
                             \set Staff.instrumentName = \markup \bold { Bass Clarinet }
                             \set Staff.shortInstrumentName = \markup \bold { b. cl. }
                             \textSpannerDown
@@ -107,6 +110,7 @@
                             - \tweak padding #10
                             - \abjad-dashed-line-with-up-hook
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
                             \startTextSpan
                             - \tweak stencil #constante-hairpin
                             \<
@@ -133,13 +137,16 @@
                                 % SPANNER_STOPS:
                                 \stopTrillSpan
                                 % SPANNER_STARTS:
-                                - \tweak padding #10
+                                - \tweak padding #9
                                 - \abjad-dashed-line-with-hook
                                 - \tweak bound-details.left.text \markup \concat { \upright { "overblow" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -1
                                 \startTextSpan
                                 - \tweak stencil #constante-hairpin
                                 \<
                                 ~
+                                % COMMANDS:
+                                \revert TrillSpanner.bound-details.right.padding
                                 e'16
                                 % AFTER:
                                 % ARTICULATIONS:
@@ -172,6 +179,7 @@
                             - \tweak padding #8
                             - \abjad-dashed-line-with-up-hook
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -1
                             \startTextSpan
                             - \tweak stencil #constante-hairpin
                             \<
@@ -212,6 +220,7 @@
                                 - \tweak padding #7
                                 - \abjad-dashed-line-with-hook
                                 - \tweak bound-details.left.text \markup \concat { \upright { "overblow" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -1
                                 \startTextSpan
                                 - \tweak stencil #constante-hairpin
                                 \<
@@ -244,6 +253,7 @@
                             \revert TupletNumber.text
                             % BEFORE:
                             % COMMANDS:
+                            \override TrillSpanner.bound-details.right.padding = #0
                             \textSpannerDown
                             \vibrato #'(0 0.25 0.5 0.75 1 1.25 1.5 7 12 15) #1.25  #0.2
                             e'4..
@@ -254,6 +264,7 @@
                             - \tweak padding #9
                             - \abjad-dashed-line-with-up-hook
                             - \tweak bound-details.left.text \markup \concat { \upright { "teeth" } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 5
                             \startTextSpan
                             % TRILL_SPANNER_STARTS:
                             \startTrillSpan
@@ -266,6 +277,7 @@
                             \stopTextSpan
                             \stopTrillSpan
                             % COMMANDS:
+                            \revert TrillSpanner.bound-details.right.padding
                             \stopStaff \startStaff
                             \textSpannerUp
                         % CLOSE_BRACKETS:

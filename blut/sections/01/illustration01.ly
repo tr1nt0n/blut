@@ -505,6 +505,7 @@
                             r4
                             % BEFORE:
                             % COMMANDS:
+                            \override TrillSpanner.bound-details.right.padding = #-12
                             \textSpannerDown
                             \vibrato #'(1 7 2 5 4 3 1 7) #3.25  #0.2
                             bf8
@@ -597,6 +598,7 @@
                             \stopTextSpan
                             \stopTrillSpan
                             % COMMANDS:
+                            \revert TrillSpanner.bound-details.right.padding
                             \textSpannerUp
                         % CLOSE_BRACKETS:
                         }

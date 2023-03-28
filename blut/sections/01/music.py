@@ -733,6 +733,7 @@ trinton.make_music(
             [0, 0, 3, 4, 4, 6, 7, 7, 9, 10, 10, -1], pitched=True
         ),
         wave_length="3.25",
+        right_padding=12,
     ),
     trinton.linear_attachment_command(
         attachments=[

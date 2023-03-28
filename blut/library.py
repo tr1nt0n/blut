@@ -551,6 +551,7 @@ def vc_bells_attachments(instrument, padding=9.5):
             left_text=abjad.Markup(rf'\markup \upright {{ "pizz. molto pont." }}'),
             right_text=None,
             style="dashed-line-with-hook",
+            right_padding=-1,
         )
 
         bundle = abjad.bundle(start_text_span, rf"- \tweak padding #{padding}")
@@ -726,9 +727,10 @@ def totem_attachments(
                     allow_ties=True,
                 )
 
-                middle_leaves = abjad.select.exclude(
-                    abjad.select.leaves(group), [0, -1]
-                )
+                leaves = abjad.select.leaves(group)
+
+                middle_leaves = abjad.select.exclude(leaves, [0, -1])
+
                 for leaf in middle_leaves:
                     abjad.attach(
                         abjad.LilyPondLiteral(
@@ -736,6 +738,9 @@ def totem_attachments(
                         ),
                         leaf,
                     )
+
+                for leaf in leaves:
+                    abjad.detach(abjad.Tie, leaf)
 
             if bcl is True:
                 first_leaf = group[0][0]
@@ -1184,14 +1189,11 @@ def perc_instrument(instrument_string, selector):
 # spanners
 
 
-def bcl_vibrato(
-    amplitudes,
-    selector,
-    wave_length="2",
-):
+def bcl_vibrato(amplitudes, selector, wave_length="2", right_padding=None):
+    def vibrato(argument):
+        selections = selector(argument)
 
-    command = trinton.linear_attachment_command(
-        attachments=cycle(
+        main_cycle = cycle(
             [
                 abjad.LilyPondLiteral(
                     rf"\vibrato #'{amplitudes} #{wave_length}  #0.2", site="before"
@@ -1199,11 +1201,28 @@ def bcl_vibrato(
                 abjad.StartTrillSpan(),
                 abjad.StopTrillSpan(),
             ]
-        ),
-        selector=selector,
-    )
+        )
 
-    return command
+        for selection, attachment in zip(selections, main_cycle):
+            abjad.attach(attachment, selection)
+
+        if right_padding is not None:
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    rf"\override TrillSpanner.bound-details.right.padding = #{right_padding * -1}",
+                    "before",
+                ),
+                selections[0],
+            )
+
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\revert TrillSpanner.bound-details.right.padding", "after"
+                ),
+                selections[-1],
+            )
+
+    return vibrato
 
 
 def hooked_spanner(string, padding):

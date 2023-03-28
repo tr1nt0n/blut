@@ -56,7 +56,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string="overblow",
         selector=trinton.select_leaves_by_index([2, -1]),
-        padding=10,
+        padding=9,
     ),
     library.bcl_vibrato(
         amplitudes="(8 1 7 5 3 1.5 1.25 1 0.5 0)",
@@ -68,6 +68,7 @@ trinton.make_music(
             ]
         ),
         wave_length="3.25",
+        right_padding=0,
     ),
     voice=score["bassclarinet voice"],
 )
@@ -135,12 +136,14 @@ trinton.make_music(
             ]
         ),
         wave_length="1.25",
+        right_padding=0,
     ),
     trinton.hooked_spanner_command(
         string="teeth",
         selector=trinton.select_leaves_by_index([-2, -1]),
         padding=9,
         direction="down",
+        right_padding=-5,
     ),
     voice=score["bassclarinet voice"],
 )
@@ -254,6 +257,7 @@ for leaf, tempo in zip(
         voice=score["Global Context"],
         leaves=[leaf],
         attachment=library.tempi[tempo],
+        direction=abjad.UP,
     )
 
 trinton.attach_multiple(
