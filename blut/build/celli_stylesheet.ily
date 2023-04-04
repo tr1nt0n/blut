@@ -5,10 +5,9 @@
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
-\include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
-\include "/Users/trintonprater/evans/lilypond/evans-spanners.ily"
+\include "/Users/trintonprater/evans/lilypond/evans.ily"
+\include "/Users/trintonprater/baca/baca/scm/baca.ily"
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
-\include "/Users/trintonprater/baca/baca/scm/baca-circle-bow-markups.ily"
 
 \header {
     dedication = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #3 \center-column {"to 李惟怡" \fontsize #0.25 \with-color #white "."}
