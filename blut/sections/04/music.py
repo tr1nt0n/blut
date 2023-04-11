@@ -245,7 +245,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.Articulation("baca-circle-bowing-markup"),
+            abjad.Articulation("baca-circle-bowing"),
         ],
         selector=trinton.pleaves(),
         direction=abjad.UP,
@@ -296,7 +296,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.Articulation("baca-circle-markup"),
+            abjad.Articulation("baca-circle-bowing"),
         ],
         selector=trinton.pleaves(),
         direction=abjad.UP,
@@ -357,7 +357,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.Articulation("baca-circle-markup"),
+            abjad.Articulation("baca-circle-bowing"),
         ],
         selector=trinton.pleaves(),
         direction=abjad.UP,
@@ -412,7 +412,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Articulation("stopped"),
-            abjad.Articulation("baca-circle-markup"),
+            abjad.Articulation("baca-circle-bowing"),
         ],
         selector=trinton.pleaves(),
         direction=abjad.UP,
@@ -1169,7 +1169,16 @@ trinton.tuplet_brackets(score, library.all_voice_names)
 
 trinton.remove_redundant_time_signatures(score=score)
 
-library.push_markups(score["bassclarinet voice"])
+library.push_markups(
+    score["bassclarinet voice"],
+    measures=[
+        6,
+        8,
+        11,
+        13,
+        17,
+    ],
+)
 
 # parts
 

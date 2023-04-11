@@ -540,23 +540,21 @@ def pitch_monolith(voice_name, index, selector=trinton.pleaves()):
     return pitch
 
 
-def push_markups(voice):
-    measures = abjad.select.group_by_measure(voice)
-
+def push_markups(voice, measures):
     for measure in measures:
-        first_leaf = abjad.select.leaf(measure, 0)
+        relevant_measure = trinton.select_target(voice, (measure,))
+        first_leaf = abjad.select.leaf(relevant_measure, 0)
         if abjad.get.has_indicator(first_leaf, abjad.Markup):
             markup = abjad.get.markup(first_leaf)[0]
             abjad.detach(abjad.Markup, first_leaf)
 
-            # bundle = abjad.bundle(
-            #     markup,
-            #     r"- \tweak Markup.hspace #2"
-            # )
+            old_string = markup.string
 
-            abjad.override(markup).Markup.hspace = "#2"
+            new_string = old_string[:33] + "\hspace #2.5 " + old_string[33:]
 
-            abjad.attach(markup, first_leaf, direction=abjad.UP)
+            new_markup = abjad.Markup(new_string)
+
+            abjad.attach(new_markup, first_leaf, direction=abjad.UP)
 
 
 # commands

@@ -212,8 +212,7 @@
                                 af'4
                                 % AFTER:
                                 % MARKUP:
-                                - \tweak Markup.hspace #2
-                                ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                                ^ \markup \override #'(size . .6) {\hspace #2.5  \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \<
@@ -254,8 +253,7 @@
                             af'4
                             % AFTER:
                             % MARKUP:
-                            - \tweak Markup.hspace #2
-                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            ^ \markup \override #'(size . .6) {\hspace #2.5  \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \<
@@ -295,8 +293,7 @@
                             af'2
                             % AFTER:
                             % MARKUP:
-                            - \tweak Markup.hspace #2
-                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            ^ \markup \override #'(size . .6) {\hspace #2.5  \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \<
@@ -336,8 +333,7 @@
                                 af'1
                                 % AFTER:
                                 % MARKUP:
-                                - \tweak Markup.hspace #2
-                                ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                                ^ \markup \override #'(size . .6) {\hspace #2.5  \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 \<
@@ -380,8 +376,7 @@
                             af'8
                             % AFTER:
                             % MARKUP:
-                            - \tweak Markup.hspace #2
-                            ^ \markup \override #'(size . .6) { \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
+                            ^ \markup \override #'(size . .6) {\hspace #2.5  \woodwind-diagram #'bass-clarinet #'((cc . (one two)) (lh . (thumb)) (rh . (two)))}
                             % START_BEAM:
                             [
                             % SPANNER_STARTS:
@@ -426,7 +421,6 @@
                                 e'''!4
                                 % AFTER:
                                 % MARKUP:
-                                - \tweak Markup.hspace #2
                                 ^ \markup \center-align { \concat { E\raise #0.5 { \teeny \flat } +42 } }
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
@@ -507,7 +501,7 @@
                             % AFTER:
                             % ARTICULATIONS:
                             \ppp
-                            ^ \baca-circle-bowing-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             % COMMANDS:
                             \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
@@ -516,7 +510,7 @@
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            ^ \baca-circle-bowing-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r4.
                             % OPEN_BRACKETS:
@@ -528,13 +522,13 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-bowing-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-bowing-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                             % CLOSE_BRACKETS:
@@ -543,7 +537,7 @@
                             c'8
                             % AFTER:
                             % ARTICULATIONS:
-                            ^ \baca-circle-bowing-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r16
                             c'4.
@@ -560,14 +554,14 @@
                             % AFTER:
                             % ARTICULATIONS:
                             \pp
-                            ^ \baca-circle-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r8.
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            ^ \baca-circle-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r8
                             r4
@@ -581,19 +575,19 @@
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                             % CLOSE_BRACKETS:
                             }
@@ -611,19 +605,19 @@
                             % AFTER:
                             % ARTICULATIONS:
                             \p
-                            ^ \baca-circle-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r16
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            ^ \baca-circle-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             r8.
                             c'16
                             % AFTER:
                             % ARTICULATIONS:
-                            ^ \baca-circle-markup
+                            ^ \baca-circle-bowing
                             ^ \stopped
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
@@ -633,7 +627,7 @@
                                 c'16
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                             % CLOSE_BRACKETS:
@@ -657,13 +651,13 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 \mp
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r16
                                 c'32
                                 % AFTER:
                                 % ARTICULATIONS:
-                                ^ \baca-circle-markup
+                                ^ \baca-circle-bowing
                                 ^ \stopped
                                 r32
                             % CLOSE_BRACKETS:
